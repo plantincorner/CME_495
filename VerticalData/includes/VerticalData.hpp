@@ -13,9 +13,8 @@
 
 //#include "AnsiCLibrary/Pkg_AnsiCLibrary.h"
 #include <cstdlib>
-#include <iostream>
+#include <queue>
 #include <ctime>
-
 #include "../includes/Height.hpp"
 
 using namespace std;
@@ -26,107 +25,26 @@ using namespace std;
 class VerticalData {
 public:
 
-	/**
-	 * Create an empty vertical Data Object
-	 *
+	/*
+	 * Store height object
+	 * @param[in] currentHeight
 	 */
-	VerticalData();
+	void storeHeight(Height *ht);
 
-	/**
-	 * 
-	 * @param height 
-	 */
-	VerticalData(Height /*in*/previous);
-
-	/**
-	 * 
-	 * @param height 
-	 */
-	void setCurrentHeight(float /*in*/height);
-
-	/**
-	 * 
-	 * @return  
-	 */
-	float getCurrentHeight();
-
-	/**
-	 * 
-	 * @return time 
-	 */
-	time_t getCurrentTime();
-
-	/**
-	 * 
+	/*
+	 * @return vertical velocity
 	 */
 	float getVelocity();
 
-	/**
-	 * 
-	 */
-	~VerticalData(void);
 
 private:
-	/**
-	 * 
-	 */
-	float currentHeight;
-	/**
-	 * 
-	 */
-	float previousHeight;
-	/**
-	 * 
-	 */
-	time_t currentTime;
-	/**
-	 * 
-	 */
-	time_t previousTime;
-	/**
-	 * 
-	 */
+	queue <Height> heights;
+
 	float velocity;
 
-	/**
-	 * 
-	 * @param height 
-	 */
-	void setPreviousHeight(Height /*in*/prevHeight);
 
-	/**
-	 * 
-	 * @return height 
-	 */
-	float getPreviouseHeight();
-
-	/**
-	 * 
-	 * @param time 
-	 */
-	void setCurrentTime(time_t /*in*/time);
-
-	/**
-	 * 
-	 */
-	time_t getPreviouseTime();
-
-	/**
-	 * 
-	 * @param time 
-	 */
-	void setPreviousTime(time_t /*in*/time);
-
-	/**
-	 * 
-	 */
 	void calculateVelocity();
 };
-/************************************************************/
-/* External declarations (package visibility)               */
-/************************************************************/
-
-/* Inline functions                                         */
 
 /************************************************************
  End of VerticalData class header
