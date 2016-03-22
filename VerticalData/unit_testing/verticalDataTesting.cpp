@@ -17,24 +17,26 @@
 
 /*
  * Test the constructor
+ *
  */
-int testConstructor()
+int testConstructor(VerticalData *testVD)
 {
+	VerticalData testObject;
+	*testVD = testObject;
 	//return 0 on success
 	return 0;
 }
 /*
  * Test if Height object is stored
- * @param[in] testHeight test height data
  */
-void testStorage(Height *testHeight)
+void testStorage(VerticalData *testVD, Height *testHeight)
 {
-
+	//*testVD->storeHeight(testHeight);
+	return;
 }
 
 /*
  * Test if Height object is returned and is the same as that stored
- * @param[out] testHeight test height data
  */
 void testRetrieve(Height *testHeight)
 {
