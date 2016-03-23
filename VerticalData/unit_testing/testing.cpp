@@ -5,20 +5,20 @@
  *      Author: devon
  */
 #include "../includes/Height.hpp"
-
+#include "../includes/VerticalData.hpp"
 
 
 
 
 //instantiate empty height object
-void testEmpty()
+void testEmptyHeight()
 {
 cout << "creating empty Height object" <<endl ;
 Height emptyHeight;
 cout << "empty Height contents" <<endl ;
 emptyHeight.printAll();
 }
-void testMin()
+void testMinHeight()
 {
 	float lowerHeight = 0;
 	time_t lowerTime = 0;
@@ -31,7 +31,7 @@ void testMin()
 
 
 //test max height, use current time
-void testMax()
+void testMaxHeight()
 {
 	float upperHeight = 120;
 	//Maxtime does not exist
@@ -41,7 +41,7 @@ void testMax()
 	maxHeight.printAll();
 }
 
-void testWrite(string testFile, float height)
+void testWriteHeight(string testFile, float height)
 {
 	Height maxHeight(height, time(NULL));
 	Height emptyHeight;
@@ -52,7 +52,7 @@ void testWrite(string testFile, float height)
 	emptyHeight.readData(testFile, &emptyHeight);
 	emptyHeight.printAll();
 }
-void testRandom()
+void testRandomHeight()
 {
 	bool testStatus = false;
 	float randomHeight;
@@ -89,17 +89,42 @@ void testRandom()
 		cout << "test failed" << endl;
 	}
 }
+/*
+ * Test the VerticalData object
+ * @todo Test Storage
+ * @todo Test retrieval of height object
+ * @todo Test calculation of vertical velocity
+ */
 
+
+/*
+ * Test if Height object is stored
+ */
+void testStorage(VerticalData &testVD, Height &testHeight)
+{
+	testVD.storeHeight(testHeight);
+	testVD.printAll();
+}
+
+/*
+ * Test the calculation of vertical velocity
+ */
+void testVelocityCalc()
+{
+
+}
 
 int main(){
 
-	testEmpty();
-	testMin();
-	testMax();
-	testRandom();
-	float maxh = 120;
-	string file = "test/testHeight.bin";
-	testWrite(file, maxh);
+//	testEmpty();
+
+//	testRandom();
+//	float maxh = 120;
+//	string file = "test/testHeight.bin";
+//	testWrite(file, maxh);
+
+	Height firstHeight;
+	Height secondHeight;
 	return 0;
 
 }

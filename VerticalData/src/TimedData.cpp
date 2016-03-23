@@ -8,14 +8,14 @@ TimedData::TimedData() {
 }
 
 
-TimedData::TimedData(float /*in*/data, time_t /*in*/time) {
+TimedData::TimedData(float data, time_t time) {
 	this->setData(data);
 	this->setTime(time);
 
 	//cout << time << ": Creating TimedData object" << endl;
 }
 
-void TimedData::setData(float /*in*/d) {
+void TimedData::setData(float d) {
 	this->data = d;
 }
 
@@ -24,7 +24,7 @@ float TimedData::getData() {
 }
 
 
-void TimedData::setTime(time_t /*in*/t) {
+void TimedData::setTime(time_t t) {
 	this->time = t;
 }
 

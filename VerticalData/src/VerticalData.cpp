@@ -8,27 +8,46 @@
  ************************************************************/
 
 // include associated header file
-#include "VerticalData.hpp"
+#include "../includes/VerticalData.hpp"
 
-void VerticalData::storeHeight(Height *ht)
+void VerticalData::storeHeight(Height &ht)
 {
-	if(heights.empty())
+	if(this->heights.empty())
 	{
-		this->heights.push(*ht);
+		this->heights.push(ht);
 	}
 	else
 	{
-		this->heights.push(*ht);
+		this->heights.push(ht);
 		this->calculateVelocity();
 		this->heights.pop();
 	}
 }
 
-/**
- *
- */
 float VerticalData::getVelocity() {
 	return this->velocity;
+}
+
+void VerticalData::printAll()
+{
+	if (this->heights.empty())
+	{
+		cout << "no data to print" << endl;
+	}
+	else if (this->heights.size() == 1)
+	{
+		cout << "No previous Height" << endl;
+		cout << "current height: " << endl;
+		this->heights.front().printAll();
+	}
+	else
+	{
+		cout << "previous height:" << endl;
+		this->heights.front().printAll();
+		cout << "current height";
+		this->heights.back().printAll();
+	}
+
 }
 
 
@@ -49,10 +68,4 @@ void VerticalData::calculateVelocity() {
 /************************************************************
  End of VerticalData class body
  ************************************************************/
-int main()
-{
-	VerticalData test;
-	Height h_test;
-	test.storeHeight(&h_test);
-	cout << test.getVelocity() <<endl;
-}
+

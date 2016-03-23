@@ -14,7 +14,7 @@
 //#include "AnsiCLibrary/Pkg_AnsiCLibrary.h"
 #include <cstdlib>
 #include <iostream>
-#include <../includes/Height.hpp>
+#include "Height.hpp"
 //#include "CME_diagram/VerticalData.h"
 
 /************************************************************/
@@ -153,10 +153,6 @@ public:
 	 */
 	void setConfidenceFactor(float /*in*/factor);
 
-	/**
-	 * @return
-	 */
-	void delete();
 
 private:
 	/**
@@ -186,7 +182,7 @@ private:
 	/**
 	 * 
 	 */
-	VerticalData vertical;
+	//VerticalData vertical;
 	/**
 	 * 
 	 */

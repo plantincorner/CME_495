@@ -15,7 +15,7 @@
 #include <cstdlib>
 #include <queue>
 #include <ctime>
-#include "../includes/Height.hpp"
+#include "Height.hpp"
 
 using namespace std;
 /************************************************************/
@@ -29,14 +29,17 @@ public:
 	 * Store height object
 	 * @param[in] currentHeight
 	 */
-	void storeHeight(Height *ht);
+	void storeHeight(Height &ht);
 
 	/*
 	 * @return vertical velocity
 	 */
 	float getVelocity();
 
-
+	/*For testing purposes
+	 * Print contents of VerticalData object
+	 */
+	void printAll();
 private:
 	queue <Height> heights;
 

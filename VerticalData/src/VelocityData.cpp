@@ -36,23 +36,23 @@ VelocityData::VelocityData(float height, float velocity) {
  * @return height
  * @return height 
  */
-float VelocityData::getHeight() {
-	return this->
-}
+//float VelocityData::getHeight() {
+//	return this->
+//}
 
 /**
  * 
  * @param ht 
  */
-void VelocityData::setHeight(float /*in*/ht) {
-}
+//void VelocityData::setHeight(float /*in*/ht) {
+//}
 
 /**
  * @return vvel
  * @return velocity 
  */
-float VelocityData::getVerticalVelocity() {
-}
+//float VelocityData::getVerticalVelocity() {
+//}
 
 /**
  * 
@@ -65,8 +65,8 @@ void VelocityData::setPitch(float /*in*/pitch) {
  * @return
  * @return pitch 
  */
-float VelocityData::getPitch() {
-}
+//float VelocityData::getPitch() {
+//}
 
 /**
  * 
@@ -79,15 +79,15 @@ void VelocityData::setPitchVelocity(float /*in*/pitchVel) {
  * 
  * @return pitchVel 
  */
-float VelocityData::getPitchVelocity() {
-}
+//float VelocityData::getPitchVelocity() {
+//}
 
 /**
  * @return rl
  * @return roll 
  */
-float VelocityData::getRoll() {
-}
+//float VelocityData::getRoll() {
+//}
 
 /**
  * 
@@ -107,8 +107,8 @@ void VelocityData::setRollVelocity(float /*in*/velocity) {
  * 
  * @return velocity 
  */
-float VelocityData::getRollVelocity() {
-}
+//float VelocityData::getRollVelocity() {
+//}
 
 /**
  * 
@@ -121,8 +121,8 @@ void VelocityData::setFrameRate(float /*in*/fps) {
  * 
  * @return fps 
  */
-float VelocityData::getFrameRate() {
-}
+//float VelocityData::getFrameRate() {
+//}
 
 /**
  * 
@@ -152,16 +152,16 @@ void VelocityData::getVelocity(float /*in*/prevOrCurrent) {
  * @param vel 
  * @param prevOrCurrent 
  */
-void VelocityData::setCurrentVelocity(float /*in*/vel) {
-}
+//void VelocityData::setCurrentVelocity(float /*in*/vel) {
+//}
 
 /**
  *
  * @param vel
  * @param prevOrCurrent
  */
-void VelocityData::setPreviousVelocity(float /*in*/vel) {
-}
+//void VelocityData::setPreviousVelocity(float /*in*/vel) {
+//}
 
 /**
  * 
@@ -175,12 +175,6 @@ float VelocityData::getConfidenceFactor() {
  * @param factor 
  */
 void VelocityData::setConfidenceFactor(float /*in*/factor) {
-}
-
-/**
- * @return
- */
-VelocityData::~VelocityData {
 }
 
 /************************************************************

@@ -6,7 +6,7 @@ Height::Height()
 {
 	this->setData(0);
 	this->setTime(0);
-	cout << "Creating empty Height object" << endl;
+	//cout << "Creating empty Height object" << endl;
 }
 
 
