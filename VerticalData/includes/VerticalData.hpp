@@ -9,9 +9,6 @@
  VerticalData class header
  ************************************************************/
 
-//#include "CME_diagram/Pkg_CME_diagram.h"
-
-//#include "AnsiCLibrary/Pkg_AnsiCLibrary.h"
 #include <cstdlib>
 #include <queue>
 #include <ctime>
@@ -36,17 +33,21 @@ public:
 	 */
 	float getVelocity();
 
+	void setVelocity(float vel);
+
 	/*For testing purposes
 	 * Print contents of VerticalData object
 	 */
 	void printAll();
+
+protected:
+
+	void calculateVelocity();
+
 private:
 	queue <Height> heights;
 
 	float velocity;
-
-
-	void calculateVelocity();
 };
 
 /************************************************************

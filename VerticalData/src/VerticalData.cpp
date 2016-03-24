@@ -10,11 +10,13 @@
 // include associated header file
 #include "../includes/VerticalData.hpp"
 
+
 void VerticalData::storeHeight(Height &ht)
 {
 	if(this->heights.empty())
 	{
 		this->heights.push(ht);
+		this->setVelocity(0);
 	}
 	else
 	{
@@ -23,8 +25,13 @@ void VerticalData::storeHeight(Height &ht)
 		this->heights.pop();
 	}
 }
+void VerticalData::setVelocity(float vel)
+{
+	this->velocity = vel;
+}
 
-float VerticalData::getVelocity() {
+float VerticalData::getVelocity()
+{
 	return this->velocity;
 }
 
@@ -34,35 +41,29 @@ void VerticalData::printAll()
 	{
 		cout << "no data to print" << endl;
 	}
-	else if (this->heights.size() == 1)
-	{
-		cout << "No previous Height" << endl;
-		cout << "current height: " << endl;
-		this->heights.front().printAll();
-	}
 	else
 	{
-		cout << "previous height:" << endl;
+		cout << "current height: " << endl;
 		this->heights.front().printAll();
-		cout << "current height";
-		this->heights.back().printAll();
+		cout << "Vertical Velocity: "<< this->getVelocity() << endl;
 	}
 
 }
 
 
-void VerticalData::calculateVelocity() {
-	float deltaT = 0;
-	float deltaH = 0;
-	time_t currentTime = this->heights.back().getTime();
-	time_t previousTime = this->heights.front().getTime();
-	float currentHeight = this->heights.back().getData();
-	float previousHeight = this->heights.front().getData();
+void VerticalData::calculateVelocity()
+{
+		microseconds deltaT = microseconds(0);
+		float deltaH = 0;
+		microseconds currentTime = this->heights.back().getTime();
+		microseconds previousTime = this->heights.front().getTime();
+		float currentHeight = this->heights.back().getData();
+		float previousHeight = this->heights.front().getData();
 
-	deltaT = currentTime - previousTime;
-	deltaH = currentHeight - previousHeight;
+		deltaT = currentTime - previousTime;
+		deltaH = (currentHeight - previousHeight) / 1000000;// us / 1000000 = s
 
-	this->velocity = (deltaH/deltaT);
+		this->velocity = (deltaH/deltaT.count());
 }
 
 /************************************************************

@@ -3,6 +3,7 @@
 
 #include "../includes/TimedData.hpp"
 
+
 using namespace std;
 
 /************************************************************/
@@ -26,7 +27,7 @@ public:
 	 * @pre Height reading availabel
 	 * @post A Height object containing a height reading and the corresponding time-stamp
 	 */
-	Height(float height, time_t  time);
+	Height(float height, microseconds time);
 
 
 	/**

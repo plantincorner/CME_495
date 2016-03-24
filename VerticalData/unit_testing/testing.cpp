@@ -6,9 +6,10 @@
  */
 #include "../includes/Height.hpp"
 #include "../includes/VerticalData.hpp"
+#include <chrono>
 
-
-
+using namespace std;
+using namespace chrono;
 
 //instantiate empty height object
 void testEmptyHeight()
@@ -21,7 +22,7 @@ emptyHeight.printAll();
 void testMinHeight()
 {
 	float lowerHeight = 0;
-	time_t lowerTime = 0;
+	 microseconds lowerTime = microseconds(0);
 	//test min values
 	cout << "creating min Height object" <<endl ;
 	Height minHeight(lowerHeight, lowerTime);
@@ -34,16 +35,16 @@ void testMinHeight()
 void testMaxHeight()
 {
 	float upperHeight = 120;
-	//Maxtime does not exist
+	microseconds maxTime = duration_cast<microseconds>(system_clock::now().time_since_epoch());
 	cout << "creating empty max Height object" <<endl;
-	Height maxHeight(upperHeight, time(NULL));
+	Height maxHeight(upperHeight, maxTime);
 	cout << "max Height contents" <<endl ;
 	maxHeight.printAll();
 }
 
 void testWriteHeight(string testFile, float height)
 {
-	Height maxHeight(height, time(NULL));
+	Height maxHeight(height, duration_cast<microseconds>(system_clock::now().time_since_epoch()));
 	Height emptyHeight;
 	cout << "write to file:";
 	maxHeight.printAll();
@@ -56,12 +57,12 @@ void testRandomHeight()
 {
 	bool testStatus = false;
 	float randomHeight;
-	time_t randomTestTime;
+	microseconds randomTestTime;
 	for(int i=0; i<10000; i++)
 	{
 		srand(time(NULL) + i);
 		randomHeight = ((float)rand()/(float)(RAND_MAX)) * 120;
-		randomTestTime = time(NULL);
+		randomTestTime = microseconds((int)rand());
 		Height randHeight(randomHeight, randomTestTime);
 
 		// Check manually if data in to Height is the sam as data out
@@ -109,22 +110,58 @@ void testStorage(VerticalData &testVD, Height &testHeight)
 /*
  * Test the calculation of vertical velocity
  */
-void testVelocityCalc()
+void testVelocityCalc(VerticalData &testVD, Height &testPrevious, Height &testCurrent)
 {
-
+	testStorage(testVD, testPrevious);
+	testStorage(testVD, testCurrent);
 }
 
+
+void testRandomVelocity(int numberOfTests)
+{
+	VerticalData
+	srand(time(NULL));
+	for(int i = 0; i < numberOfTests; i++)
+	{
+		float randomHeight = ((float)rand()/(float)(RAND_MAX)) * 120;
+
+		Height firstHeight(randomHeight, microseconds(i * 25));
+		testStorage(&)
+	}
+}
+
+void timeTest()
+{
+	for(int i = 0; i<10; i++)
+	{
+		microseconds us = duration_cast<microseconds>(system_clock::now().time_since_epoch());
+		time_t tt;
+		time(&tt);
+		//time_point <system_clock,microseconds> tt2 = system_clock::from_time_t(tt).time_since_epoch();
+		//microseconds ustime = duration_cast<microseconds>(system_clock::from_time_t(tt).);
+
+		//microseconds ustime = chrono::duration_cast<microseconds>(system_clock::from_time_t(tt));
+		cout << "time: " << tt << " now: " << us.count() << endl;
+	}
+}
 int main(){
 
-//	testEmpty();
+	//testEmptyHeight();
+	//testMinHeight();
+	//testMaxHeight();
+	//testRandomHeight();
+	/*
+	float maxh = 120;
+	string file = "test/testHeight.bin";
+	testWriteHeight(file, maxh);
+	*/
 
-//	testRandom();
-//	float maxh = 120;
-//	string file = "test/testHeight.bin";
-//	testWrite(file, maxh);
-
-	Height firstHeight;
-	Height secondHeight;
+	Height firstHeight(120, microseconds(0));
+	Height secondHeight(110, microseconds(25));
+	VerticalData testVertData;
+	//testStorage(testVertData, firstHeight);
+	//testStorage(testVertData, secondHeight);
+	testVelocityCalc(testVertData, firstHeight, secondHeight);
 	return 0;
 
 }

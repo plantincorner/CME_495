@@ -6,8 +6,10 @@
 #include <iostream>
 #include <ctime>
 #include <fstream>
+#include <chrono>
 
 using namespace std;
+using namespace chrono;
 
 /************************************************************/
 
@@ -28,7 +30,7 @@ public:
 	 * @pre TimedData reading availabel
 	 * @post A TimedData object containing a TimedData reading and the corresponding time-stamp
 	 */
-	TimedData(float /*in*/data, time_t /*in*/ time);
+	TimedData(float /*in*/data, microseconds /*in*/ time);
 
 
 	/**
@@ -40,7 +42,7 @@ public:
 	 * 
 	 * @return time 
 	 */
-	time_t getTime();
+	microseconds getTime();
 
 	/**
 	 *  print contents to console
@@ -68,6 +70,8 @@ public:
 	 */
 	void readData(string filename, TimedData *h);
 
+
+
 	/**
 	 * Destructor for TimedData object
 	 */
@@ -77,7 +81,7 @@ protected:
 	/**
 	*
 	*/
-	void setTime(time_t t);
+	void setTime(microseconds t);
 
 	/**
 	*
@@ -92,7 +96,7 @@ private:
 	/**
 	 * 
 	 */
-	double time;
+	microseconds time;
 
 
 };

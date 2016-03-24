@@ -3,12 +3,12 @@
 
 TimedData::TimedData() {
 	this->setData(0);
-	this->setTime(0);
+	this->setTime(microseconds(0));
 	//cout << "Creating empty TimedData object" << endl;
 }
 
 
-TimedData::TimedData(float data, time_t time) {
+TimedData::TimedData(float data, microseconds time) {
 	this->setData(data);
 	this->setTime(time);
 
@@ -24,17 +24,17 @@ float TimedData::getData() {
 }
 
 
-void TimedData::setTime(time_t t) {
+void TimedData::setTime(microseconds t) {
 	this->time = t;
 }
 
-time_t TimedData::getTime() {
+microseconds TimedData::getTime() {
 	return this->time;
 }
 
 void TimedData::printAll(){
 	cout << "data: " << this->getData() << endl;
-	cout << "time:" << this->getTime() << endl;
+	cout << "time: " << this->getTime().count() << endl;
 }
 void TimedData::writeData(string filename, TimedData *h){
 

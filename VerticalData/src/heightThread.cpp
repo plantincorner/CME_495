@@ -36,7 +36,7 @@ void heightReporting(bool *exit_flag)
 		system_clock::time_point start = system_clock::now();
 
 		//Create Height object with sensor data
-		Height fastHeight(count,time(0));
+		Height fastHeight(count,duration_cast<microseconds>(start.time_since_epoch()));
 		//print fastHeights contents to console
 		fastHeight.printAll();
 
@@ -65,10 +65,9 @@ void testHeightThread()
 		//start time of loop
 
 		system_clock::time_point start = system_clock::now();
-		time_t tt = system_clock::to_time_t(start);
-		cout << "* "<< endl <<"starting new loop at time"<< tt << endl << "*" << endl;
+		cout << "* "<< endl <<"starting new loop at time"<< duration_cast<microseconds>(start.time_since_epoch()).count() << endl << "*" << endl;
 		cout << "slowHeight: "<< i << endl;
-		Height slowHeight(i,time(0));
+		Height slowHeight(i,duration_cast<microseconds>(start.time_since_epoch()));
 		slowHeight.printAll();
 		//wait until 1s has passed
 		this_thread::sleep_until(start + milliseconds(1000));
@@ -78,14 +77,8 @@ void testHeightThread()
 	exit_flag = true;
 
 }
-void timeTest()
-{
-	for(int i = 0; i<10; i++)
-	{
-		milliseconds ms = chrono::duration_cast<milliseconds>(system_clock::now().time_since_epoch());
-		cout << "time: " << time(0) << " now: " << ms.count() << endl;
-	}
-}
+
+
 /*
 int main()
 {
