@@ -34,20 +34,47 @@ public:
 	 * @param height 
 	 * @param velocity 
 	 */
-	//VelocityData(float /*in*/height, float /*in*/velocity);
+	VelocityData(float prevVelocity);
 
 	/**
-	 * @return height
-	 * @return height
+	 *
+	 * @param vel
+	 * @param prevOrCurrent
 	 */
-//	float getHeight();
+	void setCurrentVelocity(double currVelocity);
+
+	/**
+	 * @return vel
+	 * @param prevOrCurrent
+	 */
+	double getCurrentVelocity();
+
+	/**
+	 *
+	 */
+	void setPreviousVelocity(double prevVelocity);
+
+	/**
+	 *
+	 */
+	double getPreviousVelocity();
 
 	/**
 	 *
 	 * @param ht
 	 */
-//	void setHeight(float /*in*/ht);
+	void setHeight(float ht);
 
+	/**
+	 * @return height
+	 * @return height
+	 */
+	float getHeight();
+
+	/**
+	 *
+	 */
+	void setVerticalVelocity(float vertVel);
 	/**
 	 * @return vel
 	 * @return velocity
@@ -58,7 +85,7 @@ public:
 	 *
 	 * @param pitch
 	 */
-	void setPitch(float /*in*/pitch);
+	void setPitch(float pch);
 
 	/**
 	 * @return
@@ -79,22 +106,21 @@ public:
 	float getPitchVelocity();
 
 	/**
-	 * @return rl
+	 *
+	 * @param rl
+	 */
+	void setRoll(float rl);
+
+	/**
 	 * @return roll
 	 */
 	float getRoll();
 
 	/**
 	 *
-	 * @param roll
-	 */
-	void setRoll(float /*in*/roll);
-
-	/**
-	 *
 	 * @param velocity
 	 */
-	void setRollVelocity(float /*in*/velocity);
+	void setRollVelocity(float rollVel);
 
 	/**
 	 *
@@ -106,7 +132,7 @@ public:
 	 *
 	 * @param fps
 	 */
-	void setFrameRate(float /*in*/fps);
+	void setFrameRate(float fps);
 
 	/**
 	 *
@@ -116,30 +142,18 @@ public:
 
 	/**
 	 *
-	 * @param imageNumber @return image
-	 * @param image
-	 */
-	void getImage(int /*in*/imageNumber, uint8_t* /*out*/image);
-
-	/**
-	 *
 	 * @param imageNumber
 	 * @param image
 	 */
-	void setImage(int /*in*/imageNumber, uint8_t /*in*/image[]);
+	void setImage_1(uint8_t image[]);
 
 	/**
-	 * @return vel
-	 * @param prevOrCurrent
+	 *@todo may not need this method just use references instead
+	 * @param imageNumber @return image
+	 * @param image
 	 */
-	void getVelocity(float /*in*/prevOrCurrent);
-
-	/**
-	 *
-	 * @param vel
-	 * @param prevOrCurrent
-	 */
-	void setVelocity(float /*in*/vel, int /*in*/prevOrCurrent);
+	//uint8_t* getImage_1(int uint8_t* image_1);
+	void setImage_2(uint8_t image[]);
 
 	/**
 	 *
@@ -151,7 +165,9 @@ public:
 	 *
 	 * @param factor
 	 */
-	void setConfidenceFactor(float /*in*/factor);
+	void setConfidenceFactor(float factor);
+
+	void printAll();
 
 
 private:
@@ -163,8 +179,17 @@ private:
 	 * 
 	 */
 	double previousVelocity;
+
 	/**
 	 * 
+	 */
+	float height;
+	/**
+	 *
+	 */
+	float verticalVelocity;
+	/**
+	 *
 	 */
 	float pitch;
 	/**
@@ -182,10 +207,6 @@ private:
 	/**
 	 * 
 	 */
-	//VerticalData vertical;
-	/**
-	 * 
-	 */
 	float frameRate;
 	/**
 	 * 
@@ -199,6 +220,9 @@ private:
 	 * 
 	 */
 	float confidenceFactor;
+
+
+	void init();
 };
 /************************************************************/
 /* External declarations (package visibility)               */

@@ -27,7 +27,7 @@ using namespace this_thread;
  * @post a Height object has been saved to disk
  */
 
-void heightReporting(VerticalData &vertDataRef, bool &exit_flag)
+void testHeightReporting(VerticalData &vertDataRef, bool &exit_flag)
 {
 	int count = 0;
 	cout << "Begin height reporting" << endl;
@@ -54,7 +54,7 @@ void testHeightThread()
 	//Object that stores Height objects and calculates velocity
 	VerticalData frequentHeight;
 	//create thread for reporting height every 0.1 seconds
-	thread one (heightReporting,ref(frequentHeight) ,ref(exit_flag));
+	thread one (testHeightReporting,ref(frequentHeight) ,ref(exit_flag));
 	one.detach();
 	for(int i = 0; i < 10; i++)
 	{
@@ -80,12 +80,12 @@ void testHeightThread()
 }
 
 
-
+/*
 int main()
 {
 	testHeightThread();
 	return 0;
 }
-
+*/
 
 
