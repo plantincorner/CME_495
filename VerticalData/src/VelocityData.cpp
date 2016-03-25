@@ -168,6 +168,7 @@ void VelocityData::getVelocity(float /*in*/prevOrCurrent) {
  * @return  
  */
 float VelocityData::getConfidenceFactor() {
+	return this->confidenceFactor;
 }
 
 /**

@@ -11,6 +11,7 @@
 #include <ctime>
 
 #include "../includes/Height.hpp"
+#include "../includes/VerticalData.hpp"
 
 
 using namespace std;
@@ -26,21 +27,19 @@ using namespace this_thread;
  * @post a Height object has been saved to disk
  */
 
-void heightReporting(bool *exit_flag)
+void heightReporting(VerticalData &vertDataRef, bool &exit_flag)
 {
 	int count = 0;
-
-	while(!(*exit_flag))
+	cout << "Begin height reporting" << endl;
+	while(!(exit_flag))
 	{
 		//set the start time of the funcion
 		system_clock::time_point start = system_clock::now();
 
-		//Create Height object with sensor data
-		Height fastHeight(count,duration_cast<microseconds>(start.time_since_epoch()));
-		//print fastHeights contents to console
-		fastHeight.printAll();
-
-		//fastHeight.writeHeight(to_string(count), &fastHeight);
+		//Create Height object with sensor data and store in a VerticalData object
+		vertDataRef.placeHeight(count,duration_cast<microseconds>(start.time_since_epoch()));
+		cout << "fast Height";
+		vertDataRef.printAll();
 		count++;
 		//stop reporting for start time + 0.1 seconds
 		this_thread::sleep_until(start + milliseconds(100));
@@ -48,12 +47,14 @@ void heightReporting(bool *exit_flag)
 	cout<< "exit height reporting" << endl;
 }
 
-//Test timing of thread running aevery 0.1 seconds
+//Test timing of thread running a every 0.1 seconds
 void testHeightThread()
 {
 	bool exit_flag = false;
+	//Object that stores Height objects and calculates velocity
+	VerticalData frequentHeight;
 	//create thread for reporting height every 0.1 seconds
-	thread one (heightReporting, &exit_flag);
+	thread one (heightReporting,ref(frequentHeight) ,ref(exit_flag));
 	one.detach();
 	for(int i = 0; i < 10; i++)
 	{
@@ -79,13 +80,12 @@ void testHeightThread()
 }
 
 
-/*
+
 int main()
 {
 	testHeightThread();
-	//timeTest();
 	return 0;
 }
-*/
+
 
 

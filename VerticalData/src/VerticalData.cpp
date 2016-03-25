@@ -25,6 +25,20 @@ void VerticalData::storeHeight(Height &ht)
 		this->heights.pop();
 	}
 }
+void VerticalData::placeHeight(float height, microseconds time)
+{
+	if (this->heights.empty())
+	{
+		this->heights.emplace(height, time);
+		this->setVelocity(0);
+	}
+	else
+	{
+		this->heights.emplace(height, time);
+		this->calculateVelocity();
+		this->heights.pop();
+	}
+}
 void VerticalData::setVelocity(float vel)
 {
 	this->velocity = vel;

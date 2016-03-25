@@ -106,27 +106,37 @@ void testStorage(VerticalData &testVD, Height &testHeight)
 	testVD.storeHeight(testHeight);
 	testVD.printAll();
 }
+void testPlace(VerticalData &testVD, float height, microseconds time)
+{
+	testVD.placeHeight(height, time);
+	testVD.printAll();
+}
 
 /*
  * Test the calculation of vertical velocity
  */
 void testVelocityCalc(VerticalData &testVD, Height &testPrevious, Height &testCurrent)
 {
-	testStorage(testVD, testPrevious);
-	testStorage(testVD, testCurrent);
+	//testStorage(testVD, testPrevious);
+	//testStorage(testVD, testCurrent);
+	testPlace(testVD, testPrevious.getData(), testPrevious.getTime());
+
+	testPlace(testVD, testCurrent.getData(), testCurrent.getTime());
+
+
 }
 
 
 void testRandomVelocity(int numberOfTests)
 {
-	VerticalData
+	VerticalData testVD;
 	srand(time(NULL));
 	for(int i = 0; i < numberOfTests; i++)
 	{
 		float randomHeight = ((float)rand()/(float)(RAND_MAX)) * 120;
 
 		Height firstHeight(randomHeight, microseconds(i * 25));
-		testStorage(&)
+		testStorage(testVD, firstHeight);
 	}
 }
 
@@ -144,6 +154,7 @@ void timeTest()
 		cout << "time: " << tt << " now: " << us.count() << endl;
 	}
 }
+/*
 int main(){
 
 	//testEmptyHeight();
@@ -155,14 +166,16 @@ int main(){
 	string file = "test/testHeight.bin";
 	testWriteHeight(file, maxh);
 	*/
-
+/*
 	Height firstHeight(120, microseconds(0));
 	Height secondHeight(110, microseconds(25));
 	VerticalData testVertData;
 	//testStorage(testVertData, firstHeight);
 	//testStorage(testVertData, secondHeight);
-	testVelocityCalc(testVertData, firstHeight, secondHeight);
+	//testVelocityCalc(testVertData, firstHeight, secondHeight);
+	testRandomVelocity(10);
+
 	return 0;
 
 }
-
+*/
