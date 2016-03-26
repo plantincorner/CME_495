@@ -115,7 +115,7 @@ void writeGyrReg(uint8_t reg, uint8_t value)
 void enableIMU()
 {
 
-	__u16 block[I2C_SMBUS_BLOCK_MAX];
+		//__u16 block[I2C_SMBUS_BLOCK_MAX];
 
         int res, bus,  size;
 
