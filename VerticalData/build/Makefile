@@ -115,6 +115,30 @@ velocityDetection/fast:
 	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/build
 .PHONY : velocityDetection/fast
 
+src/EE495_Project_Implementation.o: src/EE495_Project_Implementation.cpp.o
+.PHONY : src/EE495_Project_Implementation.o
+
+# target to build an object file
+src/EE495_Project_Implementation.cpp.o:
+	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/EE495_Project_Implementation.cpp.o
+.PHONY : src/EE495_Project_Implementation.cpp.o
+
+src/EE495_Project_Implementation.i: src/EE495_Project_Implementation.cpp.i
+.PHONY : src/EE495_Project_Implementation.i
+
+# target to preprocess a source file
+src/EE495_Project_Implementation.cpp.i:
+	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/EE495_Project_Implementation.cpp.i
+.PHONY : src/EE495_Project_Implementation.cpp.i
+
+src/EE495_Project_Implementation.s: src/EE495_Project_Implementation.cpp.s
+.PHONY : src/EE495_Project_Implementation.s
+
+# target to generate assembly for a file
+src/EE495_Project_Implementation.cpp.s:
+	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/EE495_Project_Implementation.cpp.s
+.PHONY : src/EE495_Project_Implementation.cpp.s
+
 src/Height.o: src/Height.cpp.o
 .PHONY : src/Height.o
 
@@ -307,6 +331,30 @@ src/sensor.c.s:
 	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/sensor.c.s
 .PHONY : src/sensor.c.s
 
+src/velocityCalculate.o: src/velocityCalculate.cpp.o
+.PHONY : src/velocityCalculate.o
+
+# target to build an object file
+src/velocityCalculate.cpp.o:
+	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/velocityCalculate.cpp.o
+.PHONY : src/velocityCalculate.cpp.o
+
+src/velocityCalculate.i: src/velocityCalculate.cpp.i
+.PHONY : src/velocityCalculate.i
+
+# target to preprocess a source file
+src/velocityCalculate.cpp.i:
+	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/velocityCalculate.cpp.i
+.PHONY : src/velocityCalculate.cpp.i
+
+src/velocityCalculate.s: src/velocityCalculate.cpp.s
+.PHONY : src/velocityCalculate.s
+
+# target to generate assembly for a file
+src/velocityCalculate.cpp.s:
+	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/velocityCalculate.cpp.s
+.PHONY : src/velocityCalculate.cpp.s
+
 src/velocityTracking.o: src/velocityTracking.cpp.o
 .PHONY : src/velocityTracking.o
 
@@ -340,6 +388,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... velocityDetection"
+	@echo "... src/EE495_Project_Implementation.o"
+	@echo "... src/EE495_Project_Implementation.i"
+	@echo "... src/EE495_Project_Implementation.s"
 	@echo "... src/Height.o"
 	@echo "... src/Height.i"
 	@echo "... src/Height.s"
@@ -364,6 +415,9 @@ help:
 	@echo "... src/sensor.o"
 	@echo "... src/sensor.i"
 	@echo "... src/sensor.s"
+	@echo "... src/velocityCalculate.o"
+	@echo "... src/velocityCalculate.i"
+	@echo "... src/velocityCalculate.s"
 	@echo "... src/velocityTracking.o"
 	@echo "... src/velocityTracking.i"
 	@echo "... src/velocityTracking.s"
