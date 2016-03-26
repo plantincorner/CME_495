@@ -211,6 +211,54 @@ src/VerticalData.cpp.s:
 	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/VerticalData.cpp.s
 .PHONY : src/VerticalData.cpp.s
 
+src/bmp180.o: src/bmp180.c.o
+.PHONY : src/bmp180.o
+
+# target to build an object file
+src/bmp180.c.o:
+	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/bmp180.c.o
+.PHONY : src/bmp180.c.o
+
+src/bmp180.i: src/bmp180.c.i
+.PHONY : src/bmp180.i
+
+# target to preprocess a source file
+src/bmp180.c.i:
+	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/bmp180.c.i
+.PHONY : src/bmp180.c.i
+
+src/bmp180.s: src/bmp180.c.s
+.PHONY : src/bmp180.s
+
+# target to generate assembly for a file
+src/bmp180.c.s:
+	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/bmp180.c.s
+.PHONY : src/bmp180.c.s
+
+src/lidarLite.o: src/lidarLite.c.o
+.PHONY : src/lidarLite.o
+
+# target to build an object file
+src/lidarLite.c.o:
+	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/lidarLite.c.o
+.PHONY : src/lidarLite.c.o
+
+src/lidarLite.i: src/lidarLite.c.i
+.PHONY : src/lidarLite.i
+
+# target to preprocess a source file
+src/lidarLite.c.i:
+	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/lidarLite.c.i
+.PHONY : src/lidarLite.c.i
+
+src/lidarLite.s: src/lidarLite.c.s
+.PHONY : src/lidarLite.s
+
+# target to generate assembly for a file
+src/lidarLite.c.s:
+	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/lidarLite.c.s
+.PHONY : src/lidarLite.c.s
+
 src/output.o: src/output.c.o
 .PHONY : src/output.o
 
@@ -304,6 +352,12 @@ help:
 	@echo "... src/VerticalData.o"
 	@echo "... src/VerticalData.i"
 	@echo "... src/VerticalData.s"
+	@echo "... src/bmp180.o"
+	@echo "... src/bmp180.i"
+	@echo "... src/bmp180.s"
+	@echo "... src/lidarLite.o"
+	@echo "... src/lidarLite.i"
+	@echo "... src/lidarLite.s"
 	@echo "... src/output.o"
 	@echo "... src/output.i"
 	@echo "... src/output.s"

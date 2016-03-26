@@ -42,6 +42,16 @@ ctime
 Height.hpp
 /home/pi/CME_495/Project/CME_495/VerticalData/includes/Height.hpp
 
+/home/pi/CME_495/Project/CME_495/VerticalData/includes/bmp180.h
+
+/home/pi/CME_495/Project/CME_495/VerticalData/includes/lidarLite.h
+stdio.h
+-
+wiringPiI2C.h
+-
+stdbool.h
+-
+
 /home/pi/CME_495/Project/CME_495/VerticalData/includes/output.h
 unistd.h
 -
@@ -76,22 +86,6 @@ linux/i2c-dev.h
 LSM9DS0.h
 /home/pi/CME_495/Project/CME_495/VerticalData/includes/LSM9DS0.h
 
-/home/pi/CME_495/Project/CME_495/VerticalData/src/Height.cpp
-../includes/Height.hpp
-/home/pi/CME_495/Project/CME_495/VerticalData/includes/Height.hpp
-
-/home/pi/CME_495/Project/CME_495/VerticalData/src/TimedData.cpp
-../includes/TimedData.hpp
-/home/pi/CME_495/Project/CME_495/VerticalData/includes/TimedData.hpp
-
-/home/pi/CME_495/Project/CME_495/VerticalData/src/VelocityData.cpp
-../includes/VelocityData.hpp
-/home/pi/CME_495/Project/CME_495/VerticalData/includes/VelocityData.hpp
-
-/home/pi/CME_495/Project/CME_495/VerticalData/src/VerticalData.cpp
-../includes/VerticalData.hpp
-/home/pi/CME_495/Project/CME_495/VerticalData/includes/VerticalData.hpp
-
 /home/pi/CME_495/Project/CME_495/VerticalData/src/velocityTracking.cpp
 ../includes/Height.hpp
 /home/pi/CME_495/Project/CME_495/VerticalData/includes/Height.hpp
@@ -103,6 +97,10 @@ LSM9DS0.h
 /home/pi/CME_495/Project/CME_495/VerticalData/includes/output.h
 ../includes/sensor.h
 /home/pi/CME_495/Project/CME_495/VerticalData/includes/sensor.h
+../includes/bmp180.h
+/home/pi/CME_495/Project/CME_495/VerticalData/includes/bmp180.h
+../includes/lidarLite.h
+/home/pi/CME_495/Project/CME_495/VerticalData/includes/lidarLite.h
 iostream
 -
 cstdlib
@@ -112,23 +110,5 @@ thread
 chrono
 -
 ctime
--
-unistd.h
--
-math.h
--
-stdio.h
--
-signal.h
--
-stdlib.h
--
-fcntl.h
--
-string.h
--
-time.h
--
-wiringPi.h
 -
 

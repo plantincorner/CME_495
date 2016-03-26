@@ -95,9 +95,32 @@ CMakeFiles/velocityDetection.dir/src/Height.cpp.o.provides: CMakeFiles/velocityD
 
 CMakeFiles/velocityDetection.dir/src/Height.cpp.o.provides.build: CMakeFiles/velocityDetection.dir/src/Height.cpp.o
 
+CMakeFiles/velocityDetection.dir/src/lidarLite.c.o: CMakeFiles/velocityDetection.dir/flags.make
+CMakeFiles/velocityDetection.dir/src/lidarLite.c.o: ../src/lidarLite.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pi/CME_495/Project/CME_495/VerticalData/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/velocityDetection.dir/src/lidarLite.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/velocityDetection.dir/src/lidarLite.c.o   -c /home/pi/CME_495/Project/CME_495/VerticalData/src/lidarLite.c
+
+CMakeFiles/velocityDetection.dir/src/lidarLite.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/velocityDetection.dir/src/lidarLite.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/pi/CME_495/Project/CME_495/VerticalData/src/lidarLite.c > CMakeFiles/velocityDetection.dir/src/lidarLite.c.i
+
+CMakeFiles/velocityDetection.dir/src/lidarLite.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/velocityDetection.dir/src/lidarLite.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/pi/CME_495/Project/CME_495/VerticalData/src/lidarLite.c -o CMakeFiles/velocityDetection.dir/src/lidarLite.c.s
+
+CMakeFiles/velocityDetection.dir/src/lidarLite.c.o.requires:
+.PHONY : CMakeFiles/velocityDetection.dir/src/lidarLite.c.o.requires
+
+CMakeFiles/velocityDetection.dir/src/lidarLite.c.o.provides: CMakeFiles/velocityDetection.dir/src/lidarLite.c.o.requires
+	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/lidarLite.c.o.provides.build
+.PHONY : CMakeFiles/velocityDetection.dir/src/lidarLite.c.o.provides
+
+CMakeFiles/velocityDetection.dir/src/lidarLite.c.o.provides.build: CMakeFiles/velocityDetection.dir/src/lidarLite.c.o
+
 CMakeFiles/velocityDetection.dir/src/output.c.o: CMakeFiles/velocityDetection.dir/flags.make
 CMakeFiles/velocityDetection.dir/src/output.c.o: ../src/output.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pi/CME_495/Project/CME_495/VerticalData/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pi/CME_495/Project/CME_495/VerticalData/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/velocityDetection.dir/src/output.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/velocityDetection.dir/src/output.c.o   -c /home/pi/CME_495/Project/CME_495/VerticalData/src/output.c
 
@@ -120,7 +143,7 @@ CMakeFiles/velocityDetection.dir/src/output.c.o.provides.build: CMakeFiles/veloc
 
 CMakeFiles/velocityDetection.dir/src/VerticalData.cpp.o: CMakeFiles/velocityDetection.dir/flags.make
 CMakeFiles/velocityDetection.dir/src/VerticalData.cpp.o: ../src/VerticalData.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pi/CME_495/Project/CME_495/VerticalData/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pi/CME_495/Project/CME_495/VerticalData/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/velocityDetection.dir/src/VerticalData.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/velocityDetection.dir/src/VerticalData.cpp.o -c /home/pi/CME_495/Project/CME_495/VerticalData/src/VerticalData.cpp
 
@@ -143,7 +166,7 @@ CMakeFiles/velocityDetection.dir/src/VerticalData.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/velocityDetection.dir/src/sensor.c.o: CMakeFiles/velocityDetection.dir/flags.make
 CMakeFiles/velocityDetection.dir/src/sensor.c.o: ../src/sensor.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pi/CME_495/Project/CME_495/VerticalData/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pi/CME_495/Project/CME_495/VerticalData/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/velocityDetection.dir/src/sensor.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/velocityDetection.dir/src/sensor.c.o   -c /home/pi/CME_495/Project/CME_495/VerticalData/src/sensor.c
 
@@ -164,9 +187,32 @@ CMakeFiles/velocityDetection.dir/src/sensor.c.o.provides: CMakeFiles/velocityDet
 
 CMakeFiles/velocityDetection.dir/src/sensor.c.o.provides.build: CMakeFiles/velocityDetection.dir/src/sensor.c.o
 
+CMakeFiles/velocityDetection.dir/src/bmp180.c.o: CMakeFiles/velocityDetection.dir/flags.make
+CMakeFiles/velocityDetection.dir/src/bmp180.c.o: ../src/bmp180.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pi/CME_495/Project/CME_495/VerticalData/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/velocityDetection.dir/src/bmp180.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/velocityDetection.dir/src/bmp180.c.o   -c /home/pi/CME_495/Project/CME_495/VerticalData/src/bmp180.c
+
+CMakeFiles/velocityDetection.dir/src/bmp180.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/velocityDetection.dir/src/bmp180.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/pi/CME_495/Project/CME_495/VerticalData/src/bmp180.c > CMakeFiles/velocityDetection.dir/src/bmp180.c.i
+
+CMakeFiles/velocityDetection.dir/src/bmp180.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/velocityDetection.dir/src/bmp180.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/pi/CME_495/Project/CME_495/VerticalData/src/bmp180.c -o CMakeFiles/velocityDetection.dir/src/bmp180.c.s
+
+CMakeFiles/velocityDetection.dir/src/bmp180.c.o.requires:
+.PHONY : CMakeFiles/velocityDetection.dir/src/bmp180.c.o.requires
+
+CMakeFiles/velocityDetection.dir/src/bmp180.c.o.provides: CMakeFiles/velocityDetection.dir/src/bmp180.c.o.requires
+	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/bmp180.c.o.provides.build
+.PHONY : CMakeFiles/velocityDetection.dir/src/bmp180.c.o.provides
+
+CMakeFiles/velocityDetection.dir/src/bmp180.c.o.provides.build: CMakeFiles/velocityDetection.dir/src/bmp180.c.o
+
 CMakeFiles/velocityDetection.dir/src/TimedData.cpp.o: CMakeFiles/velocityDetection.dir/flags.make
 CMakeFiles/velocityDetection.dir/src/TimedData.cpp.o: ../src/TimedData.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pi/CME_495/Project/CME_495/VerticalData/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pi/CME_495/Project/CME_495/VerticalData/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/velocityDetection.dir/src/TimedData.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/velocityDetection.dir/src/TimedData.cpp.o -c /home/pi/CME_495/Project/CME_495/VerticalData/src/TimedData.cpp
 
@@ -189,7 +235,7 @@ CMakeFiles/velocityDetection.dir/src/TimedData.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/velocityDetection.dir/src/VelocityData.cpp.o: CMakeFiles/velocityDetection.dir/flags.make
 CMakeFiles/velocityDetection.dir/src/VelocityData.cpp.o: ../src/VelocityData.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pi/CME_495/Project/CME_495/VerticalData/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pi/CME_495/Project/CME_495/VerticalData/build/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/velocityDetection.dir/src/VelocityData.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/velocityDetection.dir/src/VelocityData.cpp.o -c /home/pi/CME_495/Project/CME_495/VerticalData/src/VelocityData.cpp
 
@@ -214,9 +260,11 @@ CMakeFiles/velocityDetection.dir/src/VelocityData.cpp.o.provides.build: CMakeFil
 velocityDetection_OBJECTS = \
 "CMakeFiles/velocityDetection.dir/src/velocityTracking.cpp.o" \
 "CMakeFiles/velocityDetection.dir/src/Height.cpp.o" \
+"CMakeFiles/velocityDetection.dir/src/lidarLite.c.o" \
 "CMakeFiles/velocityDetection.dir/src/output.c.o" \
 "CMakeFiles/velocityDetection.dir/src/VerticalData.cpp.o" \
 "CMakeFiles/velocityDetection.dir/src/sensor.c.o" \
+"CMakeFiles/velocityDetection.dir/src/bmp180.c.o" \
 "CMakeFiles/velocityDetection.dir/src/TimedData.cpp.o" \
 "CMakeFiles/velocityDetection.dir/src/VelocityData.cpp.o"
 
@@ -225,9 +273,11 @@ velocityDetection_EXTERNAL_OBJECTS =
 
 velocityDetection: CMakeFiles/velocityDetection.dir/src/velocityTracking.cpp.o
 velocityDetection: CMakeFiles/velocityDetection.dir/src/Height.cpp.o
+velocityDetection: CMakeFiles/velocityDetection.dir/src/lidarLite.c.o
 velocityDetection: CMakeFiles/velocityDetection.dir/src/output.c.o
 velocityDetection: CMakeFiles/velocityDetection.dir/src/VerticalData.cpp.o
 velocityDetection: CMakeFiles/velocityDetection.dir/src/sensor.c.o
+velocityDetection: CMakeFiles/velocityDetection.dir/src/bmp180.c.o
 velocityDetection: CMakeFiles/velocityDetection.dir/src/TimedData.cpp.o
 velocityDetection: CMakeFiles/velocityDetection.dir/src/VelocityData.cpp.o
 velocityDetection: CMakeFiles/velocityDetection.dir/build.make
@@ -241,9 +291,11 @@ CMakeFiles/velocityDetection.dir/build: velocityDetection
 
 CMakeFiles/velocityDetection.dir/requires: CMakeFiles/velocityDetection.dir/src/velocityTracking.cpp.o.requires
 CMakeFiles/velocityDetection.dir/requires: CMakeFiles/velocityDetection.dir/src/Height.cpp.o.requires
+CMakeFiles/velocityDetection.dir/requires: CMakeFiles/velocityDetection.dir/src/lidarLite.c.o.requires
 CMakeFiles/velocityDetection.dir/requires: CMakeFiles/velocityDetection.dir/src/output.c.o.requires
 CMakeFiles/velocityDetection.dir/requires: CMakeFiles/velocityDetection.dir/src/VerticalData.cpp.o.requires
 CMakeFiles/velocityDetection.dir/requires: CMakeFiles/velocityDetection.dir/src/sensor.c.o.requires
+CMakeFiles/velocityDetection.dir/requires: CMakeFiles/velocityDetection.dir/src/bmp180.c.o.requires
 CMakeFiles/velocityDetection.dir/requires: CMakeFiles/velocityDetection.dir/src/TimedData.cpp.o.requires
 CMakeFiles/velocityDetection.dir/requires: CMakeFiles/velocityDetection.dir/src/VelocityData.cpp.o.requires
 .PHONY : CMakeFiles/velocityDetection.dir/requires
