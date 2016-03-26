@@ -23,23 +23,10 @@ extern "C" {
 }
 
 #include <iostream>
-
 #include <cstdlib>
 #include <thread>
 #include <chrono>
 #include <ctime>
-
-
-#include <unistd.h>
-#include <math.h>
-#include <stdio.h>
-#include <signal.h>
-#include <stdlib.h>
-#include <fcntl.h>
-#include <string.h>
-#include <time.h>
-#include <wiringPi.h> //added
-
 
 
 using namespace std;
