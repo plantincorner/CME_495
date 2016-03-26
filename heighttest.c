@@ -12,6 +12,7 @@
 //gyro acc
 #include "gyro_accelerometer/sensor.h"
 #include "gyro_accelerometer/output.h"
+#define M_PI 3.14159265358979323846
 
 //baro
 #include "bmp180/bmp180.h"
@@ -45,15 +46,17 @@ int main()
 	float height = 0;
 	
 	//math
+	while(1){
 	ACCGYR(&gyr_x,&gyr_y,&acc_x,&acc_y);	
 	BAROTEMP(&temp,&press);
 	LIDAR_LITE_(&res,fd);
 	
-	height = res*sqrt(1-(pow(sin(abs(acc_x)),2)+pow(sin(abs(acc_y)),2)));
+	height = res*sqrt(1-(pow(sin(abs(acc_x)*(M_PI/180)),2)+pow(sin(abs(acc_y)*(M_PI/180)),2)));
 	
-	
-	printf (" gyr_x %7.3f \t acc_x %7.3f \t gyr_y %7.3f \t acc_y %7.3f \n", gyr_x, acc_x, gyr_y, acc_y);
-	printf("t = %f, p = %lu \n", temp, press);
-	printf("%3.0d cm \n", res );
+	printf("height = %f cm length = %3.0d cm \n", height, res);
+	}
+	//printf (" gyr_x %7.3f \t acc_x %7.3f \t gyr_y %7.3f \t acc_y %7.3f \n", gyr_x, acc_x, gyr_y, acc_y);
+	//printf("t = %f, p = %lu \n", temp, press);
+	//printf("%3.0d cm \n", res );
 
 }
