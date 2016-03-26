@@ -13,15 +13,23 @@
  *  Created on: Mar 16, 2016
  *      Author: devon
  */
+#include "../includes/Height.hpp"
+#include "../includes/VerticalData.hpp"
+#include "../includes/VelocityData.hpp"
+
+extern "C" {
+#include "../includes/output.h"
+#include "../includes/sensor.h"
+#include "../includes/bmp180.h"
+#include "../includes/lidarLite.h"
+}
+
 #include <iostream>
 #include <cstdlib>
 #include <thread>
 #include <chrono>
 #include <ctime>
 
-#include "../includes/Height.hpp"
-#include "../includes/VerticalData.hpp"
-#include "../includes/VelocityData.hpp"
 
 using namespace std;
 using namespace chrono;
@@ -60,32 +68,65 @@ void heightReporting(VerticalData &vertDataRef, bool &exit_flag)
 void testMain()
 {
 	bool exit_flag = false;
+
 	//Object that stores Height objects and calculates velocity
 	VerticalData frequentHeight;
+	
 	//hold the calculated velocity for use in the next iteration
-
 	double previousVelocity = 0;
-	//create thread for reporting height every 0.1 seconds
 
 	/**
 	 * @todo initialize Sensors
 	 */
 
+
+	/*** initialize the imu***/
+	//signal(SIGINT, INThandler);
+	//enableIMU();
+
+	/***Create thread for reporting height 10X per sec ***/
 	thread one (heightReporting,ref(frequentHeight) ,ref(exit_flag));
 	one.detach();
 
 	for(int i = 0; i < 10; i++)
 	{
-
+		
 		//start time of loop
-
 		system_clock::time_point start = system_clock::now();
+
+		/**temp storage variables for pitch and roll
+		*gyr_x roll velocity
+		*gyr_y pitch velocity
+		*acc_x roll position
+		*acc_y pitch position
+		* @todo modify code so we don't have to use these ACCGYR to accept reference instead of pointers
+		*/
+		float gyr_x, gyr_y, acc_x, acc_y = 0;
+
+
+		//@todo remove cout for test
 		cout << "* "<< endl <<"starting new loop at time"<< duration_cast<microseconds>(start.time_since_epoch()).count() << endl << "*" << endl;
 		cout << "Velocity Test: "<< i << " Previous Velocity: " << previousVelocity << endl;
+		
+		
 		VelocityData vD;
 		vD.setPreviousVelocity(previousVelocity);
+		
+		/**Accuire pitch, roll and there respective velocities**/
+		//ACCGYR( &gyr_x, &gyr_y, &acc_x, &acc_y);
+		vD.setRollVelocity(gyr_x);
+		vD.setPitchVelocity(gyr_y);
+		vD.setRoll(acc_x);
+		vD.setPitch(acc_y);
+
+		/**Print results to console **/
 		vD.printAll();
-		//wait until 1s has passed
+		
+		/**@todo remove loop timer**/
+		const auto loop_timer = duration_cast<milliseconds>(system_clock::now() - start).count();
+		cout << "loop duration: " << loop_timer << endl;
+
+		/**wait until 1s has passed to get velocity every second**/
 		this_thread::sleep_until(start + milliseconds(1000));
 
 	}
@@ -95,13 +136,13 @@ void testMain()
 }
 
 
-
+/*
 int main()
 {
 	testMain();
 	return 0;
 }
-
+*/
 
 
 
