@@ -1,5 +1,5 @@
-//#ifndef OUTPUT_H
-//#define OUTPUT_H
+#ifndef OUTPUT_H
+#define OUTPUT_H
 
 #include <unistd.h>
 #include <math.h>
@@ -15,4 +15,4 @@ void  INThandler(int sig);
 
 void ACCGYR(float *gyr_x, float *gyr_y, float *acc_x, float *acc_y);
 
-//#endif
+#endif
