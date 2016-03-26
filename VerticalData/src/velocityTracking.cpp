@@ -95,13 +95,13 @@ void testMain()
 }
 
 
-
+/*
 int main()
 {
 	testMain();
 	return 0;
 }
-
+*/
 
 
 
