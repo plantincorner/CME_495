@@ -1,8 +1,14 @@
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "C"
   "CXX"
   )
 # The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_C
+  "/home/pi/CME_495/Project/CME_495/VerticalData/src/output.c" "/home/pi/CME_495/Project/CME_495/VerticalData/build/CMakeFiles/velocityDetection.dir/src/output.c.o"
+  "/home/pi/CME_495/Project/CME_495/VerticalData/src/sensor.c" "/home/pi/CME_495/Project/CME_495/VerticalData/build/CMakeFiles/velocityDetection.dir/src/sensor.c.o"
+  )
+set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/pi/CME_495/Project/CME_495/VerticalData/src/Height.cpp" "/home/pi/CME_495/Project/CME_495/VerticalData/build/CMakeFiles/velocityDetection.dir/src/Height.cpp.o"
   "/home/pi/CME_495/Project/CME_495/VerticalData/src/TimedData.cpp" "/home/pi/CME_495/Project/CME_495/VerticalData/build/CMakeFiles/velocityDetection.dir/src/TimedData.cpp.o"

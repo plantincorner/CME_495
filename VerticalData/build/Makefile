@@ -211,6 +211,54 @@ src/VerticalData.cpp.s:
 	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/VerticalData.cpp.s
 .PHONY : src/VerticalData.cpp.s
 
+src/output.o: src/output.c.o
+.PHONY : src/output.o
+
+# target to build an object file
+src/output.c.o:
+	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/output.c.o
+.PHONY : src/output.c.o
+
+src/output.i: src/output.c.i
+.PHONY : src/output.i
+
+# target to preprocess a source file
+src/output.c.i:
+	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/output.c.i
+.PHONY : src/output.c.i
+
+src/output.s: src/output.c.s
+.PHONY : src/output.s
+
+# target to generate assembly for a file
+src/output.c.s:
+	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/output.c.s
+.PHONY : src/output.c.s
+
+src/sensor.o: src/sensor.c.o
+.PHONY : src/sensor.o
+
+# target to build an object file
+src/sensor.c.o:
+	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/sensor.c.o
+.PHONY : src/sensor.c.o
+
+src/sensor.i: src/sensor.c.i
+.PHONY : src/sensor.i
+
+# target to preprocess a source file
+src/sensor.c.i:
+	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/sensor.c.i
+.PHONY : src/sensor.c.i
+
+src/sensor.s: src/sensor.c.s
+.PHONY : src/sensor.s
+
+# target to generate assembly for a file
+src/sensor.c.s:
+	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/sensor.c.s
+.PHONY : src/sensor.c.s
+
 src/velocityTracking.o: src/velocityTracking.cpp.o
 .PHONY : src/velocityTracking.o
 
@@ -256,6 +304,12 @@ help:
 	@echo "... src/VerticalData.o"
 	@echo "... src/VerticalData.i"
 	@echo "... src/VerticalData.s"
+	@echo "... src/output.o"
+	@echo "... src/output.i"
+	@echo "... src/output.s"
+	@echo "... src/sensor.o"
+	@echo "... src/sensor.i"
+	@echo "... src/sensor.s"
 	@echo "... src/velocityTracking.o"
 	@echo "... src/velocityTracking.i"
 	@echo "... src/velocityTracking.s"
