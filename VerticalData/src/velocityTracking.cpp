@@ -39,6 +39,40 @@ using namespace chrono;
 using namespace this_thread;
 using namespace cv;
 
+
+void twoImageCapture(Mat &image_1, Mat &image_2)
+{
+	
+		raspicam::RaspiCam_Cv Camera;	
+		Camera.set( CV_CAP_PROP_FORMAT, CV_8UC1);
+		Camera.set( CV_CAP_PROP_EXPOSURE, 8.3);
+		Camera.set(CV_CAP_PROP_FRAME_WIDTH, 320);
+		Camera.set(CV_CAP_PROP_FRAME_HEIGHT, 240);	
+	cout << Camera.get(CV_CAP_PROP_FRAME_WIDTH) << ", " << Camera.get(CV_CAP_PROP_FRAME_HEIGHT) <<endl;
+		if(!Camera.open())
+			{
+				cerr<<"Error" << endl;
+			}
+		else
+			{
+		
+				system_clock::time_point start = system_clock::now();
+				Camera.grab();
+				Camera.retrieve(image_1);
+		
+				const auto loop_timer = duration_cast<milliseconds>(system_clock::now() - start).count();
+				cout << "frame time: " << loop_timer << endl;
+				Camera.grab();
+				Camera.retrieve(image_2);
+				
+				const auto loop_timer_2 = duration_cast<milliseconds>(system_clock::now() - start).count() - loop_timer;
+				cout << "frame time 2: " << loop_timer_2<< endl;
+			}
+		Camera.release();
+
+	//	cv::imwrite("test_img.jpg", image);
+}
+
 /** Get height data every 0.1 seconds
  * @pre a thread has been created and id assigned
  * @pre the sensors have been initialized and are accessible
@@ -74,6 +108,7 @@ void heightReporting(VerticalData &vertDataRef, bool &exit_flag)
 //Test timing of thread running a every 0.1 seconds
 void testMain()
 {
+	//Alert threads of exit
 	bool exit_flag = false;
 
 	//Object that stores Height objects and calculates velocity
@@ -86,11 +121,8 @@ void testMain()
 	 * @todo initialize Sensors
 	 */
 
-	raspicam::RaspiCam_Cv Camera;	
 	Mat image;
 	Mat image2;
-	Camera.set( CV_CAP_PROP_FORMAT, CV_8UC1);
-	Camera.set( CV_CAP_PROP_EXPOSURE, 8.3);
 
 	/*** initialize the imu***/
 	signal(SIGINT, INThandler);
@@ -106,21 +138,6 @@ void testMain()
 		//start time of loop
 		system_clock::time_point start = system_clock::now();
 
-		if(!Camera.open())
-			{
-				cerr<<"Error" << endl;
-				break;
-			}
-		
-		Camera.grab();
-		Camera.retrieve(image);
-		
-		Camera.grab();
-		Camera.retrieve(image2);
-
-		Camera.release();
-
-	//	cv::imwrite("test_img.jpg", image);
 
 		/**temp storage variables for pitch and roll
 		*gyr_x roll velocity
@@ -167,7 +184,9 @@ void testMain()
 
 int main()
 {
-	testMain();
+	Mat image_1;
+	Mat image_2;
+	twoImageCapture(image_1, image_2);
 	return 0;
 }
 
