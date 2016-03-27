@@ -45,9 +45,10 @@ void twoImageCapture(Mat &image_1, Mat &image_2)
 	
 		raspicam::RaspiCam_Cv Camera;	
 		Camera.set( CV_CAP_PROP_FORMAT, CV_8UC1);
-		Camera.set( CV_CAP_PROP_EXPOSURE, 8.3);
-		Camera.set(CV_CAP_PROP_FRAME_WIDTH, 320);
-		Camera.set(CV_CAP_PROP_FRAME_HEIGHT, 240);	
+		Camera.set( CV_CAP_PROP_GAIN, 100);
+	//	Camera.set( CV_CAP_PROP_CONTRAST, 55);
+	//	Camera.set( CV_CAP_PROP_BRIGHTNESS, 50);
+	//	Camera.set( CV_CAP_PROP_EXPOSURE, 33);
 	cout << Camera.get(CV_CAP_PROP_FRAME_WIDTH) << ", " << Camera.get(CV_CAP_PROP_FRAME_HEIGHT) <<endl;
 		if(!Camera.open())
 			{
@@ -57,6 +58,7 @@ void twoImageCapture(Mat &image_1, Mat &image_2)
 			{
 		
 				system_clock::time_point start = system_clock::now();
+				
 				Camera.grab();
 				Camera.retrieve(image_1);
 		
@@ -70,7 +72,6 @@ void twoImageCapture(Mat &image_1, Mat &image_2)
 			}
 		Camera.release();
 
-	//	cv::imwrite("test_img.jpg", image);
 }
 
 /** Get height data every 0.1 seconds
@@ -172,7 +173,7 @@ void testMain()
 		cout << "loop duration: " << loop_timer << endl;
 
 		/**wait until 1s has passed to get velocity every second**/
-		this_thread::sleep_until(start + milliseconds(1000));
+		sleep_until(start + milliseconds(1000));
 
 	}
 
@@ -187,6 +188,8 @@ int main()
 	Mat image_1;
 	Mat image_2;
 	twoImageCapture(image_1, image_2);
+	cv::imwrite("test_img1.jpg", image_1);
+	cv::imwrite("test_img2.jpg", image_2);
 	return 0;
 }
 

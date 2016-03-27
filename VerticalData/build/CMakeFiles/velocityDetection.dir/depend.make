@@ -36,14 +36,4 @@ CMakeFiles/velocityDetection.dir/src/VerticalData.cpp.o: ../src/VerticalData.cpp
 CMakeFiles/velocityDetection.dir/src/velocityCalculate.cpp.o: ../includes/velocityCalculate.hpp
 CMakeFiles/velocityDetection.dir/src/velocityCalculate.cpp.o: ../src/velocityCalculate.cpp
 
-CMakeFiles/velocityDetection.dir/src/velocityTracking.cpp.o: ../includes/Height.hpp
-CMakeFiles/velocityDetection.dir/src/velocityTracking.cpp.o: ../includes/LSM9DS0.h
-CMakeFiles/velocityDetection.dir/src/velocityTracking.cpp.o: ../includes/TimedData.hpp
-CMakeFiles/velocityDetection.dir/src/velocityTracking.cpp.o: ../includes/VelocityData.hpp
-CMakeFiles/velocityDetection.dir/src/velocityTracking.cpp.o: ../includes/VerticalData.hpp
-CMakeFiles/velocityDetection.dir/src/velocityTracking.cpp.o: ../includes/bmp180.h
-CMakeFiles/velocityDetection.dir/src/velocityTracking.cpp.o: ../includes/lidarLite.h
-CMakeFiles/velocityDetection.dir/src/velocityTracking.cpp.o: ../includes/output.h
-CMakeFiles/velocityDetection.dir/src/velocityTracking.cpp.o: ../includes/sensor.h
-CMakeFiles/velocityDetection.dir/src/velocityTracking.cpp.o: ../src/velocityTracking.cpp
 
