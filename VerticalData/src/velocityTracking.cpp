@@ -58,6 +58,10 @@ void heightReporting(VerticalData &vertDataRef, bool &exit_flag)
 		cout << "fast Height";
 		vertDataRef.printAll();
 		count++;
+
+		const auto loop_timer = duration_cast<milliseconds>(system_clock::now() - start).count();
+		cout << "height loop duration: " << loop_timer << endl;
+		
 		//stop reporting for start time + 0.1 seconds
 		this_thread::sleep_until(start + milliseconds(100));
 	}
