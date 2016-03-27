@@ -17,6 +17,7 @@
 #include "../includes/VerticalData.hpp"
 #include "../includes/VelocityData.hpp"
 
+
 extern "C" {
 #include "../includes/output.h"
 #include "../includes/sensor.h"
@@ -29,6 +30,8 @@ extern "C" {
 #include <thread>
 #include <chrono>
 #include <ctime>
+
+#include <raspicam/raspicam_cv.h>
 
 
 using namespace std;
@@ -83,6 +86,11 @@ void testMain()
 	 * @todo initialize Sensors
 	 */
 
+	raspicam::RaspiCam_Cv Camera;	
+	cv::Mat image;
+	cv::Mat image2;
+	Camera.set( CV_CAP_PROP_FORMAT, CV_8UC1);
+	Camera.set( CV_CAP_PROP_EXPOSURE, 8.3)
 
 	/*** initialize the imu***/
 	signal(SIGINT, INThandler);
@@ -97,6 +105,22 @@ void testMain()
 		
 		//start time of loop
 		system_clock::time_point start = system_clock::now();
+
+		if(!Camera.open())
+			{
+				cerr<<"Error" << endl;
+				break;
+			}
+		
+		Camera.grab();
+		Camera.retrieve(image);
+		
+		Camera.grab();
+		Camera.retrieve(image2);
+
+		Camera.release();
+
+	//	cv::imwrite("test_img.jpg", image);
 
 		/**temp storage variables for pitch and roll
 		*gyr_x roll velocity

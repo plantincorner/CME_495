@@ -90,26 +90,6 @@ linux/i2c-dev.h
 LSM9DS0.h
 /home/pi/CME_495/Project/CME_495/VerticalData/includes/LSM9DS0.h
 
-/home/pi/CME_495/Project/CME_495/VerticalData/includes/velocityCalculate.hpp
-opencv2/video/tracking.hpp
--
-opencv2/imgproc/imgproc.hpp
--
-opencv2/highgui/highgui.hpp
--
-iostream
--
-ctype.h
--
-iomanip
--
-random
--
-
-/home/pi/CME_495/Project/CME_495/VerticalData/src/velocityCalculate.cpp
-../includes/velocityCalculate.hpp
-/home/pi/CME_495/Project/CME_495/VerticalData/includes/velocityCalculate.hpp
-
 /home/pi/CME_495/Project/CME_495/VerticalData/src/velocityTracking.cpp
 ../includes/Height.hpp
 /home/pi/CME_495/Project/CME_495/VerticalData/includes/Height.hpp
@@ -134,5 +114,7 @@ thread
 chrono
 -
 ctime
+-
+raspicam/raspicam_cv.h
 -
 
