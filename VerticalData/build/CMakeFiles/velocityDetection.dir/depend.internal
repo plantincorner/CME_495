@@ -8,14 +8,14 @@ CMakeFiles/velocityDetection.dir/src/lidarLite.c.o
  /home/pi/CME_495/Project/CME_495/VerticalData/includes/lidarLite.h
  /home/pi/CME_495/Project/CME_495/VerticalData/src/lidarLite.c
 CMakeFiles/velocityDetection.dir/src/output.c.o
+ /home/pi/CME_495/Project/CME_495/VerticalData/includes/LSM9DS0.h
  /home/pi/CME_495/Project/CME_495/VerticalData/includes/output.h
+ /home/pi/CME_495/Project/CME_495/VerticalData/includes/sensor.h
  /home/pi/CME_495/Project/CME_495/VerticalData/src/output.c
 CMakeFiles/velocityDetection.dir/src/sensor.c.o
  /home/pi/CME_495/Project/CME_495/VerticalData/includes/LSM9DS0.h
  /home/pi/CME_495/Project/CME_495/VerticalData/includes/sensor.h
  /home/pi/CME_495/Project/CME_495/VerticalData/src/sensor.c
-CMakeFiles/velocityDetection.dir/src/EE495_Project_Implementation.cpp.o
- /home/pi/CME_495/Project/CME_495/VerticalData/src/EE495_Project_Implementation.cpp
 CMakeFiles/velocityDetection.dir/src/Height.cpp.o
  /home/pi/CME_495/Project/CME_495/VerticalData/includes/Height.hpp
  /home/pi/CME_495/Project/CME_495/VerticalData/includes/TimedData.hpp

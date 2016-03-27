@@ -6,7 +6,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/velocityDetection.dir/src/output.c.o"
   "CMakeFiles/velocityDetection.dir/src/VerticalData.cpp.o"
   "CMakeFiles/velocityDetection.dir/src/sensor.c.o"
-  "CMakeFiles/velocityDetection.dir/src/EE495_Project_Implementation.cpp.o"
   "CMakeFiles/velocityDetection.dir/src/bmp180.c.o"
   "CMakeFiles/velocityDetection.dir/src/TimedData.cpp.o"
   "CMakeFiles/velocityDetection.dir/src/VelocityData.cpp.o"

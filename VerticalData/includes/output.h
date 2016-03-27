@@ -1,6 +1,7 @@
 #ifndef OUTPUT_H
 #define OUTPUT_H
 
+#include "sensor.h"
 #include <unistd.h>
 #include <math.h>
 #include <stdio.h>

@@ -117,7 +117,7 @@ void enableIMU()
 
 		//__u16 block[I2C_SMBUS_BLOCK_MAX];
 
-        int res, bus,  size;
+//        int res, bus,  size;
 
         char filename[20];
         sprintf(filename, "/dev/i2c-%d", 1);

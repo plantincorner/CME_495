@@ -7,14 +7,14 @@ CMakeFiles/velocityDetection.dir/src/bmp180.c.o: ../src/bmp180.c
 CMakeFiles/velocityDetection.dir/src/lidarLite.c.o: ../includes/lidarLite.h
 CMakeFiles/velocityDetection.dir/src/lidarLite.c.o: ../src/lidarLite.c
 
+CMakeFiles/velocityDetection.dir/src/output.c.o: ../includes/LSM9DS0.h
 CMakeFiles/velocityDetection.dir/src/output.c.o: ../includes/output.h
+CMakeFiles/velocityDetection.dir/src/output.c.o: ../includes/sensor.h
 CMakeFiles/velocityDetection.dir/src/output.c.o: ../src/output.c
 
 CMakeFiles/velocityDetection.dir/src/sensor.c.o: ../includes/LSM9DS0.h
 CMakeFiles/velocityDetection.dir/src/sensor.c.o: ../includes/sensor.h
 CMakeFiles/velocityDetection.dir/src/sensor.c.o: ../src/sensor.c
-
-CMakeFiles/velocityDetection.dir/src/EE495_Project_Implementation.cpp.o: ../src/EE495_Project_Implementation.cpp
 
 CMakeFiles/velocityDetection.dir/src/Height.cpp.o: ../includes/Height.hpp
 CMakeFiles/velocityDetection.dir/src/Height.cpp.o: ../includes/TimedData.hpp

@@ -115,30 +115,6 @@ velocityDetection/fast:
 	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/build
 .PHONY : velocityDetection/fast
 
-src/EE495_Project_Implementation.o: src/EE495_Project_Implementation.cpp.o
-.PHONY : src/EE495_Project_Implementation.o
-
-# target to build an object file
-src/EE495_Project_Implementation.cpp.o:
-	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/EE495_Project_Implementation.cpp.o
-.PHONY : src/EE495_Project_Implementation.cpp.o
-
-src/EE495_Project_Implementation.i: src/EE495_Project_Implementation.cpp.i
-.PHONY : src/EE495_Project_Implementation.i
-
-# target to preprocess a source file
-src/EE495_Project_Implementation.cpp.i:
-	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/EE495_Project_Implementation.cpp.i
-.PHONY : src/EE495_Project_Implementation.cpp.i
-
-src/EE495_Project_Implementation.s: src/EE495_Project_Implementation.cpp.s
-.PHONY : src/EE495_Project_Implementation.s
-
-# target to generate assembly for a file
-src/EE495_Project_Implementation.cpp.s:
-	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/EE495_Project_Implementation.cpp.s
-.PHONY : src/EE495_Project_Implementation.cpp.s
-
 src/Height.o: src/Height.cpp.o
 .PHONY : src/Height.o
 
@@ -388,9 +364,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... velocityDetection"
-	@echo "... src/EE495_Project_Implementation.o"
-	@echo "... src/EE495_Project_Implementation.i"
-	@echo "... src/EE495_Project_Implementation.s"
 	@echo "... src/Height.o"
 	@echo "... src/Height.i"
 	@echo "... src/Height.s"

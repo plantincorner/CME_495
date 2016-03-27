@@ -45,7 +45,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
     // Read distance in cm from LidarLite
     int lidar_read(int fd) {
-           int hiVal, loVal, i=0;
+           int hiVal, loVal/*, i=0*/;
            
            // send "measure" command
            hiVal = wiringPiI2CWriteReg8(fd, MEASURE_REG, MEASURE_VAL);
@@ -122,7 +122,7 @@ unsigned char  _read_byte_raw(int fd, int reg, bool allowZero) {
 
 void LIDAR_LITE_(int *res, int fd){
 	
-unsigned char st, ver;
+//unsigned char st, ver;//for error checking
 	
     if (fd == -1) {
         printf("initialization error\n");

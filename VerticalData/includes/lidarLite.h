@@ -27,6 +27,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.*/
 #include <stdio.h>
 #include <wiringPiI2C.h>
 #include <stdbool.h>
+#include <wiringPi.h>
 
 #define LIDAR_LITE_ADRS 0x62
 
