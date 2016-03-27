@@ -37,7 +37,7 @@ extern "C" {
 using namespace std;
 using namespace chrono;
 using namespace this_thread;
-
+using namespace cv;
 
 /** Get height data every 0.1 seconds
  * @pre a thread has been created and id assigned
@@ -87,10 +87,10 @@ void testMain()
 	 */
 
 	raspicam::RaspiCam_Cv Camera;	
-	cv::Mat image;
-	cv::Mat image2;
+	Mat image;
+	Mat image2;
 	Camera.set( CV_CAP_PROP_FORMAT, CV_8UC1);
-	Camera.set( CV_CAP_PROP_EXPOSURE, 8.3)
+	Camera.set( CV_CAP_PROP_EXPOSURE, 8.3);
 
 	/*** initialize the imu***/
 	signal(SIGINT, INThandler);
