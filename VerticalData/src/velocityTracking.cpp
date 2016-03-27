@@ -81,8 +81,8 @@ void testMain()
 
 
 	/*** initialize the imu***/
-	//signal(SIGINT, INThandler);
-	//enableIMU();
+	signal(SIGINT, INThandler);
+	enableIMU();
 
 	/***Create thread for reporting height 10X per sec ***/
 	thread one (heightReporting,ref(frequentHeight) ,ref(exit_flag));
@@ -113,7 +113,7 @@ void testMain()
 		vD.setPreviousVelocity(previousVelocity);
 		
 		/**Accuire pitch, roll and there respective velocities**/
-		//ACCGYR( &gyr_x, &gyr_y, &acc_x, &acc_y);
+		ACCGYR( &gyr_x, &gyr_y, &acc_x, &acc_y);
 		vD.setRollVelocity(gyr_x);
 		vD.setPitchVelocity(gyr_y);
 		vD.setRoll(acc_x);
@@ -136,13 +136,13 @@ void testMain()
 }
 
 
-/*
+
 int main()
 {
 	testMain();
 	return 0;
 }
-*/
+
 
 
 

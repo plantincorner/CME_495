@@ -6,23 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/home/pi/CME_495/Project/CME_495/VerticalData/includes/LSM9DS0.h
-
-/home/pi/CME_495/Project/CME_495/VerticalData/includes/sensor.h
-stdint.h
--
-stdio.h
--
-stdlib.h
--
-fcntl.h
--
-linux/i2c-dev.h
-/home/pi/CME_495/Project/CME_495/VerticalData/includes/linux/i2c-dev.h
-LSM9DS0.h
-/home/pi/CME_495/Project/CME_495/VerticalData/includes/LSM9DS0.h
-
-/home/pi/CME_495/Project/CME_495/VerticalData/src/sensor.c
-../includes/sensor.h
-/home/pi/CME_495/Project/CME_495/VerticalData/includes/sensor.h
-

@@ -693,7 +693,3 @@ int calculateAlmostEverythingAtOnce(double cameraElevation,double pixelHeight,in
 	// releases and window destroy are automatic in C++ interface
 	return 0;
 }
-int main()
-{
-	return 0;
-}
