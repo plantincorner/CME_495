@@ -1,15 +1,9 @@
-#include <opencv2/video/tracking.hpp>
-#include <opencv2/imgproc/imgproc.hpp>
-#include <opencv2/highgui/highgui.hpp>
-
-#include <iostream>
-#include <ctype.h>
-#include <iomanip>
-#include <random>
+#include "../includes/velocityCalculate.hpp"
 
 using namespace cv;
 using namespace std;
 
+#define PIXEL_SIZE 0.002
 
 //camera settings
 //double cameraElevation;	//meters above ground
@@ -427,13 +421,14 @@ Mat myEntropy(Mat seq, int histSize)
 }
 //////// END ENTROPY CALCULATIONS ///////////////////////////
 
-int calculateAlmostEverythingAtOnce(double cameraElevation,double pixelHeight,int frameRate, int frameCount, double pitch, double roll, double wPitch, double wRoll, double Vx, double Vy, double Vz, double speed, double actualSpeed  )
+void calculateAEAO(Mat prevGray, Mat nextGray, double cameraElevation,int frameRate, double pitch, double roll, double wPitch, double wRoll, double &Vx, double &Vy, double &Vz, double &speed, double &direction  )
 {
+	double groundSensorDistance = cameraElevation*sqrt(pow(tan(abs(pitch)),2)+pow(tan(abs(roll)),2)+1);
+	double pixelHeight =groundSensorDistance * PIXEL_SIZE;
 	//Get video from file
-	VideoCapture capture(videos[videoNum]);
+//	VideoCapture capture(videos[videoNum]);
 
 	//We need to know the frame rate. Maybe just set to 120 for now?
-	frameRate = 120;
 
 	/***** TESTING ************
 	frameRate = capture.get(CV_CAP_PROP_FPS);	//get frame rate
@@ -446,7 +441,8 @@ int calculateAlmostEverythingAtOnce(double cameraElevation,double pixelHeight,in
 
 
 	//video frames
-	Mat prevFrame, nextFrame, prevGray, nextGray;
+	//Mat prevFrame, nextFrame, 
+	//Mat prevGray, nextGray;
 	Mat reducedPrevGray, reducedNextGray;	//2x2 pixel average of original images
 
 	/*
@@ -479,7 +475,7 @@ int calculateAlmostEverythingAtOnce(double cameraElevation,double pixelHeight,in
 
 
 
-	int i,j,k;
+	int i,j;//,k;
 //	for(k=0;k<frameCount-1;k++){
 
 		/* TESTING **********************************
@@ -503,11 +499,10 @@ int calculateAlmostEverythingAtOnce(double cameraElevation,double pixelHeight,in
 		nextFrame.copyTo(prevFrame);
 		capture >> nextFrame;
 */
-
 		//COMMENT THIS OUT IF THE FRAMES YOU SEND ARE ALREADY GRAYSCALE
 		//convert frames to grayscale
-		cvtColor(prevFrame, prevGray, COLOR_BGR2GRAY);
-		cvtColor(nextFrame, nextGray, COLOR_BGR2GRAY);
+		//cvtColor(prevFrame, prevGray, COLOR_BGR2GRAY);
+		//cvtColor(nextFrame, nextGray, COLOR_BGR2GRAY);
 
 		//take a 4 pixel average of each frame
 		fourPixelAverage(prevGray, reducedPrevGray);
@@ -545,13 +540,12 @@ int calculateAlmostEverythingAtOnce(double cameraElevation,double pixelHeight,in
 		vector<uchar> status;
 		vector<float> err;
 		TermCriteria termcrit(TermCriteria::COUNT|TermCriteria::EPS,20,0.03);
-
 		//int prevLevels = buildOpticalFlowPyramid(reducedPrevGray,prevPyr,winSize,2);//,true,1,1,true);
 		buildOpticalFlowPyramid(reducedPrevGray,prevPyr,winSize,2);
+
 		//int nextLevels = buildOpticalFlowPyramid(reducedNextGray,nextPyr,winSize,2);//,true,1,1,true);
 		buildOpticalFlowPyramid(reducedNextGray,nextPyr,winSize,2);
-		calcOpticalFlowPyrLK(prevPyr, nextPyr, prevPts, nextPts, status, err, winSize,
-				3, termcrit, 0, 0.001);
+		calcOpticalFlowPyrLK(prevPyr, nextPyr, prevPts, nextPts, status, err, winSize, 3, termcrit, 0, 0.001);
 
 		Scalar vels;
 		vector<Point2f> distance;
@@ -599,7 +593,6 @@ int calculateAlmostEverythingAtOnce(double cameraElevation,double pixelHeight,in
 		//switch equation based on height
 //		if (cameraElevation + elevationNoise<1) below1m = true;
 //		else if (cameraElevation + elevationNoise>1.2) below1m = false;
-
 		if (cameraElevation<1) below1m = true;
 		else below1m = false;
 
@@ -636,7 +629,7 @@ int calculateAlmostEverythingAtOnce(double cameraElevation,double pixelHeight,in
 		////////////////////////////////////////////////////////
 		//Display results
 		/*****************************************************/
-		cout << "Frame " << right << setw(4) << k << " to " << right << setw(4) << k+1 << "\t";
+	//	cout << "Frame " << right << setw(4) << k << " to " << right << setw(4) << k+1 << "\t";
 
 		cout << "Vx =  ";
 		if (Vx < 0) cout << "-" 		<< fixed << setw(6) << setprecision(3) << -Vx;
@@ -696,11 +689,6 @@ int calculateAlmostEverythingAtOnce(double cameraElevation,double pixelHeight,in
 **************************************/
 
 
-	waitKey(0); // key press to close window
+	//waitKey(0); // key press to close window
 	// releases and window destroy are automatic in C++ interface
-	return 0;
-}
-int main()
-{
-	return 0;
 }

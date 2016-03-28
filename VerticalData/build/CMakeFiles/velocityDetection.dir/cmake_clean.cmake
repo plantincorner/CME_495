@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/velocityDetection.dir/src/velocityTracking.cpp.o"
+  "CMakeFiles/velocityDetection.dir/src/velocityCalculate.cpp.o"
   "CMakeFiles/velocityDetection.dir/src/Height.cpp.o"
   "CMakeFiles/velocityDetection.dir/src/lidarLite.c.o"
   "CMakeFiles/velocityDetection.dir/src/output.c.o"

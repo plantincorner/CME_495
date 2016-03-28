@@ -7,7 +7,7 @@
 //#include "CME_diagram/VelocityData.h"
 #include "../includes/VelocityData.hpp"
 
-
+using namespace cv;
 /**
  *@todo constructor can be ommited if not overloaded
  *
@@ -123,19 +123,24 @@ float VelocityData::getFrameRate()
 	return this->frameRate;
 }
 
-void VelocityData::setImage_1(uint8_t image[])
+void VelocityData::setImage_1(Mat image)
 {
-	//this->image_1 = image;
+	this->image_1.copyTo(image);
 }
-/*
-uint8_t* VelocityData::getImage_1(uint8_t* image_1)
+
+Mat VelocityData::getImage_1()
 {
 	return this->image_1;
 }
-*/
-void VelocityData::setImage_2(uint8_t image[])
+
+void VelocityData::setImage_2(Mat image)
 {
-	//this->image_2 = image;
+	this->image_2.copyTo(image);
+}
+
+Mat VelocityData::getImage_2()
+{
+	return this->image_2;
 }
 
 void VelocityData::setConfidenceFactor(float factor)
@@ -154,8 +159,8 @@ void VelocityData::init()
 	this->setCurrentVelocity(0);
 	this->setFrameRate(0);
 	this->setHeight(0);
-	this->setImage_1(0);
-	this->setImage_2(0);
+//	this->setImage_1(0);
+//	this->setImage_2(0);
 	this->setPitch(0);
 	this->setPitchVelocity(0);
 	this->setPreviousVelocity(0);

@@ -7,7 +7,7 @@ C_FLAGS =  -g -Wall -lwiringPi -I/home/pi/CME_495/Project/CME_495/VerticalData/i
 
 C_DEFINES = 
 
-CXX_FLAGS =  -g -Wall -std=c++11 -pthread -lwiringPi -I/home/pi/CME_495/Project/CME_495/VerticalData/includes   
+CXX_FLAGS =  -g -Wall -std=c++11 -pthread -I/usr/local/include -L/opt/vc/lib -lraspicam -lraspicam_cv -lmmal -lmmal_core -lmmal_util -lopencv_highgui -lopencv_video -lopencv_imgproc -lopencv_core -lwiringPi -I/home/pi/CME_495/Project/CME_495/VerticalData/includes   
 
 CXX_DEFINES = 
 

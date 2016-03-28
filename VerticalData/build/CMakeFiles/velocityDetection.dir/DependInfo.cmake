@@ -16,6 +16,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/pi/CME_495/Project/CME_495/VerticalData/src/TimedData.cpp" "/home/pi/CME_495/Project/CME_495/VerticalData/build/CMakeFiles/velocityDetection.dir/src/TimedData.cpp.o"
   "/home/pi/CME_495/Project/CME_495/VerticalData/src/VelocityData.cpp" "/home/pi/CME_495/Project/CME_495/VerticalData/build/CMakeFiles/velocityDetection.dir/src/VelocityData.cpp.o"
   "/home/pi/CME_495/Project/CME_495/VerticalData/src/VerticalData.cpp" "/home/pi/CME_495/Project/CME_495/VerticalData/build/CMakeFiles/velocityDetection.dir/src/VerticalData.cpp.o"
+  "/home/pi/CME_495/Project/CME_495/VerticalData/src/velocityCalculate.cpp" "/home/pi/CME_495/Project/CME_495/VerticalData/build/CMakeFiles/velocityDetection.dir/src/velocityCalculate.cpp.o"
   "/home/pi/CME_495/Project/CME_495/VerticalData/src/velocityTracking.cpp" "/home/pi/CME_495/Project/CME_495/VerticalData/build/CMakeFiles/velocityDetection.dir/src/velocityTracking.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

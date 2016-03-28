@@ -19,19 +19,19 @@ void ACCGYR(float *gyr_x, float *gyr_y, float *acc_x, float *acc_y)
 {
 	float rate_gyr_y = 0.0;   // [deg/s]
 	float rate_gyr_x = 0.0;    // [deg/s]
-	float rate_gyr_z = 0.0;     // [deg/s]
+//	float rate_gyr_z = 0.0;     // [deg/s]
 
 	int  accRaw[3];
-	int  magRaw[3];
+//	int  magRaw[3];
 	int  gyrRaw[3];
 
-	float gyroXangle = 0.0;
-	float gyroYangle = 0.0;
-	float gyroZangle = 0.0;
+//	float gyroXangle = 0.0;
+//	float gyroYangle = 0.0;
+//	float gyroZangle = 0.0;
 	float AccYangle = 0.0;
 	float AccXangle = 0.0;
-	float CFangleX = 0.0;
-	float CFangleY = 0.0;
+//	float CFangleX = 0.0;
+//	float CFangleY = 0.0;
 
 	//read ACC and GYR data
 	readACC(accRaw);
@@ -40,7 +40,7 @@ void ACCGYR(float *gyr_x, float *gyr_y, float *acc_x, float *acc_y)
 	//Convert Gyro raw to degrees per second
 	rate_gyr_x = (float) gyrRaw[0] * G_GAIN;
 	rate_gyr_y = (float) gyrRaw[1]  * G_GAIN;
-	rate_gyr_z = (float) gyrRaw[2]  * G_GAIN;
+//	rate_gyr_z = (float) gyrRaw[2]  * G_GAIN;
 
 	//Convert Accelerometer values to degrees
 	AccXangle = (float) (atan2(accRaw[1],accRaw[2])+M_PI)*RAD_TO_DEG;
@@ -65,10 +65,10 @@ void ACCGYR(float *gyr_x, float *gyr_y, float *acc_x, float *acc_y)
 	else
 		AccYangle += (float)90;
 
-	//return values;
-	*gyr_x = rate_gyr_x;
-	*gyr_y = rate_gyr_y;
-	*acc_x = AccXangle;
-	*acc_y = AccYangle;
+	//return values (radians);
+	*gyr_x = rate_gyr_x*(M_PI/180);
+	*gyr_y = rate_gyr_y*(M_PI/180);
+	*acc_x = AccXangle*(M_PI/180);
+	*acc_y = AccYangle*(M_PI/180);
 
 }

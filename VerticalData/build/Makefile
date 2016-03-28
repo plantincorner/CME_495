@@ -307,6 +307,30 @@ src/sensor.c.s:
 	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/sensor.c.s
 .PHONY : src/sensor.c.s
 
+src/velocityCalculate.o: src/velocityCalculate.cpp.o
+.PHONY : src/velocityCalculate.o
+
+# target to build an object file
+src/velocityCalculate.cpp.o:
+	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/velocityCalculate.cpp.o
+.PHONY : src/velocityCalculate.cpp.o
+
+src/velocityCalculate.i: src/velocityCalculate.cpp.i
+.PHONY : src/velocityCalculate.i
+
+# target to preprocess a source file
+src/velocityCalculate.cpp.i:
+	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/velocityCalculate.cpp.i
+.PHONY : src/velocityCalculate.cpp.i
+
+src/velocityCalculate.s: src/velocityCalculate.cpp.s
+.PHONY : src/velocityCalculate.s
+
+# target to generate assembly for a file
+src/velocityCalculate.cpp.s:
+	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/velocityCalculate.cpp.s
+.PHONY : src/velocityCalculate.cpp.s
+
 src/velocityTracking.o: src/velocityTracking.cpp.o
 .PHONY : src/velocityTracking.o
 
@@ -364,6 +388,9 @@ help:
 	@echo "... src/sensor.o"
 	@echo "... src/sensor.i"
 	@echo "... src/sensor.s"
+	@echo "... src/velocityCalculate.o"
+	@echo "... src/velocityCalculate.i"
+	@echo "... src/velocityCalculate.s"
 	@echo "... src/velocityTracking.o"
 	@echo "... src/velocityTracking.i"
 	@echo "... src/velocityTracking.s"
