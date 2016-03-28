@@ -26,7 +26,7 @@ float entropy(Mat seq, Size size, int index);
 
 Mat myEntropy(Mat seq, int histSize);
 
-int calculateAlmostEverythingAtOnce(double cameraElevation,double pixelHeight,int frameRate, int frameCount, double pitch, double roll, double wPitch, double wRoll, double Vx, double Vy, double Vz, double speed, double actualSpeed  );
+void calculateAEAO(Mat prevGray, Mat nextGray, double cameraElevation,int frameRate, double pitch, double roll, double wPitch, double wRoll, double &Vx, double &Vy, double &Vz, double &speed, double &direction  );
 
 
 #endif /* INCLUDES_VELOCITYCALCULATE_HPP_ */

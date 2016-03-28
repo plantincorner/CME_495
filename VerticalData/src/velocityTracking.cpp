@@ -16,7 +16,7 @@
 #include "../includes/Height.hpp"
 #include "../includes/VerticalData.hpp"
 #include "../includes/VelocityData.hpp"
-
+#include "../includes/velocityCalculate.hpp"
 
 extern "C" {
 #include "../includes/output.h"
@@ -33,35 +33,39 @@ extern "C" {
 
 #include <raspicam/raspicam_cv.h>
 
+#define FRAME_RATE 90
 
 using namespace std;
 using namespace chrono;
 using namespace this_thread;
 using namespace cv;
 
-
-void twoImageCapture(Mat &image_1, Mat &image_2)
+void initializeCamera(raspicam::RaspiCam_Cv &Camera)
 {
-	
-		raspicam::RaspiCam_Cv Camera;	
 		Camera.set( CV_CAP_PROP_FORMAT, CV_8UC1);
 		Camera.set( CV_CAP_PROP_GAIN, 100);
 	//	Camera.set( CV_CAP_PROP_CONTRAST, 55);
 	//	Camera.set( CV_CAP_PROP_BRIGHTNESS, 50);
 	//	Camera.set( CV_CAP_PROP_EXPOSURE, 33);
 	cout << Camera.get(CV_CAP_PROP_FRAME_WIDTH) << ", " << Camera.get(CV_CAP_PROP_FRAME_HEIGHT) <<endl;
+}
+void twoImageCapture(raspicam::RaspiCam_Cv &Camera, Mat &image_1, Mat &image_2)
+{
+	
+		system_clock::time_point start = system_clock::now();
 		if(!Camera.open())
 			{
-				cerr<<"Error" << endl;
+				cerr<<"Error: Camera not open" << endl;
 			}
 		else
 			{
-		
-				system_clock::time_point start = system_clock::now();
+				for(int i = 0; i < 10; i++)
+				{	
 				
-				Camera.grab();
+					Camera.grab();
+				}
 				Camera.retrieve(image_1);
-		
+					
 				const auto loop_timer = duration_cast<milliseconds>(system_clock::now() - start).count();
 				cout << "frame time: " << loop_timer << endl;
 				Camera.grab();
@@ -93,7 +97,7 @@ void heightReporting(VerticalData &vertDataRef, bool &exit_flag)
 
 		//Create Height object with sensor data and store in a VerticalData object
 		vertDataRef.placeHeight(count,duration_cast<microseconds>(start.time_since_epoch()));
-		cout << "fast Height";
+		cout << "fast Height"<< endl;
 		vertDataRef.printAll();
 		count++;
 
@@ -116,14 +120,17 @@ void testMain()
 	VerticalData frequentHeight;
 	
 	//hold the calculated velocity for use in the next iteration
-	double previousVelocity = 0;
+	//double previousVelocity = 0;// needed for calculating framerate
 
 	/**
 	 * @todo initialize Sensors
 	 */
 
-	Mat image;
-	Mat image2;
+
+	Mat image_1;
+	Mat image_2;
+	raspicam::RaspiCam_Cv Camera;
+	initializeCamera(Camera);
 
 	/*** initialize the imu***/
 	signal(SIGINT, INThandler);
@@ -133,7 +140,7 @@ void testMain()
 	thread one (heightReporting,ref(frequentHeight) ,ref(exit_flag));
 	one.detach();
 
-	for(int i = 0; i < 10; i++)
+	for(int i = 0; i < 5; i++)
 	{
 		
 		//start time of loop
@@ -149,28 +156,48 @@ void testMain()
 		*/
 		float gyr_x, gyr_y, acc_x, acc_y = 0;
 
+		double vx,vz, vy, spd, direction = 0;
+
 
 		//@todo remove cout for test
 		cout << "* "<< endl <<"starting new loop at time"<< duration_cast<microseconds>(start.time_since_epoch()).count() << endl << "*" << endl;
-		cout << "Velocity Test: "<< i << " Previous Velocity: " << previousVelocity << endl;
+		cout << "Velocity Test: "<< i << endl;
 		
 		
-		VelocityData vD;
-		vD.setPreviousVelocity(previousVelocity);
+		//VelocityData vD;
+		//vD.setPreviousVelocity(previousVelocity);// needed for setting framerate
 		
 		/**Accuire pitch, roll and there respective velocities**/
 		ACCGYR( &gyr_x, &gyr_y, &acc_x, &acc_y);
+		
+		/**Aquire Vertical Velocity*/
+		//vz = frequentHeight.getVelocity();
+		
+	/**	Functions for setting data structure
 		vD.setRollVelocity(gyr_x);
 		vD.setPitchVelocity(gyr_y);
 		vD.setRoll(acc_x);
 		vD.setPitch(acc_y);
-
-		/**Print results to console **/
-		vD.printAll();
 		
+		vD.setVerticalVelocity(frequentHeight.getVelocity())
+	*/
+		/** Aquire images(X2) */
+		twoImageCapture(Camera, image_1, image_2);
+	//	vD.setImage_1(image_1);
+	//	vD.setImage_2(image_2);
+		/**Print results to console **/
+//		vD.printAll();
+		
+		cv::imwrite("test_img1.jpg", image_1);
+		cv::imwrite("test_img2.jpg", image_2);
+		
+		cout<<"*************Beginning Velocity Calculation**************"<<endl;
+		calculateAEAO(image_1, image_2, 10, FRAME_RATE, acc_y, acc_x, gyr_x, gyr_y, vx, vy, vz, spd, direction );
+
+		cout<<"++++++++++++++End Hight Calculation+++++++++++++++++++"<<endl;
 		/**@todo remove loop timer**/
 		const auto loop_timer = duration_cast<milliseconds>(system_clock::now() - start).count();
-		cout << "loop duration: " << loop_timer << endl;
+		cout << "main loop duration: " << loop_timer << endl;
 
 		/**wait until 1s has passed to get velocity every second**/
 		sleep_until(start + milliseconds(1000));
@@ -184,12 +211,9 @@ void testMain()
 
 
 int main()
+
 {
-	Mat image_1;
-	Mat image_2;
-	twoImageCapture(image_1, image_2);
-	cv::imwrite("test_img1.jpg", image_1);
-	cv::imwrite("test_img2.jpg", image_2);
+	testMain();
 	return 0;
 }
 
