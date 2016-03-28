@@ -66,9 +66,9 @@ void ACCGYR(float *gyr_x, float *gyr_y, float *acc_x, float *acc_y)
 		AccYangle += (float)90;
 
 	//return values;
-	*gyr_x = rate_gyr_x;
-	*gyr_y = rate_gyr_y;
-	*acc_x = AccXangle;
-	*acc_y = AccYangle;
+	*gyr_x = rate_gyr_x*(M_PI/180);
+	*gyr_y = rate_gyr_y*(M_PI/180);
+	*acc_x = AccXangle*(M_PI/180);
+	*acc_y = AccYangle*(M_PI/180);
 
 }

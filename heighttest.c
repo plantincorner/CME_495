@@ -63,7 +63,7 @@ int main()
 	LIDAR_LITE_(&res,fd);
 
 	//calculating height with changing distance and angles (height should stay constant in an ideal situation)
-	height = (res*cos(abs(acc_x)*(M_PI/180))*cos(abs(acc_y)*(M_PI/180))) / (sqrt(pow(cos(abs(acc_x)*(M_PI/180)),2) + pow(sin(abs(acc_x)*(M_PI/180)),2) + pow(cos(abs(acc_y)*(M_PI/180)),2)));
+	height = (res*cos(abs(acc_x))*cos(abs(acc_y))) / (sqrt(pow(cos(abs(acc_x)),2) + pow(sin(abs(acc_x)),2) + pow(cos(abs(acc_y)),2)));
 	comp_height = height + 0.5*height; //I added this because it makes it work
 
 	if (comp_height <= ALT_SENS_CHNG){
