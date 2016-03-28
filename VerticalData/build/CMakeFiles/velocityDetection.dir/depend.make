@@ -7,6 +7,14 @@ CMakeFiles/velocityDetection.dir/src/bmp180.c.o: ../src/bmp180.c
 CMakeFiles/velocityDetection.dir/src/lidarLite.c.o: ../includes/lidarLite.h
 CMakeFiles/velocityDetection.dir/src/lidarLite.c.o: ../src/lidarLite.c
 
+CMakeFiles/velocityDetection.dir/src/mega_sensor.c.o: ../includes/LSM9DS0.h
+CMakeFiles/velocityDetection.dir/src/mega_sensor.c.o: ../includes/bmp180.h
+CMakeFiles/velocityDetection.dir/src/mega_sensor.c.o: ../includes/lidarLite.h
+CMakeFiles/velocityDetection.dir/src/mega_sensor.c.o: ../includes/mega_sensor.h
+CMakeFiles/velocityDetection.dir/src/mega_sensor.c.o: ../includes/output.h
+CMakeFiles/velocityDetection.dir/src/mega_sensor.c.o: ../includes/sensor.h
+CMakeFiles/velocityDetection.dir/src/mega_sensor.c.o: ../src/mega_sensor.c
+
 CMakeFiles/velocityDetection.dir/src/output.c.o: ../includes/LSM9DS0.h
 CMakeFiles/velocityDetection.dir/src/output.c.o: ../includes/output.h
 CMakeFiles/velocityDetection.dir/src/output.c.o: ../includes/sensor.h

@@ -1,3 +1,5 @@
+#ifndef BMP180_H
+#define BMP180_H
 /*
  * @author 	Alexander Rüedlinger <a.rueedlinger@gmail.com>
  * @date 	26.02.2015
@@ -45,4 +47,4 @@ float bmp180_altitude(void *_bmp);
 void bmp180_dump_eprom(void *_bmp, bmp180_eprom_t *eprom);
 
 void BAROTEMP(float *t, long *p);
-
+#endif

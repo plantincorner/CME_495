@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/home/pi/CME_495/Project/CME_495/VerticalData/src/bmp180.c" "/home/pi/CME_495/Project/CME_495/VerticalData/build/CMakeFiles/velocityDetection.dir/src/bmp180.c.o"
   "/home/pi/CME_495/Project/CME_495/VerticalData/src/lidarLite.c" "/home/pi/CME_495/Project/CME_495/VerticalData/build/CMakeFiles/velocityDetection.dir/src/lidarLite.c.o"
+  "/home/pi/CME_495/Project/CME_495/VerticalData/src/mega_sensor.c" "/home/pi/CME_495/Project/CME_495/VerticalData/build/CMakeFiles/velocityDetection.dir/src/mega_sensor.c.o"
   "/home/pi/CME_495/Project/CME_495/VerticalData/src/output.c" "/home/pi/CME_495/Project/CME_495/VerticalData/build/CMakeFiles/velocityDetection.dir/src/output.c.o"
   "/home/pi/CME_495/Project/CME_495/VerticalData/src/sensor.c" "/home/pi/CME_495/Project/CME_495/VerticalData/build/CMakeFiles/velocityDetection.dir/src/sensor.c.o"
   )

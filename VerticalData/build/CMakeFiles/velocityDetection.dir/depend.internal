@@ -7,6 +7,14 @@ CMakeFiles/velocityDetection.dir/src/bmp180.c.o
 CMakeFiles/velocityDetection.dir/src/lidarLite.c.o
  /home/pi/CME_495/Project/CME_495/VerticalData/includes/lidarLite.h
  /home/pi/CME_495/Project/CME_495/VerticalData/src/lidarLite.c
+CMakeFiles/velocityDetection.dir/src/mega_sensor.c.o
+ /home/pi/CME_495/Project/CME_495/VerticalData/includes/LSM9DS0.h
+ /home/pi/CME_495/Project/CME_495/VerticalData/includes/bmp180.h
+ /home/pi/CME_495/Project/CME_495/VerticalData/includes/lidarLite.h
+ /home/pi/CME_495/Project/CME_495/VerticalData/includes/mega_sensor.h
+ /home/pi/CME_495/Project/CME_495/VerticalData/includes/output.h
+ /home/pi/CME_495/Project/CME_495/VerticalData/includes/sensor.h
+ /home/pi/CME_495/Project/CME_495/VerticalData/src/mega_sensor.c
 CMakeFiles/velocityDetection.dir/src/output.c.o
  /home/pi/CME_495/Project/CME_495/VerticalData/includes/LSM9DS0.h
  /home/pi/CME_495/Project/CME_495/VerticalData/includes/output.h

@@ -120,7 +120,7 @@ unsigned char  _read_byte_raw(int fd, int reg, bool allowZero) {
     
 //added
 
-void LIDAR_LITE_(int *res, int fd){
+void LIDAR_LITE(int *res, int fd){
 	
 //unsigned char st, ver;//for error checking
 	

@@ -259,6 +259,30 @@ src/lidarLite.c.s:
 	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/lidarLite.c.s
 .PHONY : src/lidarLite.c.s
 
+src/mega_sensor.o: src/mega_sensor.c.o
+.PHONY : src/mega_sensor.o
+
+# target to build an object file
+src/mega_sensor.c.o:
+	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/mega_sensor.c.o
+.PHONY : src/mega_sensor.c.o
+
+src/mega_sensor.i: src/mega_sensor.c.i
+.PHONY : src/mega_sensor.i
+
+# target to preprocess a source file
+src/mega_sensor.c.i:
+	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/mega_sensor.c.i
+.PHONY : src/mega_sensor.c.i
+
+src/mega_sensor.s: src/mega_sensor.c.s
+.PHONY : src/mega_sensor.s
+
+# target to generate assembly for a file
+src/mega_sensor.c.s:
+	$(MAKE) -f CMakeFiles/velocityDetection.dir/build.make CMakeFiles/velocityDetection.dir/src/mega_sensor.c.s
+.PHONY : src/mega_sensor.c.s
+
 src/output.o: src/output.c.o
 .PHONY : src/output.o
 
@@ -382,6 +406,9 @@ help:
 	@echo "... src/lidarLite.o"
 	@echo "... src/lidarLite.i"
 	@echo "... src/lidarLite.s"
+	@echo "... src/mega_sensor.o"
+	@echo "... src/mega_sensor.i"
+	@echo "... src/mega_sensor.s"
 	@echo "... src/output.o"
 	@echo "... src/output.i"
 	@echo "... src/output.s"

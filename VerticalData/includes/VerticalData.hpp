@@ -10,6 +10,7 @@
 #include <cstdlib>
 #include <queue>
 #include <ctime>
+#include <iostream>
 #include "Height.hpp"
 
 using namespace std;
@@ -49,7 +50,7 @@ protected:
 private:
 	queue <Height> heights;
 
-	float velocity;
+	double velocity;
 };
 
 /************************************************************

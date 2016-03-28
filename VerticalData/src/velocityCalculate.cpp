@@ -3,7 +3,7 @@
 using namespace cv;
 using namespace std;
 
-#define PIXEL_SIZE 0.002
+#define PIXEL_SIZE 0.0016
 
 //camera settings
 //double cameraElevation;	//meters above ground
@@ -586,7 +586,7 @@ void calculateAEAO(Mat prevGray, Mat nextGray, double cameraElevation,int frameR
 		double ent = entropy(hist,src.size(), histSize);
 
 		//ENTROPY CONFIDENCE
-		entCon = exp(pow(ent,3.5/2)/40)-1;
+		entCon = exp(pow(ent,3.5/2)/20)-1;
 		if (entCon>1) entCon = 1;
 
 		//HEIGHT CONFIDENCE
@@ -625,6 +625,9 @@ void calculateAEAO(Mat prevGray, Mat nextGray, double cameraElevation,int frameR
 		if (actualSpeed < 0.001) speedError = 100;
 		else speedError = abs(speed-actualSpeed)/actualSpeed*100;
 		**************************************/
+		
+		// Direction Calculation
+		direction = atan2(Vx,Vy);	//radians with straight y being 0 and -y being pi. Straight x is pi/2 and -x is -pi/2
 
 		////////////////////////////////////////////////////////
 		//Display results
@@ -646,10 +649,9 @@ void calculateAEAO(Mat prevGray, Mat nextGray, double cameraElevation,int frameR
 
 		//confidence
 		cout << "   Confidence = " 		<< fixed << setw(6) << setprecision(3) << confidenceFactor;
-		cout << "   EntCon = " 			<< fixed << setw(6) << setprecision(3) << entCon;
-		cout << "   HeightCon = " 		<< fixed << setw(6) << setprecision(3) << heightCon;
-		cout << "   AttCon = " 			<< fixed << setw(6) << setprecision(3) << attCon;
-		cout << "   AngAttCon = " 		<< fixed << setw(6) << setprecision(3) << angAttCon << endl;
+
+		//direction
+		cout << "  Direction = " << direction << endl;
 
 		////////////////////////////////////////////////////////////////
 		//PLAY VIDEO

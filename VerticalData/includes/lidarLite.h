@@ -57,3 +57,4 @@ unsigned char  _read_byteNZ(int, int);
 unsigned char  _read_byte_raw(int, int, bool);
 unsigned char lidar_version(int) ;
 unsigned char lidar_status(int);
+void LIDAR_LITE(int *res, int fd);
