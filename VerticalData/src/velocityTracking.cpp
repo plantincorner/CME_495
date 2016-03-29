@@ -49,37 +49,38 @@ void initializeCamera(raspicam::RaspiCam_Cv &Camera)
 		Camera.set( CV_CAP_PROP_GAIN, 100);
 	//	Camera.set( CV_CAP_PROP_CONTRAST, 55);
 	//	Camera.set( CV_CAP_PROP_BRIGHTNESS, 50);
-	//	Camera.set( CV_CAP_PROP_EXPOSURE, 33);
+//		Camera.set( CV_CAP_PROP_EXPOSURE, 0);
 //	cout << Camera.get(CV_CAP_PROP_FRAME_WIDTH) << ", " << Camera.get(CV_CAP_PROP_FRAME_HEIGHT) <<endl;
 }
-void twoImageCapture( Mat &image_1, Mat &image_2)
+void twoImageCapture( Mat &image_1, Mat &image_2, bool &exit_flag, bool &ready_flag, bool &wait_flag)
 {
 	
 	raspicam::RaspiCam_Cv Camera;
 	initializeCamera(Camera);
-		//system_clock::time_point start = system_clock::now();
-		if(!Camera.open())
-			{
-				cerr<<"Error: Camera not open" << endl;
-			}
-		else
-			{
-				for(int i = 0; i < 7; i++)
-				{	
-				
-					Camera.grab();
-				}
-				Camera.retrieve(image_1);
+	
+	if(!Camera.open())
+	{
+		cerr<<"Error: Camera not open" << endl;
+	}
+
+	while (!exit_flag)
+	{	
+//		system_clock::time_point start = system_clock::now();
+		while(wait_flag){}	
+		ready_flag = false;
+		Camera.retrieve(image_1);
 					
-			//	const auto loop_timer = duration_cast<milliseconds>(system_clock::now() - start).count();
-//				cout << "frame time: " << loop_timer << endl;
-				Camera.grab();
-				Camera.retrieve(image_2);
-				
-		//		const auto loop_timer_2 = duration_cast<milliseconds>(system_clock::now() - start).count() ;
-			//	cout << "frame time 2: " << loop_timer_2<< endl;
-			}
-		Camera.release();
+			//const auto loop_timer = duration_cast<milliseconds>(system_clock::now() - start).count();
+//			cout << "frame time: " << loop_timer << endl;
+		Camera.grab();
+		Camera.retrieve(image_2);
+		ready_flag = true;		
+//		const auto loop_timer_2 = duration_cast<milliseconds>(system_clock::now() - start).count() ;
+//				cout << "two frame time: " << loop_timer_2<< endl;
+			
+	}
+
+	Camera.release();
 
 }
 
@@ -91,7 +92,7 @@ void twoImageCapture( Mat &image_1, Mat &image_2)
  * @post a Height object has been saved to disk
  */
 
-void heightReporting(VerticalData &vertDataRef, bool &exit_flag int lidar)
+void heightReporting(VerticalData &vertDataRef, bool &exit_flag, bool heightOut_flag, int lidar)
 {
 		float gyr_x, gyr_y, acc_x, acc_y, t, l_c, h;
 		long p, b_c;
@@ -107,34 +108,50 @@ void heightReporting(VerticalData &vertDataRef, bool &exit_flag int lidar)
 		MEGA_SENSOR(&gyr_x, &gyr_y, &acc_x, &acc_y, &t, &p, &l, &l_c, &b_c, &h, lidar);
 		
 		vertDataRef.placeHeight(h,duration_cast<microseconds>(start.time_since_epoch()));
-		cout << "Height: " << vertDataRef.getVelocity()<< endl;
+		
+		if (heightOut_flag)
+		{
+			cout << "Height: " << h << endl;
 
-		const auto loop_timer = duration_cast<milliseconds>(system_clock::now() - start).count();
+			const auto loop_timer = duration_cast<milliseconds>(system_clock::now() - start).count();
 		cout << "height loop duration: " << loop_timer << endl;
+		}
 		
 		//stop reporting for start time + 0.1 seconds
 		this_thread::sleep_until(start + milliseconds(100));
 	}
-	//cout<< "exit height reporting" << endl;
+	cout<< "exit height reporting" << endl;
 }
 
 //Test timing of thread running a every 0.1 seconds
-void testMain()
+int main(int argc, char *argv[])
 {
 	//Alert threads of exit
 	bool exit_flag = false;
 
 	//Object that stores Height objects and calculates velocity
 	VerticalData frequentHeight;
-	
+	bool heightOut_flag = true;
+	string heightOut = "noHeightOut";
+	if (argc > 1)
+	{
+	if(heightOut.compare(argv[1]) == 0)
+		{
+			cout << "Not reporting Height 10X per sec" << endl;
+			heightOut_flag = false;
+		}	
+
+	}
 	//hold the calculated velocity for use in the next iteration
 	//double previousVelocity = 0;// needed for calculating framerate
 
 	/**
 	 * @todo initialize Sensors
 	 */
-
-
+	
+	// stop camera from taking images
+	bool wait_flag = false;
+	bool ready_flag = false;
 	Mat image_1;
 	Mat image_2;
 
@@ -145,10 +162,11 @@ void testMain()
 	/**Initialize the Lidar**/
 	int lidar = lidar_init(false);
 	/***Create thread for reporting height 10X per sec ***/
-	thread one (heightReporting,ref(frequentHeight) ,ref(exit_flag), lidar);
+	thread one (heightReporting,ref(frequentHeight) ,ref(exit_flag), heightOut_flag, lidar);
 	one.detach();
 
-	thread two (twoImageCapture,ref(image_1, ref(image_2)))
+	thread two (twoImageCapture,ref(image_1), ref(image_2), ref(exit_flag), ref(ready_flag), ref(wait_flag));
+	two.detach();
 	for(int i = 0; i < 1000; i++)
 	{
 		
@@ -174,11 +192,21 @@ void testMain()
 		//VelocityData vD;
 		//vD.setPreviousVelocity(previousVelocity);// needed for setting framerate
 		
-		/**Accuire pitch, roll and there respective velocities and heit**/
-		//MEGA_SENSOR(&gyr_x, &gyr_y, &acc_x, &acc_y, &t, &p, &l, &l_c, &b_c, &h, lidar);
+		
+		/** Aquire images **/
+		
+		Mat prevImg;
+		Mat currImg;
+		while(!ready_flag){}
+		wait_flag = true;
+		prevImg = image_1.clone();
+		currImg = image_2.clone();
+		wait_flag = false;
 
+		/**Accuire pitch, roll and there respective velocities and heit**/
+		MEGA_SENSOR(&gyr_x, &gyr_y, &acc_x, &acc_y, &t, &p, &l, &l_c, &b_c, &h, lidar);
 		/**Aquire Vertical Velocity*/
-	//	vz = frequentHeight.getVelocity();
+		vz = frequentHeight.getVelocity();
 		
 	/**	Functions for setting data structure
 		vD.setRollVelocity(gyr_x);
@@ -193,11 +221,11 @@ void testMain()
 		/**Print results to console **/
 //		vD.printAll();
 		
-	//	cv::imwrite("test_img1.jpg", image_1);
-	//	cv::imwrite("test_img2.jpg", image_2);
+	//	cv::imwrite("test_img1.jpg", prevImg);
+	//	cv::imwrite("test_img2.jpg", currImg);
 		
 //		cout<<"*************Beginning Velocity Calculation**************"<<endl;
-		calculateAEAO(image_1, image_2, h, FRAME_RATE, acc_y, acc_x, gyr_x, gyr_y, vx, vy, vz, spd, direction );
+		calculateAEAO(prevImg, currImg, h, FRAME_RATE, acc_y, acc_x, gyr_x, gyr_y, vx, vy, vz, spd, direction );
 
 //		cout<<"++++++++++++++End Hight Calculation+++++++++++++++++++"<<endl;
 		/**@todo remove loop timer**/
@@ -205,25 +233,11 @@ void testMain()
 		cout << "main loop duration: " << loop_timer << endl;
 
 		/**wait until 1s has passed to get velocity every second**/
-		sleep_until(start + milliseconds(1000));
+//		sleep_until(start + milliseconds(1000));
 
 	}
 
 	exit_flag = true;
-
-}
-
-
-
-int main()
-
-{
-	testMain();
 	return 0;
 }
-
-
-
-
-
 
