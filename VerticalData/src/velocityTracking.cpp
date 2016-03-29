@@ -52,9 +52,11 @@ void initializeCamera(raspicam::RaspiCam_Cv &Camera)
 	//	Camera.set( CV_CAP_PROP_EXPOSURE, 33);
 //	cout << Camera.get(CV_CAP_PROP_FRAME_WIDTH) << ", " << Camera.get(CV_CAP_PROP_FRAME_HEIGHT) <<endl;
 }
-void twoImageCapture(raspicam::RaspiCam_Cv &Camera, Mat &image_1, Mat &image_2)
+void twoImageCapture( Mat &image_1, Mat &image_2)
 {
 	
+	raspicam::RaspiCam_Cv Camera;
+	initializeCamera(Camera);
 		//system_clock::time_point start = system_clock::now();
 		if(!Camera.open())
 			{
@@ -89,7 +91,7 @@ void twoImageCapture(raspicam::RaspiCam_Cv &Camera, Mat &image_1, Mat &image_2)
  * @post a Height object has been saved to disk
  */
 
-void heightReporting(VerticalData &vertDataRef, bool &exit_flag)
+void heightReporting(VerticalData &vertDataRef, bool &exit_flag int lidar)
 {
 		float gyr_x, gyr_y, acc_x, acc_y, t, l_c, h;
 		long p, b_c;
@@ -102,7 +104,7 @@ void heightReporting(VerticalData &vertDataRef, bool &exit_flag)
 		system_clock::time_point start = system_clock::now();
 
 		//Create Height object with sensor data and store in a VerticalData object
-		MEGA_SENSOR(&gyr_x, &gyr_y, &acc_x, &acc_y, &t, &p, &l, &l_c, &b_c, &h, lidar_init(false));
+		MEGA_SENSOR(&gyr_x, &gyr_y, &acc_x, &acc_y, &t, &p, &l, &l_c, &b_c, &h, lidar);
 		
 		vertDataRef.placeHeight(h,duration_cast<microseconds>(start.time_since_epoch()));
 		cout << "Height: " << vertDataRef.getVelocity()<< endl;
@@ -135,17 +137,18 @@ void testMain()
 
 	Mat image_1;
 	Mat image_2;
-	raspicam::RaspiCam_Cv Camera;
-	initializeCamera(Camera);
 
 	/*** initialize the imu***/
 	signal(SIGINT, INThandler);
 	enableIMU();
 
+	/**Initialize the Lidar**/
+	int lidar = lidar_init(false);
 	/***Create thread for reporting height 10X per sec ***/
-	thread one (heightReporting,ref(frequentHeight) ,ref(exit_flag));
+	thread one (heightReporting,ref(frequentHeight) ,ref(exit_flag), lidar);
 	one.detach();
 
+	thread two (twoImageCapture,ref(image_1, ref(image_2)))
 	for(int i = 0; i < 1000; i++)
 	{
 		
@@ -172,7 +175,7 @@ void testMain()
 		//vD.setPreviousVelocity(previousVelocity);// needed for setting framerate
 		
 		/**Accuire pitch, roll and there respective velocities and heit**/
-		MEGA_SENSOR(&gyr_x, &gyr_y, &acc_x, &acc_y, &t, &p, &l, &l_c, &b_c, &h, lidar_init(false));
+		//MEGA_SENSOR(&gyr_x, &gyr_y, &acc_x, &acc_y, &t, &p, &l, &l_c, &b_c, &h, lidar);
 
 		/**Aquire Vertical Velocity*/
 	//	vz = frequentHeight.getVelocity();
@@ -185,8 +188,6 @@ void testMain()
 		
 		vD.setVerticalVelocity(frequentHeight.getVelocity())
 	*/
-		/** Aquire images(X2) */
-		twoImageCapture(Camera, image_1, image_2);
 	//	vD.setImage_1(image_1);
 	//	vD.setImage_2(image_2);
 		/**Print results to console **/
