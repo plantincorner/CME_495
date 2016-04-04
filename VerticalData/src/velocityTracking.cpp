@@ -92,7 +92,7 @@ void twoImageCapture( Mat &image_1, Mat &image_2, bool &exit_flag, bool &ready_f
  * @post a Height object has been saved to disk
  */
 
-void heightReporting(VerticalData &vertDataRef, bool &exit_flag, bool heightOut_flag, int lidar)
+void heightReporting(VerticalData &vertDataRef, bool &exit_flag, int lidar)
 {
 		float gyr_x, gyr_y, acc_x, acc_y, t, l_c, h;
 		long p, b_c;
@@ -109,13 +109,13 @@ void heightReporting(VerticalData &vertDataRef, bool &exit_flag, bool heightOut_
 		
 		vertDataRef.placeHeight(h,duration_cast<microseconds>(start.time_since_epoch()));
 		
-		if (heightOut_flag)
-		{
-			cout << "Height: " << h << endl;
+	//	if (heightOut_flag)
+	//	{
+//			cout << "Height: " << h << endl;
 
 			const auto loop_timer = duration_cast<milliseconds>(system_clock::now() - start).count();
-		cout << "height loop duration: " << loop_timer << endl;
-		}
+//		cout << "height loop duration: " << loop_timer << endl;
+	//	}
 		
 		//stop reporting for start time + 0.1 seconds
 		this_thread::sleep_until(start + milliseconds(100));
@@ -131,17 +131,17 @@ int main(int argc, char *argv[])
 
 	//Object that stores Height objects and calculates velocity
 	VerticalData frequentHeight;
-	bool heightOut_flag = true;
-	string heightOut = "noHeightOut";
-	if (argc > 1)
-	{
-	if(heightOut.compare(argv[1]) == 0)
-		{
-			cout << "Not reporting Height 10X per sec" << endl;
-			heightOut_flag = false;
-		}	
+//	bool heightOut_flag = true;
+//	string heightOut = "noHeightOut";
+//	if (argc > 1)
+//	{
+//	if(heightOut.compare(argv[1]) == 0)
+//		{
+//			cout << "Not reporting Height 10X per sec" << endl;
+//			heightOut_flag = false;
+//		}	
 
-	}
+//	}
 	//hold the calculated velocity for use in the next iteration
 	//double previousVelocity = 0;// needed for calculating framerate
 
@@ -162,7 +162,7 @@ int main(int argc, char *argv[])
 	/**Initialize the Lidar**/
 	int lidar = lidar_init(false);
 	/***Create thread for reporting height 10X per sec ***/
-	thread one (heightReporting,ref(frequentHeight) ,ref(exit_flag), heightOut_flag, lidar);
+	thread one (heightReporting,ref(frequentHeight) ,ref(exit_flag), lidar);
 	one.detach();
 
 	thread two (twoImageCapture,ref(image_1), ref(image_2), ref(exit_flag), ref(ready_flag), ref(wait_flag));
@@ -201,6 +201,7 @@ int main(int argc, char *argv[])
 		wait_flag = true;
 		prevImg = image_1.clone();
 		currImg = image_2.clone();
+	//	cout << "picture taken" << endl;
 		wait_flag = false;
 
 		/**Accuire pitch, roll and there respective velocities and heit**/
@@ -221,16 +222,17 @@ int main(int argc, char *argv[])
 		/**Print results to console **/
 //		vD.printAll();
 		
-	//	cv::imwrite("test_img1.jpg", prevImg);
-	//	cv::imwrite("test_img2.jpg", currImg);
-		
+		//cv::imwrite("test_img1.jpg", prevImg);
+		//cv::imwrite("test_img2.jpg", currImg);
+		//cout << "height: " << h << "acc_y: " << acc_y << " acc_x: "<< acc_x << " gyr_x: " << gyr_x << " gyr_y: "<< gyr_y << endl;
 //		cout<<"*************Beginning Velocity Calculation**************"<<endl;
-		calculateAEAO(prevImg, currImg, h, FRAME_RATE, acc_y, acc_x, gyr_x, gyr_y, vx, vy, vz, spd, direction );
+	//	calculateAEAO( prevImg,currImg, h, FRAME_RATE, acc_y, acc_x, gyr_x, gyr_y, vx, vy, vz, spd, direction );
 
+		calculateAEAO( prevImg,currImg, 1, FRAME_RATE, acc_y, acc_x, gyr_x, gyr_y, vx, vy, 0, spd, direction );
 //		cout<<"++++++++++++++End Hight Calculation+++++++++++++++++++"<<endl;
 		/**@todo remove loop timer**/
 		const auto loop_timer = duration_cast<milliseconds>(system_clock::now() - start).count();
-		cout << "main loop duration: " << loop_timer << endl;
+//		cout << "main loop duration: " << loop_timer << endl;
 
 		/**wait until 1s has passed to get velocity every second**/
 //		sleep_until(start + milliseconds(1000));

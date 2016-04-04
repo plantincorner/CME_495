@@ -421,7 +421,7 @@ Mat myEntropy(Mat seq, int histSize)
 }
 //////// END ENTROPY CALCULATIONS ///////////////////////////
 
-void calculateAEAO(Mat prevGray, Mat nextGray, double cameraElevation,int frameRate, double pitch, double roll, double wPitch, double wRoll, double &Vx, double &Vy, double &Vz, double &speed, double &direction  )
+void calculateAEAO(Mat prevGray, Mat nextGray, double cameraElevation,int frameRate, double pitch, double roll, double wPitch, double wRoll, double &Vx, double &Vy, double Vz, double &speed, double &direction  )
 {
 	double groundSensorDistance = cameraElevation*sqrt(pow(tan(abs(pitch)),2)+pow(tan(abs(roll)),2)+1);
 	double pixelHeight =groundSensorDistance * PIXEL_SIZE;
@@ -642,9 +642,13 @@ void calculateAEAO(Mat prevGray, Mat nextGray, double cameraElevation,int frameR
 		if (Vy < 0) cout << "-" 		<< fixed << setw(6) << setprecision(3) << -Vy;
 		else cout << " " 				<< fixed << setw(6) << setprecision(3) << Vy;
 
+		//cout << "Vz =  ";
+		//if (Vz < 0) cout << "-" 		<< fixed << setw(6) << setprecision(3) << -Vz;
+		//else cout << " " 				<< fixed << setw(6) << setprecision(3) << Vz;
+
 		cout << "   speed =  "			<< fixed << setw(6) << setprecision(3) << speed;
 //		cout << "   SpeedError = " 		<< right << setw(6) << setprecision(2) << speedError << "%";
-		cout << "   height =  " 		<< fixed << setw(6) << setprecision(3) << cameraElevation;// + elevationNoise;
+		//cout << "   height =  " 		<< fixed << setw(6) << setprecision(3) << cameraElevation;// + elevationNoise;
 		cout << "   entropy =  " 		<< fixed << setw(6) << setprecision(3) << ent;
 
 		//confidence
