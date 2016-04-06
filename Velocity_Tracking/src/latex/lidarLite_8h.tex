@@ -1,0 +1,184 @@
+\hypertarget{lidarLite_8h}{\section{lidar\+Lite.\+h File Reference}
+\label{lidarLite_8h}\index{lidar\+Lite.\+h@{lidar\+Lite.\+h}}
+}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$wiring\+Pi\+I2\+C.\+h$>$}\\*
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+{\ttfamily \#include $<$wiring\+Pi.\+h$>$}\\*
+Include dependency graph for lidar\+Lite.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lidarLite_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{lidarLite_8h_a646c224898119c2ee45ca095bab4033f}{L\+I\+D\+A\+R\+\_\+\+L\+I\+T\+E\+\_\+\+A\+D\+R\+S}~0x62
+\item 
+\#define \hyperlink{lidarLite_8h_a8b52189a56ee7151279cb3a881a16a4d}{M\+E\+A\+S\+U\+R\+E\+\_\+\+V\+A\+L}~0x04
+\item 
+\#define \hyperlink{lidarLite_8h_a83e88ae966ce20a1648751417fc7eab0}{M\+E\+A\+S\+U\+R\+E\+\_\+\+R\+E\+G}~0x00
+\item 
+\#define \hyperlink{lidarLite_8h_a1f7e79cfe81dc06414550fa52418941e}{S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+G}~0x47
+\item 
+\#define \hyperlink{lidarLite_8h_ae06110740ca1156e1a2ab9e2aada86c9}{D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+R\+E\+G\+\_\+\+H\+I}~0x0f
+\item 
+\#define \hyperlink{lidarLite_8h_a9ad02c46edf7736a8384d49131e7d05b}{D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+R\+E\+G\+\_\+\+L\+O}~0x10
+\item 
+\#define \hyperlink{lidarLite_8h_aae1fa54aa467465cf242a749dab186e7}{V\+E\+R\+S\+I\+O\+N\+\_\+\+R\+E\+G}~0x41
+\item 
+\#define \hyperlink{lidarLite_8h_ab1d43b8f2795d4e0be3b8a1baa48d732}{E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D}~-\/1
+\item 
+\#define \hyperlink{lidarLite_8h_a060bfc87531fa0c5658cc6a0d1815dec}{S\+T\+A\+T\+\_\+\+B\+U\+S\+Y}~0x01
+\item 
+\#define \hyperlink{lidarLite_8h_a8d8203b7a396d9d6dd60629d97ee016d}{S\+T\+A\+T\+\_\+\+R\+E\+F\+\_\+\+O\+V\+E\+R}~0x02
+\item 
+\#define \hyperlink{lidarLite_8h_a93ef17ecb13efd44ac37507e4f2fd96b}{S\+T\+A\+T\+\_\+\+S\+I\+G\+\_\+\+O\+V\+E\+R}~0x04
+\item 
+\#define \hyperlink{lidarLite_8h_a3abae50a0a9fb72450e5028282cc19fa}{S\+T\+A\+T\+\_\+\+P\+I\+N}~0x08
+\item 
+\#define \hyperlink{lidarLite_8h_a4e03618542e9ff584a135fe25683247d}{S\+T\+A\+T\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+P\+E\+A\+K}~0x10
+\item 
+\#define \hyperlink{lidarLite_8h_a119b61b1c1f1dc6909bc9993eb2f6b9e}{S\+T\+A\+T\+\_\+\+T\+I\+M\+E}~0x20
+\item 
+\#define \hyperlink{lidarLite_8h_ae3031c44c39640f8391cbdafbaf861e8}{S\+T\+A\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D}~0x40
+\item 
+\#define \hyperlink{lidarLite_8h_aa2b17a678f7fa2453475194a2b09197f}{S\+T\+A\+T\+\_\+\+E\+Y\+E}~0x80
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{lidarLite_8h_a1ff4776dc086087b8c961bc86dc6e21d}{lidar\+\_\+init} (bool)
+\item 
+int \hyperlink{lidarLite_8h_aea78b16665ba6cb6bbdba013e32e6c53}{lidar\+\_\+read} (int)
+\item 
+unsigned char \hyperlink{lidarLite_8h_a1a819b3fd9916eb8aac0538bead69533}{\+\_\+read\+\_\+byte} (int, int)
+\item 
+unsigned char \hyperlink{lidarLite_8h_a3fdb9a92f7c7514ab72c98ad9a4f9933}{\+\_\+read\+\_\+byte\+N\+Z} (int, int)
+\item 
+unsigned char \hyperlink{lidarLite_8h_a4f9cf6b54adcee0531606729e2d39a7d}{\+\_\+read\+\_\+byte\+\_\+raw} (int, int, bool)
+\item 
+unsigned char \hyperlink{lidarLite_8h_a186f53edf0ff597d81e51b28d498aed1}{lidar\+\_\+version} (int)
+\item 
+unsigned char \hyperlink{lidarLite_8h_abf29391d69d4d490297642592b5649b6}{lidar\+\_\+status} (int)
+\item 
+void \hyperlink{lidarLite_8h_a8733d282e19687644511824bb364469d}{L\+I\+D\+A\+R\+\_\+\+L\+I\+T\+E} (int $\ast$res, int fd)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{lidarLite_8h_ae06110740ca1156e1a2ab9e2aada86c9}{\index{lidar\+Lite.\+h@{lidar\+Lite.\+h}!D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+R\+E\+G\+\_\+\+H\+I@{D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+R\+E\+G\+\_\+\+H\+I}}
+\index{D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+R\+E\+G\+\_\+\+H\+I@{D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+R\+E\+G\+\_\+\+H\+I}!lidar\+Lite.\+h@{lidar\+Lite.\+h}}
+\subsubsection[{D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+R\+E\+G\+\_\+\+H\+I}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+R\+E\+G\+\_\+\+H\+I~0x0f}}\label{lidarLite_8h_ae06110740ca1156e1a2ab9e2aada86c9}
+\hypertarget{lidarLite_8h_a9ad02c46edf7736a8384d49131e7d05b}{\index{lidar\+Lite.\+h@{lidar\+Lite.\+h}!D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+R\+E\+G\+\_\+\+L\+O@{D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+R\+E\+G\+\_\+\+L\+O}}
+\index{D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+R\+E\+G\+\_\+\+L\+O@{D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+R\+E\+G\+\_\+\+L\+O}!lidar\+Lite.\+h@{lidar\+Lite.\+h}}
+\subsubsection[{D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+R\+E\+G\+\_\+\+L\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+R\+E\+G\+\_\+\+L\+O~0x10}}\label{lidarLite_8h_a9ad02c46edf7736a8384d49131e7d05b}
+\hypertarget{lidarLite_8h_ab1d43b8f2795d4e0be3b8a1baa48d732}{\index{lidar\+Lite.\+h@{lidar\+Lite.\+h}!E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D@{E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D}}
+\index{E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D@{E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D}!lidar\+Lite.\+h@{lidar\+Lite.\+h}}
+\subsubsection[{E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D~-\/1}}\label{lidarLite_8h_ab1d43b8f2795d4e0be3b8a1baa48d732}
+\hypertarget{lidarLite_8h_a646c224898119c2ee45ca095bab4033f}{\index{lidar\+Lite.\+h@{lidar\+Lite.\+h}!L\+I\+D\+A\+R\+\_\+\+L\+I\+T\+E\+\_\+\+A\+D\+R\+S@{L\+I\+D\+A\+R\+\_\+\+L\+I\+T\+E\+\_\+\+A\+D\+R\+S}}
+\index{L\+I\+D\+A\+R\+\_\+\+L\+I\+T\+E\+\_\+\+A\+D\+R\+S@{L\+I\+D\+A\+R\+\_\+\+L\+I\+T\+E\+\_\+\+A\+D\+R\+S}!lidar\+Lite.\+h@{lidar\+Lite.\+h}}
+\subsubsection[{L\+I\+D\+A\+R\+\_\+\+L\+I\+T\+E\+\_\+\+A\+D\+R\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+I\+D\+A\+R\+\_\+\+L\+I\+T\+E\+\_\+\+A\+D\+R\+S~0x62}}\label{lidarLite_8h_a646c224898119c2ee45ca095bab4033f}
+\hypertarget{lidarLite_8h_a83e88ae966ce20a1648751417fc7eab0}{\index{lidar\+Lite.\+h@{lidar\+Lite.\+h}!M\+E\+A\+S\+U\+R\+E\+\_\+\+R\+E\+G@{M\+E\+A\+S\+U\+R\+E\+\_\+\+R\+E\+G}}
+\index{M\+E\+A\+S\+U\+R\+E\+\_\+\+R\+E\+G@{M\+E\+A\+S\+U\+R\+E\+\_\+\+R\+E\+G}!lidar\+Lite.\+h@{lidar\+Lite.\+h}}
+\subsubsection[{M\+E\+A\+S\+U\+R\+E\+\_\+\+R\+E\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+E\+A\+S\+U\+R\+E\+\_\+\+R\+E\+G~0x00}}\label{lidarLite_8h_a83e88ae966ce20a1648751417fc7eab0}
+\hypertarget{lidarLite_8h_a8b52189a56ee7151279cb3a881a16a4d}{\index{lidar\+Lite.\+h@{lidar\+Lite.\+h}!M\+E\+A\+S\+U\+R\+E\+\_\+\+V\+A\+L@{M\+E\+A\+S\+U\+R\+E\+\_\+\+V\+A\+L}}
+\index{M\+E\+A\+S\+U\+R\+E\+\_\+\+V\+A\+L@{M\+E\+A\+S\+U\+R\+E\+\_\+\+V\+A\+L}!lidar\+Lite.\+h@{lidar\+Lite.\+h}}
+\subsubsection[{M\+E\+A\+S\+U\+R\+E\+\_\+\+V\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+E\+A\+S\+U\+R\+E\+\_\+\+V\+A\+L~0x04}}\label{lidarLite_8h_a8b52189a56ee7151279cb3a881a16a4d}
+\hypertarget{lidarLite_8h_a060bfc87531fa0c5658cc6a0d1815dec}{\index{lidar\+Lite.\+h@{lidar\+Lite.\+h}!S\+T\+A\+T\+\_\+\+B\+U\+S\+Y@{S\+T\+A\+T\+\_\+\+B\+U\+S\+Y}}
+\index{S\+T\+A\+T\+\_\+\+B\+U\+S\+Y@{S\+T\+A\+T\+\_\+\+B\+U\+S\+Y}!lidar\+Lite.\+h@{lidar\+Lite.\+h}}
+\subsubsection[{S\+T\+A\+T\+\_\+\+B\+U\+S\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+T\+A\+T\+\_\+\+B\+U\+S\+Y~0x01}}\label{lidarLite_8h_a060bfc87531fa0c5658cc6a0d1815dec}
+\hypertarget{lidarLite_8h_aa2b17a678f7fa2453475194a2b09197f}{\index{lidar\+Lite.\+h@{lidar\+Lite.\+h}!S\+T\+A\+T\+\_\+\+E\+Y\+E@{S\+T\+A\+T\+\_\+\+E\+Y\+E}}
+\index{S\+T\+A\+T\+\_\+\+E\+Y\+E@{S\+T\+A\+T\+\_\+\+E\+Y\+E}!lidar\+Lite.\+h@{lidar\+Lite.\+h}}
+\subsubsection[{S\+T\+A\+T\+\_\+\+E\+Y\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+T\+A\+T\+\_\+\+E\+Y\+E~0x80}}\label{lidarLite_8h_aa2b17a678f7fa2453475194a2b09197f}
+\hypertarget{lidarLite_8h_ae3031c44c39640f8391cbdafbaf861e8}{\index{lidar\+Lite.\+h@{lidar\+Lite.\+h}!S\+T\+A\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D@{S\+T\+A\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D}}
+\index{S\+T\+A\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D@{S\+T\+A\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D}!lidar\+Lite.\+h@{lidar\+Lite.\+h}}
+\subsubsection[{S\+T\+A\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+T\+A\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D~0x40}}\label{lidarLite_8h_ae3031c44c39640f8391cbdafbaf861e8}
+\hypertarget{lidarLite_8h_a3abae50a0a9fb72450e5028282cc19fa}{\index{lidar\+Lite.\+h@{lidar\+Lite.\+h}!S\+T\+A\+T\+\_\+\+P\+I\+N@{S\+T\+A\+T\+\_\+\+P\+I\+N}}
+\index{S\+T\+A\+T\+\_\+\+P\+I\+N@{S\+T\+A\+T\+\_\+\+P\+I\+N}!lidar\+Lite.\+h@{lidar\+Lite.\+h}}
+\subsubsection[{S\+T\+A\+T\+\_\+\+P\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+T\+A\+T\+\_\+\+P\+I\+N~0x08}}\label{lidarLite_8h_a3abae50a0a9fb72450e5028282cc19fa}
+\hypertarget{lidarLite_8h_a8d8203b7a396d9d6dd60629d97ee016d}{\index{lidar\+Lite.\+h@{lidar\+Lite.\+h}!S\+T\+A\+T\+\_\+\+R\+E\+F\+\_\+\+O\+V\+E\+R@{S\+T\+A\+T\+\_\+\+R\+E\+F\+\_\+\+O\+V\+E\+R}}
+\index{S\+T\+A\+T\+\_\+\+R\+E\+F\+\_\+\+O\+V\+E\+R@{S\+T\+A\+T\+\_\+\+R\+E\+F\+\_\+\+O\+V\+E\+R}!lidar\+Lite.\+h@{lidar\+Lite.\+h}}
+\subsubsection[{S\+T\+A\+T\+\_\+\+R\+E\+F\+\_\+\+O\+V\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+T\+A\+T\+\_\+\+R\+E\+F\+\_\+\+O\+V\+E\+R~0x02}}\label{lidarLite_8h_a8d8203b7a396d9d6dd60629d97ee016d}
+\hypertarget{lidarLite_8h_a4e03618542e9ff584a135fe25683247d}{\index{lidar\+Lite.\+h@{lidar\+Lite.\+h}!S\+T\+A\+T\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+P\+E\+A\+K@{S\+T\+A\+T\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+P\+E\+A\+K}}
+\index{S\+T\+A\+T\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+P\+E\+A\+K@{S\+T\+A\+T\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+P\+E\+A\+K}!lidar\+Lite.\+h@{lidar\+Lite.\+h}}
+\subsubsection[{S\+T\+A\+T\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+P\+E\+A\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+T\+A\+T\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+P\+E\+A\+K~0x10}}\label{lidarLite_8h_a4e03618542e9ff584a135fe25683247d}
+\hypertarget{lidarLite_8h_a93ef17ecb13efd44ac37507e4f2fd96b}{\index{lidar\+Lite.\+h@{lidar\+Lite.\+h}!S\+T\+A\+T\+\_\+\+S\+I\+G\+\_\+\+O\+V\+E\+R@{S\+T\+A\+T\+\_\+\+S\+I\+G\+\_\+\+O\+V\+E\+R}}
+\index{S\+T\+A\+T\+\_\+\+S\+I\+G\+\_\+\+O\+V\+E\+R@{S\+T\+A\+T\+\_\+\+S\+I\+G\+\_\+\+O\+V\+E\+R}!lidar\+Lite.\+h@{lidar\+Lite.\+h}}
+\subsubsection[{S\+T\+A\+T\+\_\+\+S\+I\+G\+\_\+\+O\+V\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+T\+A\+T\+\_\+\+S\+I\+G\+\_\+\+O\+V\+E\+R~0x04}}\label{lidarLite_8h_a93ef17ecb13efd44ac37507e4f2fd96b}
+\hypertarget{lidarLite_8h_a119b61b1c1f1dc6909bc9993eb2f6b9e}{\index{lidar\+Lite.\+h@{lidar\+Lite.\+h}!S\+T\+A\+T\+\_\+\+T\+I\+M\+E@{S\+T\+A\+T\+\_\+\+T\+I\+M\+E}}
+\index{S\+T\+A\+T\+\_\+\+T\+I\+M\+E@{S\+T\+A\+T\+\_\+\+T\+I\+M\+E}!lidar\+Lite.\+h@{lidar\+Lite.\+h}}
+\subsubsection[{S\+T\+A\+T\+\_\+\+T\+I\+M\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+T\+A\+T\+\_\+\+T\+I\+M\+E~0x20}}\label{lidarLite_8h_a119b61b1c1f1dc6909bc9993eb2f6b9e}
+\hypertarget{lidarLite_8h_a1f7e79cfe81dc06414550fa52418941e}{\index{lidar\+Lite.\+h@{lidar\+Lite.\+h}!S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+G@{S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+G}}
+\index{S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+G@{S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+G}!lidar\+Lite.\+h@{lidar\+Lite.\+h}}
+\subsubsection[{S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+G~0x47}}\label{lidarLite_8h_a1f7e79cfe81dc06414550fa52418941e}
+\hypertarget{lidarLite_8h_aae1fa54aa467465cf242a749dab186e7}{\index{lidar\+Lite.\+h@{lidar\+Lite.\+h}!V\+E\+R\+S\+I\+O\+N\+\_\+\+R\+E\+G@{V\+E\+R\+S\+I\+O\+N\+\_\+\+R\+E\+G}}
+\index{V\+E\+R\+S\+I\+O\+N\+\_\+\+R\+E\+G@{V\+E\+R\+S\+I\+O\+N\+\_\+\+R\+E\+G}!lidar\+Lite.\+h@{lidar\+Lite.\+h}}
+\subsubsection[{V\+E\+R\+S\+I\+O\+N\+\_\+\+R\+E\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+E\+R\+S\+I\+O\+N\+\_\+\+R\+E\+G~0x41}}\label{lidarLite_8h_aae1fa54aa467465cf242a749dab186e7}
+
+
+\subsection{Function Documentation}
+\hypertarget{lidarLite_8h_a1a819b3fd9916eb8aac0538bead69533}{\index{lidar\+Lite.\+h@{lidar\+Lite.\+h}!\+\_\+read\+\_\+byte@{\+\_\+read\+\_\+byte}}
+\index{\+\_\+read\+\_\+byte@{\+\_\+read\+\_\+byte}!lidar\+Lite.\+h@{lidar\+Lite.\+h}}
+\subsubsection[{\+\_\+read\+\_\+byte}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char \+\_\+read\+\_\+byte (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}}\label{lidarLite_8h_a1a819b3fd9916eb8aac0538bead69533}
+\hypertarget{lidarLite_8h_a4f9cf6b54adcee0531606729e2d39a7d}{\index{lidar\+Lite.\+h@{lidar\+Lite.\+h}!\+\_\+read\+\_\+byte\+\_\+raw@{\+\_\+read\+\_\+byte\+\_\+raw}}
+\index{\+\_\+read\+\_\+byte\+\_\+raw@{\+\_\+read\+\_\+byte\+\_\+raw}!lidar\+Lite.\+h@{lidar\+Lite.\+h}}
+\subsubsection[{\+\_\+read\+\_\+byte\+\_\+raw}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char \+\_\+read\+\_\+byte\+\_\+raw (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{int}]{, }
+\item[{bool}]{}
+\end{DoxyParamCaption}
+)}}\label{lidarLite_8h_a4f9cf6b54adcee0531606729e2d39a7d}
+\hypertarget{lidarLite_8h_a3fdb9a92f7c7514ab72c98ad9a4f9933}{\index{lidar\+Lite.\+h@{lidar\+Lite.\+h}!\+\_\+read\+\_\+byte\+N\+Z@{\+\_\+read\+\_\+byte\+N\+Z}}
+\index{\+\_\+read\+\_\+byte\+N\+Z@{\+\_\+read\+\_\+byte\+N\+Z}!lidar\+Lite.\+h@{lidar\+Lite.\+h}}
+\subsubsection[{\+\_\+read\+\_\+byte\+N\+Z}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char \+\_\+read\+\_\+byte\+N\+Z (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}}\label{lidarLite_8h_a3fdb9a92f7c7514ab72c98ad9a4f9933}
+\hypertarget{lidarLite_8h_a1ff4776dc086087b8c961bc86dc6e21d}{\index{lidar\+Lite.\+h@{lidar\+Lite.\+h}!lidar\+\_\+init@{lidar\+\_\+init}}
+\index{lidar\+\_\+init@{lidar\+\_\+init}!lidar\+Lite.\+h@{lidar\+Lite.\+h}}
+\subsubsection[{lidar\+\_\+init}]{\setlength{\rightskip}{0pt plus 5cm}int lidar\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{bool}]{}
+\end{DoxyParamCaption}
+)}}\label{lidarLite_8h_a1ff4776dc086087b8c961bc86dc6e21d}
+\hypertarget{lidarLite_8h_a8733d282e19687644511824bb364469d}{\index{lidar\+Lite.\+h@{lidar\+Lite.\+h}!L\+I\+D\+A\+R\+\_\+\+L\+I\+T\+E@{L\+I\+D\+A\+R\+\_\+\+L\+I\+T\+E}}
+\index{L\+I\+D\+A\+R\+\_\+\+L\+I\+T\+E@{L\+I\+D\+A\+R\+\_\+\+L\+I\+T\+E}!lidar\+Lite.\+h@{lidar\+Lite.\+h}}
+\subsubsection[{L\+I\+D\+A\+R\+\_\+\+L\+I\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}void L\+I\+D\+A\+R\+\_\+\+L\+I\+T\+E (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{res, }
+\item[{int}]{fd}
+\end{DoxyParamCaption}
+)}}\label{lidarLite_8h_a8733d282e19687644511824bb364469d}
+\hypertarget{lidarLite_8h_aea78b16665ba6cb6bbdba013e32e6c53}{\index{lidar\+Lite.\+h@{lidar\+Lite.\+h}!lidar\+\_\+read@{lidar\+\_\+read}}
+\index{lidar\+\_\+read@{lidar\+\_\+read}!lidar\+Lite.\+h@{lidar\+Lite.\+h}}
+\subsubsection[{lidar\+\_\+read}]{\setlength{\rightskip}{0pt plus 5cm}int lidar\+\_\+read (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}}\label{lidarLite_8h_aea78b16665ba6cb6bbdba013e32e6c53}
+\hypertarget{lidarLite_8h_abf29391d69d4d490297642592b5649b6}{\index{lidar\+Lite.\+h@{lidar\+Lite.\+h}!lidar\+\_\+status@{lidar\+\_\+status}}
+\index{lidar\+\_\+status@{lidar\+\_\+status}!lidar\+Lite.\+h@{lidar\+Lite.\+h}}
+\subsubsection[{lidar\+\_\+status}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char lidar\+\_\+status (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}}\label{lidarLite_8h_abf29391d69d4d490297642592b5649b6}
+\hypertarget{lidarLite_8h_a186f53edf0ff597d81e51b28d498aed1}{\index{lidar\+Lite.\+h@{lidar\+Lite.\+h}!lidar\+\_\+version@{lidar\+\_\+version}}
+\index{lidar\+\_\+version@{lidar\+\_\+version}!lidar\+Lite.\+h@{lidar\+Lite.\+h}}
+\subsubsection[{lidar\+\_\+version}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char lidar\+\_\+version (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}}\label{lidarLite_8h_a186f53edf0ff597d81e51b28d498aed1}

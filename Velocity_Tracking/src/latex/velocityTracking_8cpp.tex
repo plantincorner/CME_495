@@ -1,0 +1,173 @@
+\hypertarget{velocityTracking_8cpp}{\section{velocity\+Tracking.\+cpp File Reference}
+\label{velocityTracking_8cpp}\index{velocity\+Tracking.\+cpp@{velocity\+Tracking.\+cpp}}
+}
+
+
+The main program, stores data and calculates velocities.  
+
+
+{\ttfamily \#include \char`\"{}../includes/\+Height.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../includes/\+Vertical\+Data.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../includes/velocity\+Calculate.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../includes/output.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../includes/sensor.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../includes/bmp180.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../includes/lidar\+Lite.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../includes/mega\+\_\+sensor.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$thread$>$}\\*
+{\ttfamily \#include $<$chrono$>$}\\*
+{\ttfamily \#include $<$ctime$>$}\\*
+{\ttfamily \#include $<$opencv2/highgui/highgui.\+hpp$>$}\\*
+{\ttfamily \#include $<$raspicam/raspicam\+\_\+cv.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{velocityTracking_8cpp_ae2f99e05f64d0383aee9bd75a52c4fbb}{F\+R\+A\+M\+E\+\_\+\+R\+A\+T\+E}~90
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{velocityTracking_8cpp_a339b674fe2736f27352f0615792ba220}{initialize\+Camera} (raspicam\+::\+Raspi\+Cam\+\_\+\+Cv \&Camera)
+\item 
+void \hyperlink{velocityTracking_8cpp_a6893ce6a000489582c4754d3e929faf2}{two\+Image\+Capture} (Mat \&image\+\_\+1, Mat \&image\+\_\+2, bool \&exit\+\_\+flag, bool \&ready\+\_\+flag, bool \&wait\+\_\+flag)
+\begin{DoxyCompactList}\small\item\em capture two consecutive images at 90 frames per second, loops until exit\+\_\+flag is true \end{DoxyCompactList}\item 
+void \hyperlink{velocityTracking_8cpp_a420d1601b90eadda1b8a5a0552f1991c}{height\+Reporting} (\hyperlink{classVerticalData}{Vertical\+Data} \&vert\+Data\+Ref, bool \&exit\+\_\+flag, int lidar)
+\item 
+int \hyperlink{velocityTracking_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The main program, stores data and calculates velocities. 
+
+\begin{DoxyDate}{Date}
+Mar 21, 2016 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Devon Haubold 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{velocityTracking_8cpp_ae2f99e05f64d0383aee9bd75a52c4fbb}{\index{velocity\+Tracking.\+cpp@{velocity\+Tracking.\+cpp}!F\+R\+A\+M\+E\+\_\+\+R\+A\+T\+E@{F\+R\+A\+M\+E\+\_\+\+R\+A\+T\+E}}
+\index{F\+R\+A\+M\+E\+\_\+\+R\+A\+T\+E@{F\+R\+A\+M\+E\+\_\+\+R\+A\+T\+E}!velocity\+Tracking.\+cpp@{velocity\+Tracking.\+cpp}}
+\subsubsection[{F\+R\+A\+M\+E\+\_\+\+R\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+R\+A\+M\+E\+\_\+\+R\+A\+T\+E~90}}\label{velocityTracking_8cpp_ae2f99e05f64d0383aee9bd75a52c4fbb}
+The frame rate that the camera is set at 
+
+\subsection{Function Documentation}
+\hypertarget{velocityTracking_8cpp_a420d1601b90eadda1b8a5a0552f1991c}{\index{velocity\+Tracking.\+cpp@{velocity\+Tracking.\+cpp}!height\+Reporting@{height\+Reporting}}
+\index{height\+Reporting@{height\+Reporting}!velocity\+Tracking.\+cpp@{velocity\+Tracking.\+cpp}}
+\subsubsection[{height\+Reporting}]{\setlength{\rightskip}{0pt plus 5cm}void height\+Reporting (
+\begin{DoxyParamCaption}
+\item[{{\bf Vertical\+Data} \&}]{vert\+Data\+Ref, }
+\item[{bool \&}]{exit\+\_\+flag, }
+\item[{int}]{lidar}
+\end{DoxyParamCaption}
+)}}\label{velocityTracking_8cpp_a420d1601b90eadda1b8a5a0552f1991c}
+Get height data continuosly, calculate velocity \begin{DoxyPrecond}{Precondition}
+a thread has been created and id assigned 
+
+the sensors have been initialized and are accessible 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vert\+Data\+Ref} & holds height data and calculates vertical velocity \\
+\hline
+\mbox{\tt in}  & {\em exit\+\_\+flag} & flag to alert thread to exit \\
+\hline
+\mbox{\tt in}  & {\em lidar} & equals 1 if lidar is initialized \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{velocityTracking_8cpp_a420d1601b90eadda1b8a5a0552f1991c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{velocityTracking_8cpp_a339b674fe2736f27352f0615792ba220}{\index{velocity\+Tracking.\+cpp@{velocity\+Tracking.\+cpp}!initialize\+Camera@{initialize\+Camera}}
+\index{initialize\+Camera@{initialize\+Camera}!velocity\+Tracking.\+cpp@{velocity\+Tracking.\+cpp}}
+\subsubsection[{initialize\+Camera}]{\setlength{\rightskip}{0pt plus 5cm}void initialize\+Camera (
+\begin{DoxyParamCaption}
+\item[{raspicam\+::\+Raspi\+Cam\+\_\+\+Cv \&}]{Camera}
+\end{DoxyParamCaption}
+)}}\label{velocityTracking_8cpp_a339b674fe2736f27352f0615792ba220}
+\begin{DoxyPostcond}{Postcondition}
+camera image format set to single channel 8 bit 
+
+gain set to maximum value 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em Camera} & the camera interface \\
+\hline
+\end{DoxyParams}
+\hypertarget{velocityTracking_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{\index{velocity\+Tracking.\+cpp@{velocity\+Tracking.\+cpp}!main@{main}}
+\index{main@{main}!velocity\+Tracking.\+cpp@{velocity\+Tracking.\+cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{velocityTracking_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+Declares input/output variables for sensor data Declares variables for calculated values Spawns threads using height\+Reporting and two\+Image\+Capture Calls velocity\+Calculate with sensor data and calculated value variables $<$ equals 1 if lidar initialized
+
+wait until 1s has passed to get velocity every second 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{velocityTracking_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{velocityTracking_8cpp_a6893ce6a000489582c4754d3e929faf2}{\index{velocity\+Tracking.\+cpp@{velocity\+Tracking.\+cpp}!two\+Image\+Capture@{two\+Image\+Capture}}
+\index{two\+Image\+Capture@{two\+Image\+Capture}!velocity\+Tracking.\+cpp@{velocity\+Tracking.\+cpp}}
+\subsubsection[{two\+Image\+Capture}]{\setlength{\rightskip}{0pt plus 5cm}void two\+Image\+Capture (
+\begin{DoxyParamCaption}
+\item[{Mat \&}]{image\+\_\+1, }
+\item[{Mat \&}]{image\+\_\+2, }
+\item[{bool \&}]{exit\+\_\+flag, }
+\item[{bool \&}]{ready\+\_\+flag, }
+\item[{bool \&}]{wait\+\_\+flag}
+\end{DoxyParamCaption}
+)}}\label{velocityTracking_8cpp_a6893ce6a000489582c4754d3e929faf2}
+
+
+capture two consecutive images at 90 frames per second, loops until exit\+\_\+flag is true 
+
+\begin{DoxyPrecond}{Precondition}
+a thread has been created and id assigned 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em image\+\_\+1} & the first image to be captured \\
+\hline
+\mbox{\tt in,out}  & {\em image\+\_\+2} & the second image to be captured \\
+\hline
+\mbox{\tt in}  & {\em exit\+\_\+flag} & flag to alert thread to exit \\
+\hline
+\mbox{\tt in,out}  & {\em ready\+\_\+flag} & to alert two images have been captured \\
+\hline
+\mbox{\tt in,out}  & {\em wait\+\_\+flag} & flag to alert images are being used \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{velocityTracking_8cpp_a6893ce6a000489582c4754d3e929faf2_cgraph}
+\end{center}
+\end{figure}
+
+

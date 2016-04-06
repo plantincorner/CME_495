@@ -1,0 +1,41 @@
+This is makeindex, version 2.15 [TeX Live 2015/dev] (kpathsea + Thai support).
+Scanning input file refman.idx....
+!! Input index error (file = refman.idx, line = 6):
+   -- Extra `@' at position 139 of first argument.
+!! Input index error (file = refman.idx, line = 7):
+   -- Extra `@' at position 123 of first argument.
+!! Input index error (file = refman.idx, line = 8):
+   -- Extra `@' at position 137 of first argument.
+!! Input index error (file = refman.idx, line = 9):
+   -- Extra `@' at position 121 of first argument.
+!! Input index error (file = refman.idx, line = 10):
+   -- Extra `@' at position 138 of first argument.
+!! Input index error (file = refman.idx, line = 11):
+   -- Extra `@' at position 122 of first argument.
+!! Input index error (file = refman.idx, line = 12):
+   -- Extra `@' at position 126 of first argument.
+!! Input index error (file = refman.idx, line = 13):
+   -- Extra `@' at position 126 of first argument.
+!! Input index error (file = refman.idx, line = 14):
+   -- Extra `@' at position 126 of first argument.
+!! Input index error (file = refman.idx, line = 15):
+   -- Extra `@' at position 126 of first argument.
+!! Input index error (file = refman.idx, line = 16):
+   -- Extra `@' at position 126 of first argument.
+!! Input index error (file = refman.idx, line = 17):
+   -- Extra `@' at position 126 of first argument.
+!! Input index error (file = refman.idx, line = 18):
+   -- Extra `@' at position 154 of first argument.
+!! Input index error (file = refman.idx, line = 19):
+   -- Extra `@' at position 126 of first argument.
+!! Input index error (file = refman.idx, line = 20):
+   -- Extra `@' at position 154 of first argument.
+!! Input index error (file = refman.idx, line = 21):
+   -- Extra `@' at position 126 of first argument.
+!! Input index error (file = refman.idx, line = 22):
+   -- Extra `@' at position 154 of first argument.
+done (5 entries accepted, 17 rejected).
+Sorting entries....done (11 comparisons).
+Generating output file refman.ind....done (6 lines written, 0 warnings).
+Output written in refman.ind.
+Transcript written in refman.ilg.

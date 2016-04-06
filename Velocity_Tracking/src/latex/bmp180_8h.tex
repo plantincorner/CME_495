@@ -1,0 +1,124 @@
+\hypertarget{bmp180_8h}{\section{bmp180.\+h File Reference}
+\label{bmp180_8h}\index{bmp180.\+h@{bmp180.\+h}}
+}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{bmp180_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structbmp180__eprom__t}{bmp180\+\_\+eprom\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{bmp180_8h_a677a31d4e679a73e2a8f0b97c51316b3}{B\+M\+P180\+\_\+\+P\+R\+E\+\_\+\+O\+S\+S0}~0
+\item 
+\#define \hyperlink{bmp180_8h_aef6f208a36b9850b70a7b5f7b2bb3792}{B\+M\+P180\+\_\+\+P\+R\+E\+\_\+\+O\+S\+S1}~1
+\item 
+\#define \hyperlink{bmp180_8h_ac24715d4f9e3819408bd3e0a8a4c4556}{B\+M\+P180\+\_\+\+P\+R\+E\+\_\+\+O\+S\+S2}~2
+\item 
+\#define \hyperlink{bmp180_8h_a5941adeecccb2528525c0ee2a1ec565f}{B\+M\+P180\+\_\+\+P\+R\+E\+\_\+\+O\+S\+S3}~3
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{bmp180_8h_ad5c546590bfc73d54d486c56ac6d511e}{bmp180\+\_\+init} (int address, const char $\ast$i2c\+\_\+device\+\_\+filepath)
+\item 
+void \hyperlink{bmp180_8h_a12ae9ad1929480db091dc01dd84dfece}{bmp180\+\_\+close} (void $\ast$\+\_\+bmp)
+\item 
+long \hyperlink{bmp180_8h_a8c5598d4a7d2eb57f0c61b705cb1e6bd}{bmp180\+\_\+pressure} (void $\ast$\+\_\+bmp)
+\item 
+void \hyperlink{bmp180_8h_a3d36be4c3eab582047ed5d8055683bc6}{bmp180\+\_\+set\+\_\+oss} (void $\ast$\+\_\+bmp, int oss)
+\item 
+float \hyperlink{bmp180_8h_a1e1d4fb84c7516b649581d5aaa6dabc2}{bmp180\+\_\+temperature} (void $\ast$\+\_\+bmp)
+\item 
+float \hyperlink{bmp180_8h_a456b83f78bf48a396e396e5654f66f91}{bmp180\+\_\+altitude} (void $\ast$\+\_\+bmp)
+\item 
+void \hyperlink{bmp180_8h_a427289f82564aa9500bbfe50de479cdf}{bmp180\+\_\+dump\+\_\+eprom} (void $\ast$\+\_\+bmp, \hyperlink{structbmp180__eprom__t}{bmp180\+\_\+eprom\+\_\+t} $\ast$eprom)
+\item 
+void \hyperlink{bmp180_8h_aa3542b969a56fb20b7e109996579a8ed}{B\+A\+R\+O\+T\+E\+M\+P} (float $\ast$t, long $\ast$p)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{bmp180_8h_a677a31d4e679a73e2a8f0b97c51316b3}{\index{bmp180.\+h@{bmp180.\+h}!B\+M\+P180\+\_\+\+P\+R\+E\+\_\+\+O\+S\+S0@{B\+M\+P180\+\_\+\+P\+R\+E\+\_\+\+O\+S\+S0}}
+\index{B\+M\+P180\+\_\+\+P\+R\+E\+\_\+\+O\+S\+S0@{B\+M\+P180\+\_\+\+P\+R\+E\+\_\+\+O\+S\+S0}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{B\+M\+P180\+\_\+\+P\+R\+E\+\_\+\+O\+S\+S0}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+M\+P180\+\_\+\+P\+R\+E\+\_\+\+O\+S\+S0~0}}\label{bmp180_8h_a677a31d4e679a73e2a8f0b97c51316b3}
+\hypertarget{bmp180_8h_aef6f208a36b9850b70a7b5f7b2bb3792}{\index{bmp180.\+h@{bmp180.\+h}!B\+M\+P180\+\_\+\+P\+R\+E\+\_\+\+O\+S\+S1@{B\+M\+P180\+\_\+\+P\+R\+E\+\_\+\+O\+S\+S1}}
+\index{B\+M\+P180\+\_\+\+P\+R\+E\+\_\+\+O\+S\+S1@{B\+M\+P180\+\_\+\+P\+R\+E\+\_\+\+O\+S\+S1}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{B\+M\+P180\+\_\+\+P\+R\+E\+\_\+\+O\+S\+S1}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+M\+P180\+\_\+\+P\+R\+E\+\_\+\+O\+S\+S1~1}}\label{bmp180_8h_aef6f208a36b9850b70a7b5f7b2bb3792}
+\hypertarget{bmp180_8h_ac24715d4f9e3819408bd3e0a8a4c4556}{\index{bmp180.\+h@{bmp180.\+h}!B\+M\+P180\+\_\+\+P\+R\+E\+\_\+\+O\+S\+S2@{B\+M\+P180\+\_\+\+P\+R\+E\+\_\+\+O\+S\+S2}}
+\index{B\+M\+P180\+\_\+\+P\+R\+E\+\_\+\+O\+S\+S2@{B\+M\+P180\+\_\+\+P\+R\+E\+\_\+\+O\+S\+S2}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{B\+M\+P180\+\_\+\+P\+R\+E\+\_\+\+O\+S\+S2}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+M\+P180\+\_\+\+P\+R\+E\+\_\+\+O\+S\+S2~2}}\label{bmp180_8h_ac24715d4f9e3819408bd3e0a8a4c4556}
+\hypertarget{bmp180_8h_a5941adeecccb2528525c0ee2a1ec565f}{\index{bmp180.\+h@{bmp180.\+h}!B\+M\+P180\+\_\+\+P\+R\+E\+\_\+\+O\+S\+S3@{B\+M\+P180\+\_\+\+P\+R\+E\+\_\+\+O\+S\+S3}}
+\index{B\+M\+P180\+\_\+\+P\+R\+E\+\_\+\+O\+S\+S3@{B\+M\+P180\+\_\+\+P\+R\+E\+\_\+\+O\+S\+S3}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{B\+M\+P180\+\_\+\+P\+R\+E\+\_\+\+O\+S\+S3}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+M\+P180\+\_\+\+P\+R\+E\+\_\+\+O\+S\+S3~3}}\label{bmp180_8h_a5941adeecccb2528525c0ee2a1ec565f}
+
+
+\subsection{Function Documentation}
+\hypertarget{bmp180_8h_aa3542b969a56fb20b7e109996579a8ed}{\index{bmp180.\+h@{bmp180.\+h}!B\+A\+R\+O\+T\+E\+M\+P@{B\+A\+R\+O\+T\+E\+M\+P}}
+\index{B\+A\+R\+O\+T\+E\+M\+P@{B\+A\+R\+O\+T\+E\+M\+P}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{B\+A\+R\+O\+T\+E\+M\+P}]{\setlength{\rightskip}{0pt plus 5cm}void B\+A\+R\+O\+T\+E\+M\+P (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{t, }
+\item[{long $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{bmp180_8h_aa3542b969a56fb20b7e109996579a8ed}
+\hypertarget{bmp180_8h_a456b83f78bf48a396e396e5654f66f91}{\index{bmp180.\+h@{bmp180.\+h}!bmp180\+\_\+altitude@{bmp180\+\_\+altitude}}
+\index{bmp180\+\_\+altitude@{bmp180\+\_\+altitude}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{bmp180\+\_\+altitude}]{\setlength{\rightskip}{0pt plus 5cm}float bmp180\+\_\+altitude (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{\+\_\+bmp}
+\end{DoxyParamCaption}
+)}}\label{bmp180_8h_a456b83f78bf48a396e396e5654f66f91}
+\hypertarget{bmp180_8h_a12ae9ad1929480db091dc01dd84dfece}{\index{bmp180.\+h@{bmp180.\+h}!bmp180\+\_\+close@{bmp180\+\_\+close}}
+\index{bmp180\+\_\+close@{bmp180\+\_\+close}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{bmp180\+\_\+close}]{\setlength{\rightskip}{0pt plus 5cm}void bmp180\+\_\+close (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{\+\_\+bmp}
+\end{DoxyParamCaption}
+)}}\label{bmp180_8h_a12ae9ad1929480db091dc01dd84dfece}
+\hypertarget{bmp180_8h_a427289f82564aa9500bbfe50de479cdf}{\index{bmp180.\+h@{bmp180.\+h}!bmp180\+\_\+dump\+\_\+eprom@{bmp180\+\_\+dump\+\_\+eprom}}
+\index{bmp180\+\_\+dump\+\_\+eprom@{bmp180\+\_\+dump\+\_\+eprom}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{bmp180\+\_\+dump\+\_\+eprom}]{\setlength{\rightskip}{0pt plus 5cm}void bmp180\+\_\+dump\+\_\+eprom (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{\+\_\+bmp, }
+\item[{{\bf bmp180\+\_\+eprom\+\_\+t} $\ast$}]{eprom}
+\end{DoxyParamCaption}
+)}}\label{bmp180_8h_a427289f82564aa9500bbfe50de479cdf}
+\hypertarget{bmp180_8h_ad5c546590bfc73d54d486c56ac6d511e}{\index{bmp180.\+h@{bmp180.\+h}!bmp180\+\_\+init@{bmp180\+\_\+init}}
+\index{bmp180\+\_\+init@{bmp180\+\_\+init}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{bmp180\+\_\+init}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ bmp180\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{int}]{address, }
+\item[{const char $\ast$}]{i2c\+\_\+device\+\_\+filepath}
+\end{DoxyParamCaption}
+)}}\label{bmp180_8h_ad5c546590bfc73d54d486c56ac6d511e}
+\hypertarget{bmp180_8h_a8c5598d4a7d2eb57f0c61b705cb1e6bd}{\index{bmp180.\+h@{bmp180.\+h}!bmp180\+\_\+pressure@{bmp180\+\_\+pressure}}
+\index{bmp180\+\_\+pressure@{bmp180\+\_\+pressure}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{bmp180\+\_\+pressure}]{\setlength{\rightskip}{0pt plus 5cm}long bmp180\+\_\+pressure (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{\+\_\+bmp}
+\end{DoxyParamCaption}
+)}}\label{bmp180_8h_a8c5598d4a7d2eb57f0c61b705cb1e6bd}
+\hypertarget{bmp180_8h_a3d36be4c3eab582047ed5d8055683bc6}{\index{bmp180.\+h@{bmp180.\+h}!bmp180\+\_\+set\+\_\+oss@{bmp180\+\_\+set\+\_\+oss}}
+\index{bmp180\+\_\+set\+\_\+oss@{bmp180\+\_\+set\+\_\+oss}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{bmp180\+\_\+set\+\_\+oss}]{\setlength{\rightskip}{0pt plus 5cm}void bmp180\+\_\+set\+\_\+oss (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{\+\_\+bmp, }
+\item[{int}]{oss}
+\end{DoxyParamCaption}
+)}}\label{bmp180_8h_a3d36be4c3eab582047ed5d8055683bc6}
+\hypertarget{bmp180_8h_a1e1d4fb84c7516b649581d5aaa6dabc2}{\index{bmp180.\+h@{bmp180.\+h}!bmp180\+\_\+temperature@{bmp180\+\_\+temperature}}
+\index{bmp180\+\_\+temperature@{bmp180\+\_\+temperature}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{bmp180\+\_\+temperature}]{\setlength{\rightskip}{0pt plus 5cm}float bmp180\+\_\+temperature (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{\+\_\+bmp}
+\end{DoxyParamCaption}
+)}}\label{bmp180_8h_a1e1d4fb84c7516b649581d5aaa6dabc2}

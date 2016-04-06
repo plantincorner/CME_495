@@ -1,0 +1,86 @@
+\hypertarget{mega__sensor_8h}{\section{mega\+\_\+sensor.\+h File Reference}
+\label{mega__sensor_8h}\index{mega\+\_\+sensor.\+h@{mega\+\_\+sensor.\+h}}
+}
+
+
+get sensor data  
+
+
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$signal.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$fcntl.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include $<$wiring\+Pi.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../include/lidar\+Lite.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../includes/sensor.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../includes/output.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../includes/bmp180.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{mega__sensor_8h_a24ad36b35639619a3489817e76a1a860}{M\+E\+G\+A\+\_\+\+S\+E\+N\+S\+O\+R} (float $\ast$g\+\_\+x, float $\ast$g\+\_\+y, float $\ast$a\+\_\+x, float $\ast$a\+\_\+y, float $\ast$t, long $\ast$p, int $\ast$l, float $\ast$l\+\_\+c, long $\ast$b\+\_\+c, float $\ast$h, int fd)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+get sensor data 
+
+\begin{DoxyAuthor}{Author}
+Luke Protz 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{mega__sensor_8h_a24ad36b35639619a3489817e76a1a860}{\index{mega\+\_\+sensor.\+h@{mega\+\_\+sensor.\+h}!M\+E\+G\+A\+\_\+\+S\+E\+N\+S\+O\+R@{M\+E\+G\+A\+\_\+\+S\+E\+N\+S\+O\+R}}
+\index{M\+E\+G\+A\+\_\+\+S\+E\+N\+S\+O\+R@{M\+E\+G\+A\+\_\+\+S\+E\+N\+S\+O\+R}!mega\+\_\+sensor.\+h@{mega\+\_\+sensor.\+h}}
+\subsubsection[{M\+E\+G\+A\+\_\+\+S\+E\+N\+S\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}void M\+E\+G\+A\+\_\+\+S\+E\+N\+S\+O\+R (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{g\+\_\+x, }
+\item[{float $\ast$}]{g\+\_\+y, }
+\item[{float $\ast$}]{a\+\_\+x, }
+\item[{float $\ast$}]{a\+\_\+y, }
+\item[{float $\ast$}]{t, }
+\item[{long $\ast$}]{p, }
+\item[{int $\ast$}]{l, }
+\item[{float $\ast$}]{l\+\_\+c, }
+\item[{long $\ast$}]{b\+\_\+c, }
+\item[{float $\ast$}]{h, }
+\item[{int}]{fd}
+\end{DoxyParamCaption}
+)}}\label{mega__sensor_8h_a24ad36b35639619a3489817e76a1a860}
+\begin{DoxyPrecond}{Precondition}
+The Lidar is initialized 
+
+The I\+M\+U is initialized 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em g\+\_\+x} & acceleration in the x direction in \\
+\hline
+\mbox{\tt out}  & {\em g\+\_\+y} & acceleration in the y direction \\
+\hline
+\mbox{\tt out}  & {\em a\+\_\+x} & \\
+\hline
+\mbox{\tt out}  & {\em a\+\_\+y} & \\
+\hline
+\mbox{\tt out}  & {\em t} & \\
+\hline
+\mbox{\tt out}  & {\em p} & \\
+\hline
+\mbox{\tt out}  & {\em l} & \\
+\hline
+\mbox{\tt out}  & {\em l} & \\
+\hline
+\mbox{\tt out}  & {\em l\+\_\+c} & \\
+\hline
+\mbox{\tt out}  & {\em b\+\_\+c} & \\
+\hline
+\mbox{\tt out}  & {\em fd} & \\
+\hline
+\mbox{\tt out}  & {\em } & post \\
+\hline
+\end{DoxyParams}
