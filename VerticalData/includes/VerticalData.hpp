@@ -1,4 +1,7 @@
-
+/**
+ * @author Devon Haubold
+ * @brief Calculates vertical velocity
+ */
 
 #ifndef CME_DIAGRAM_VERTICALDATA_H
 #define CME_DIAGRAM_VERTICALDATA_H
@@ -16,35 +19,42 @@
 using namespace std;
 /************************************************************/
 /**
- * 
+ * @brief Store two Height objects and calculate vertical velocity
  */
 class VerticalData {
 public:
 
-	/*
-	 * Store height object
-	 * @param[in] currentHeight
+	/**
+	 * @brief Store height object
+	 * @param[in] ht the height of the UAV in meters
 	 */
 	void storeHeight(Height &ht);
 
-	/*
-	 *
+	/**
+	 *@brief create Height object and place in queue
+	 *@param[in] height height of UAV in meters
+	 *@param[in] time timestamp of height in microseconds
 	 */
 	void placeHeight(float height, microseconds time);
-	/*
+	/**
 	 * @return vertical velocity
 	 */
 	float getVelocity();
 
+	/**
+	 *@param vel the velocity of the UAV in m/s
+	 */
 	void setVelocity(float vel);
 
-	/*For testing purposes
-	 * Print contents of VerticalData object
+	/**
+	 * @brief Print contents of VerticalData object
 	 */
 	void printAll();
 
 protected:
-
+	/**
+	 * @brief Calculate the vertical velocity
+	 */
 	void calculateVelocity();
 
 private:

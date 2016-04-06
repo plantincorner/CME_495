@@ -3,31 +3,36 @@
 }
 
 
-Store height data and timestamp.  
-
-
-
-
 {\ttfamily \#include $<$Height.\+hpp$>$}
 
+
+
+Inheritance diagram for Height\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classHeight__inherit__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classHeight_a7fecf5018a116f8234513b222bae6a2f}{Height} ()
 \item 
-\hyperlink{classHeight_a1e48b1093e67413d817eae7acf1064ad}{Height} (float height, time\+\_\+ttime)
+\hyperlink{classHeight_ab715608c84ce45a0a9bb2e241e952312}{Height} (float height, microseconds time)
 \item 
-float \hyperlink{classHeight_a595e201f356217323516c6465f697ca4}{get\+Height} ()
-\item 
-time\+\_\+t \hyperlink{classHeight_a40db46d3736f83f914a59050abfca92d}{get\+Time} ()
-\item 
-void \hyperlink{classHeight_afa56baac0be90a36def98b7a5a40788f}{print\+All} ()
+\hyperlink{classHeight_a8173b5ed640978f40eb13203b8509581}{$\sim$\+Height} (void)
 \end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
-Store height data and timestamp. 
-
+Store height data and time-\/stamp \begin{DoxyNote}{Note}
+Inherits from the \hyperlink{classTimedData}{Timed\+Data} class 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+Timed\+Data.\+hpp 
+\end{DoxySeeAlso}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -41,52 +46,54 @@ Store height data and timestamp.
 Construct an empty \hyperlink{classHeight}{Height} object \begin{DoxyPostcond}{Postcondition}
 an empty \hyperlink{classHeight}{Height} object is created 
 \end{DoxyPostcond}
-\hypertarget{classHeight_a1e48b1093e67413d817eae7acf1064ad}{\index{Height@{Height}!Height@{Height}}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{classHeight_a7fecf5018a116f8234513b222bae6a2f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classHeight_ab715608c84ce45a0a9bb2e241e952312}{\index{Height@{Height}!Height@{Height}}
 \index{Height@{Height}!Height@{Height}}
 \subsubsection[{Height}]{\setlength{\rightskip}{0pt plus 5cm}Height\+::\+Height (
 \begin{DoxyParamCaption}
 \item[{float}]{height, }
-\item[{time\+\_\+t}]{time}
+\item[{microseconds}]{time}
 \end{DoxyParamCaption}
-)}}\label{classHeight_a1e48b1093e67413d817eae7acf1064ad}
-overloaded 
+)}}\label{classHeight_ab715608c84ce45a0a9bb2e241e952312}
+Construct a \hyperlink{classHeight}{Height} object containing a height and time 
 \begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em height} & the height of the object \\
+\hline
 \mbox{\tt in}  & {\em time} & the height reading was taken \\
 \hline
-\mbox{\tt in}  & {\em height} & reading \\
-\hline
 \end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+A \hyperlink{classHeight}{Height} object containing a height reading and the corresponding time-\/stamp 
+\end{DoxyPostcond}
 
 
-\subsection{Member Function Documentation}
-\hypertarget{classHeight_a595e201f356217323516c6465f697ca4}{\index{Height@{Height}!get\+Height@{get\+Height}}
-\index{get\+Height@{get\+Height}!Height@{Height}}
-\subsubsection[{get\+Height}]{\setlength{\rightskip}{0pt plus 5cm}float Height\+::get\+Height (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}\label{classHeight_a595e201f356217323516c6465f697ca4}
-\begin{DoxyReturn}{Returns}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{classHeight_ab715608c84ce45a0a9bb2e241e952312_cgraph}
+\end{center}
+\end{figure}
 
-\end{DoxyReturn}
-\hypertarget{classHeight_a40db46d3736f83f914a59050abfca92d}{\index{Height@{Height}!get\+Time@{get\+Time}}
-\index{get\+Time@{get\+Time}!Height@{Height}}
-\subsubsection[{get\+Time}]{\setlength{\rightskip}{0pt plus 5cm}time\+\_\+t Height\+::get\+Time (
+
+\hypertarget{classHeight_a8173b5ed640978f40eb13203b8509581}{\index{Height@{Height}!````~Height@{$\sim$\+Height}}
+\index{````~Height@{$\sim$\+Height}!Height@{Height}}
+\subsubsection[{$\sim$\+Height}]{\setlength{\rightskip}{0pt plus 5cm}Height\+::$\sim$\+Height (
 \begin{DoxyParamCaption}
-{}
+\item[{void}]{}
 \end{DoxyParamCaption}
-)}}\label{classHeight_a40db46d3736f83f914a59050abfca92d}
-\begin{DoxyReturn}{Returns}
-time 
-\end{DoxyReturn}
-\hypertarget{classHeight_afa56baac0be90a36def98b7a5a40788f}{\index{Height@{Height}!print\+All@{print\+All}}
-\index{print\+All@{print\+All}!Height@{Height}}
-\subsubsection[{print\+All}]{\setlength{\rightskip}{0pt plus 5cm}void Height\+::print\+All (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}\label{classHeight_afa56baac0be90a36def98b7a5a40788f}
-print contents to console 
+)}}\label{classHeight_a8173b5ed640978f40eb13203b8509581}
+Destructor for \hyperlink{classHeight}{Height} object 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

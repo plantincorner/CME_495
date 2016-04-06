@@ -1,9 +1,13 @@
+
+
 #include "../includes/mega_sensor.h"
 
 //variables for calculations
 #define M_PI 3.14159265358979323846
 #define DELT_PRESS 11.399393 //change in pa per 1m change in altitude
 #define ALT_SENS_CHNG 4000 //cm
+
+
 
 void MEGA_SENSOR(float *g_x,float *g_y,float *a_x,float *a_y,float *t,long *p,int *l,float *l_c,long *b_c,float *h,int fd){
 	//var for gyro-acc

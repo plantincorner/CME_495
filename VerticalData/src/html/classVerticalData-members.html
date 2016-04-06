@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>My Project: Member List</title>
+<title>CME/EE 495: Member List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">CME/EE 495
    </div>
   </td>
  </tr>
@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -61,6 +62,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -69,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,17 +89,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>This is the complete list of members for <a class="el" href="classVerticalData.html">VerticalData</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classVerticalData.html#a7cb7e42ce4f222aa9eda4007a527f886">getCurrentHeight</a>()</td><td class="entry"><a class="el" href="classVerticalData.html">VerticalData</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classVerticalData.html#a5311ece5af566a537513db40684541a5">getCurrentTime</a>()</td><td class="entry"><a class="el" href="classVerticalData.html">VerticalData</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getVelocity</b>() (defined in <a class="el" href="classVerticalData.html">VerticalData</a>)</td><td class="entry"><a class="el" href="classVerticalData.html">VerticalData</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classVerticalData.html#a7f1427ba66cd63a1b5f08e71d2a6bf0a">setCurrentHeight</a>(float height)</td><td class="entry"><a class="el" href="classVerticalData.html">VerticalData</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classVerticalData.html#a91bc7ecd0a8d86b580e70dc67e607318">VerticalData</a>()</td><td class="entry"><a class="el" href="classVerticalData.html">VerticalData</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classVerticalData.html#abb0780941eae1ff7914777d4f68e8a70">VerticalData</a>(Height previous)</td><td class="entry"><a class="el" href="classVerticalData.html">VerticalData</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~VerticalData</b>(void) (defined in <a class="el" href="classVerticalData.html">VerticalData</a>)</td><td class="entry"><a class="el" href="classVerticalData.html">VerticalData</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>calculateVelocity</b>() (defined in <a class="el" href="classVerticalData.html">VerticalData</a>)</td><td class="entry"><a class="el" href="classVerticalData.html">VerticalData</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>getVelocity</b>() (defined in <a class="el" href="classVerticalData.html">VerticalData</a>)</td><td class="entry"><a class="el" href="classVerticalData.html">VerticalData</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>placeHeight</b>(float height, microseconds time) (defined in <a class="el" href="classVerticalData.html">VerticalData</a>)</td><td class="entry"><a class="el" href="classVerticalData.html">VerticalData</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>printAll</b>() (defined in <a class="el" href="classVerticalData.html">VerticalData</a>)</td><td class="entry"><a class="el" href="classVerticalData.html">VerticalData</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>setVelocity</b>(float vel) (defined in <a class="el" href="classVerticalData.html">VerticalData</a>)</td><td class="entry"><a class="el" href="classVerticalData.html">VerticalData</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>storeHeight</b>(Height &amp;ht) (defined in <a class="el" href="classVerticalData.html">VerticalData</a>)</td><td class="entry"><a class="el" href="classVerticalData.html">VerticalData</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 17 2016 18:31:09 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 5 2016 17:56:40 for CME/EE 495 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

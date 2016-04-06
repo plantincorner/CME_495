@@ -1,21 +1,15 @@
-/*
- * velocityTracking.cpp
+/**
+ * @file velocityTracking.cpp
  *
- *  Created on: Mar 21, 2016
- *      Author: devon
+ *  @date Mar 21, 2016
+ *  @author: Devon Haubold
+ *  @brief The main program, stores data and calculates velocities
  */
-/*
- * @todo implement time checking
- */
-/*
- * heightThread.cpp
- *
- *  Created on: Mar 16, 2016
- *      Author: devon
- */
+
+
 #include "../includes/Height.hpp"
 #include "../includes/VerticalData.hpp"
-#include "../includes/VelocityData.hpp"
+//#include "../includes/VelocityData.hpp"
 #include "../includes/velocityCalculate.hpp"
 
 
@@ -36,13 +30,19 @@ extern "C" {
 #include <opencv2/highgui/highgui.hpp>
 #include <raspicam/raspicam_cv.h>
 
-#define FRAME_RATE 90
+#define FRAME_RATE 90 /**< The frame rate that the camera is set at*/
 
 using namespace std;
 using namespace chrono;
 using namespace this_thread;
 using namespace cv;
 
+
+/**
+ * @post camera image format set to single channel 8 bit
+ * @post gain set to maximum value
+ * @param[in,out] Camera the camera interface
+ */
 void initializeCamera(raspicam::RaspiCam_Cv &Camera)
 {
 		Camera.set( CV_CAP_PROP_FORMAT, CV_8UC1);
@@ -52,12 +52,25 @@ void initializeCamera(raspicam::RaspiCam_Cv &Camera)
 //		Camera.set( CV_CAP_PROP_EXPOSURE, 0);
 //	cout << Camera.get(CV_CAP_PROP_FRAME_WIDTH) << ", " << Camera.get(CV_CAP_PROP_FRAME_HEIGHT) <<endl;
 }
+
+/**
+ *
+ * @brief capture two consecutive images at 90 frames per second, loops until exit_flag is true
+ * @pre a thread has been created and id assigned
+ * @param[in,out] image_1 the first image to be captured
+ * @param[in,out] image_2 the second image to be captured
+ * @param[in] exit_flag flag to alert thread to exit
+ * @param[in,out] ready_flag to alert two images have been captured
+ * @param[in,out] wait_flag flag to alert images are being used
+ */
 void twoImageCapture( Mat &image_1, Mat &image_2, bool &exit_flag, bool &ready_flag, bool &wait_flag)
 {
-	
+	//create camera interface
 	raspicam::RaspiCam_Cv Camera;
+	//initialize the camera
 	initializeCamera(Camera);
 	
+	//open camera
 	if(!Camera.open())
 	{
 		cerr<<"Error: Camera not open" << endl;
@@ -84,19 +97,20 @@ void twoImageCapture( Mat &image_1, Mat &image_2, bool &exit_flag, bool &ready_f
 
 }
 
-/** Get height data every 0.1 seconds
+/** Get height data continuosly, calculate velocity
  * @pre a thread has been created and id assigned
  * @pre the sensors have been initialized and are accessible
- * @param[in] threadid The id number of the thread being used
- * @post the thread has reported the height
- * @post a Height object has been saved to disk
+ * @param[in] vertDataRef holds height data and calculates vertical velocity
+ * @param[in] exit_flag flag to alert thread to exit
+ * @param[in] lidar equals 1 if lidar is initialized
  */
 
 void heightReporting(VerticalData &vertDataRef, bool &exit_flag, int lidar)
 {
-		float gyr_x, gyr_y, acc_x, acc_y, t, l_c, h;
-		long p, b_c;
-		int l;
+	//declare variables to store sensor data
+	float gyr_x, gyr_y, acc_x, acc_y, t, l_c, h;
+	long p, b_c;
+	int l;
 	
 	while(!(exit_flag))
 	{
@@ -123,51 +137,38 @@ void heightReporting(VerticalData &vertDataRef, bool &exit_flag, int lidar)
 	cout<< "exit height reporting" << endl;
 }
 
-//Test timing of thread running a every 0.1 seconds
+/**
+ * Declares input/output variables for sensor data
+ * Declares variables for calculated values
+ * Spawns threads using heightReporting and twoImageCapture
+ * Calls velocityCalculate with sensor data and calculated value variables
+ */
 int main(int argc, char *argv[])
 {
 	//Alert threads of exit
-	bool exit_flag = false;
+	bool exit_flag = false; /* flag that ends all threads when true*/
 
-	//Object that stores Height objects and calculates velocity
-	VerticalData frequentHeight;
-//	bool heightOut_flag = true;
-//	string heightOut = "noHeightOut";
-//	if (argc > 1)
-//	{
-//	if(heightOut.compare(argv[1]) == 0)
-//		{
-//			cout << "Not reporting Height 10X per sec" << endl;
-//			heightOut_flag = false;
-//		}	
+	VerticalData frequentHeight; /* Object that calculates Vertical Velocity */
 
-//	}
-	//hold the calculated velocity for use in the next iteration
-	//double previousVelocity = 0;// needed for calculating framerate
+	bool wait_flag = false; /* flag to prevent camera from taking images */
+	bool ready_flag = false; /* flag to alert that two consecutive images are ready*/
+	Mat image_1; /* hold first image captured */
+	Mat image_2; /* hold second image captured */
 
-	/**
-	 * @todo initialize Sensors
-	 */
-	
-	// stop camera from taking images
-	bool wait_flag = false;
-	bool ready_flag = false;
-	Mat image_1;
-	Mat image_2;
-
-	/*** initialize the imu***/
+	// initialize the imu
 	signal(SIGINT, INThandler);
 	enableIMU();
 
-	/**Initialize the Lidar**/
-	int lidar = lidar_init(false);
-	/***Create thread for reporting height 10X per sec ***/
+	//Initialize the Lidar
+	int lidar = lidar_init(false); /**< equals 1 if lidar initialized */
+	//Create thread for reporting height
 	thread one (heightReporting,ref(frequentHeight) ,ref(exit_flag), lidar);
 	one.detach();
-
+	//create thread for capturing images
 	thread two (twoImageCapture,ref(image_1), ref(image_2), ref(exit_flag), ref(ready_flag), ref(wait_flag));
 	two.detach();
-	for(int i = 0; i < 1000; i++)
+
+	while(!exit_flag)
 	{
 		
 		//start time of loop
@@ -177,23 +178,15 @@ int main(int argc, char *argv[])
 		//cout << "* "<< endl <<"starting new loop at time"<< duration_cast<microseconds>(start.time_since_epoch()).count() << endl << "*" << endl;
 		//cout << "Velocity Test: "<< i << endl;
 		
-		/**temp storage variables for pitch and roll
-		*gyr_x roll velocity
-		*gyr_y pitch velocity
-		*acc_x roll position
-		*acc_y pitch position
-		* @todo modify code so we don't have to use these ACCGYR to accept reference instead of pointers
-		*/
+		//Sensor variables
 		float gyr_x, gyr_y, acc_x, acc_y, t, l_c, h;
 		long p, b_c;
 		int l;
+		//calculated variables
 		double vx,vz, vy, spd, direction;
-
-		//VelocityData vD;
-		//vD.setPreviousVelocity(previousVelocity);// needed for setting framerate
 		
 		
-		/** Aquire images **/
+		// Aquire images
 		
 		Mat prevImg;
 		Mat currImg;
@@ -204,31 +197,17 @@ int main(int argc, char *argv[])
 	//	cout << "picture taken" << endl;
 		wait_flag = false;
 
-		/**Accuire pitch, roll and there respective velocities and heit**/
+		//Accuire pitch, roll and there respective velocities and heit
 		MEGA_SENSOR(&gyr_x, &gyr_y, &acc_x, &acc_y, &t, &p, &l, &l_c, &b_c, &h, lidar);
-		/**Aquire Vertical Velocity*/
+		//Aquire Vertical Velocity
 		vz = frequentHeight.getVelocity();
-		
-	/**	Functions for setting data structure
-		vD.setRollVelocity(gyr_x);
-		vD.setPitchVelocity(gyr_y);
-		vD.setRoll(acc_x);
-		vD.setPitch(acc_y);
-		
-		vD.setVerticalVelocity(frequentHeight.getVelocity())
-	*/
-	//	vD.setImage_1(image_1);
-	//	vD.setImage_2(image_2);
-		/**Print results to console **/
-//		vD.printAll();
 		
 		//cv::imwrite("test_img1.jpg", prevImg);
 		//cv::imwrite("test_img2.jpg", currImg);
 		//cout << "height: " << h << "acc_y: " << acc_y << " acc_x: "<< acc_x << " gyr_x: " << gyr_x << " gyr_y: "<< gyr_y << endl;
 //		cout<<"*************Beginning Velocity Calculation**************"<<endl;
-	//	calculateAEAO( prevImg,currImg, h, FRAME_RATE, acc_y, acc_x, gyr_x, gyr_y, vx, vy, vz, spd, direction );
+		calculateAEAO( prevImg,currImg, h, FRAME_RATE, acc_y, acc_x, gyr_x, gyr_y, vx, vy, vz, spd, direction );
 
-		calculateAEAO( prevImg,currImg, 1, FRAME_RATE, acc_y, acc_x, gyr_x, gyr_y, vx, vy, 0, spd, direction );
 //		cout<<"++++++++++++++End Hight Calculation+++++++++++++++++++"<<endl;
 		/**@todo remove loop timer**/
 		const auto loop_timer = duration_cast<milliseconds>(system_clock::now() - start).count();

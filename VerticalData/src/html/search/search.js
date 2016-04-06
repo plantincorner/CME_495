@@ -7,16 +7,20 @@
 
 var indexSectionsWithContent =
 {
-  0: "ghpsv",
-  1: "hv",
-  2: "ghpsv"
+  0: "bghprstvw~",
+  1: "bhtv",
+  2: "h",
+  3: "ghprstvw~",
+  4: "t"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "classes",
-  2: "functions"
+  2: "files",
+  3: "functions",
+  4: "pages"
 };
 
 function convertToId(search)

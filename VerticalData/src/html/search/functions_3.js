@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['setcurrentheight',['setCurrentHeight',['../classVerticalData.html#a7f1427ba66cd63a1b5f08e71d2a6bf0a',1,'VerticalData']]]
+  ['readdata',['readData',['../classTimedData.html#a4b4ece4a2ab9c68e3fb0e2f1983819c5',1,'TimedData']]]
 ];

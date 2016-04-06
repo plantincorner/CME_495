@@ -8,6 +8,7 @@
 #include "linux/i2c-dev.h"
 #include "LSM9DS0.h"
 
+
 void  readBlock(uint8_t command, uint8_t size, uint8_t *data);
 
 void selectDevice(int file, int addr);

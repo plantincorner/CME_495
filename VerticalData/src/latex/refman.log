@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.2.4)  17 MAR 2016 18:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.2.4)  6 APR 2016 10:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**refman
+**refman.tex
 (./refman.tex
 LaTeX2e <2014/05/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
@@ -999,10 +999,50 @@ Package hyperref Info: Option `unicode' set `true' on input line 122.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 12.9599pt on input line 127.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.79993pt on input line 129.
+(Font)              scaled to size 6.29996pt on input line 127.
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 12
+7.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 12
+7.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlztmcm.fd
+File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 12
+7.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsztmcm.fd
+File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 12
+7.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxztmcm.fd
+File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for U+wasy on input line 127.
+
+(/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
+File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 127.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 127.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 127.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 10.79993pt on input line 127.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 8.09995pt on input line 131.
-[1
+ [1
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
@@ -1021,61 +1061,23 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 8.99994pt on input line 1.
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 1.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
-File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
-)
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 1.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlztmcm.fd
-File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
-)
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 1.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsztmcm.fd
-File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
-)
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 1.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxztmcm.fd
-File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
-)
-LaTeX Font Info:    Try loading font information for U+wasy on input line 1.
-
-(/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
-File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
-)
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 1.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
-File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
-)
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.29996pt on input line 10.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
-)
+ [3
+
+])
 \tf@toc=\write5
 \openout5 = `refman.toc'.
 
- [3
-
-] [4
-
-]
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <7> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 136.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 6.29996pt on input line 136.
+ [4]
 Package hyperref Info: Option `pageanchor' set `true' on input line 138.
 
 Chapter 1.
@@ -1087,7 +1089,7 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 18.66588pt on input line 141.
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
 (Font)              scaled to size 18.66588pt on input line 141.
-(./annotated.tex
+(./hierarchy.tex
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
@@ -1096,103 +1098,432 @@ LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
 (Font)              scaled to size 12.9599pt on input line 1.
 ) [1
 
-]
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <7> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 143.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.29996pt on input line 143.
- [2
+
+] [2
 
 ]
 Chapter 2.
+(./annotated.tex) [3] [4
+
+]
+Chapter 3.
+(./files.tex) [5] [6
+
+]
+Chapter 4.
 (./classHeight.tex
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 11.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 6.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
+<classHeight__inherit__graph.pdf, id=346, 166.6225pt x 354.32375pt>
+File: classHeight__inherit__graph.pdf Graphic file (type pdf)
+
+<use classHeight__inherit__graph.pdf>
+Package pdftex.def Info: classHeight__inherit__graph.pdf used on input line 14.
+
+(pdftex.def)             Requested size: 166.0pt x 353.0253pt.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 13.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 17.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 13.
+(Font)              scaled to size 10.79993pt on input line 17.
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 10.79993pt on input line 13.
-LaTeX Font Info:    Try loading font information for TS1+phv on input line 16.
+(Font)              scaled to size 10.79993pt on input line 17.
+LaTeX Font Info:    Try loading font information for TS1+phv on input line 20.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 16.
+(Font)              scaled to size 8.99994pt on input line 20.
+ [7 <./classHeight__inherit__graph.pdf>]
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 8.99994pt on input line 40.
-LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 6.29996pt on input line 40.
+(Font)              scaled to size 8.99994pt on input line 30.
 
-Underfull \hbox (badness 10000) detected at line 41
+Underfull \hbox (badness 10000) detected at line 30
 [][][]
  []
 
+
+Underfull \hbox (badness 10000) detected at line 33
+[][][]
+ []
+
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 6.29996pt on input line 45.
+
+Underfull \hbox (badness 10000) detected at line 46
+[][][]
+ []
+
+
+<classHeight_a7fecf5018a116f8234513b222bae6a2f_cgraph.pdf, id=370, 303.1325pt x
+ 138.5175pt>
+File: classHeight_a7fecf5018a116f8234513b222bae6a2f_cgraph.pdf Graphic file (ty
+pe pdf)
+ <use classHeight_a7fecf5018a116f8234513b222bae6a2f_cgraph.pdf>
+Package pdftex.def Info: classHeight_a7fecf5018a116f8234513b222bae6a2f_cgraph.p
+df used on input line 55.
+(pdftex.def)             Requested size: 302.0pt x 138.00142pt.
 LaTeX Font Info:    Font shape `T1/phv/bc/it' in size <10> not available
-(Font)              Font shape `T1/phv/bc/sl' tried instead on input line 51.
+(Font)              Font shape `T1/phv/bc/sl' tried instead on input line 67.
 LaTeX Font Info:    Font shape `T1/phv/bc/sl' will be
-(Font)              scaled to size 8.99994pt on input line 51.
-[3]
+(Font)              scaled to size 8.99994pt on input line 67.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 54.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 70.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.99994pt on input line 54.
+(Font)              scaled to size 8.99994pt on input line 70.
+
+Underfull \hbox (badness 10000) detected at line 75
+[][][]
+ []
+
+
+<classHeight_ab715608c84ce45a0a9bb2e241e952312_cgraph.pdf, id=373, 303.1325pt x
+ 138.5175pt>
+File: classHeight_ab715608c84ce45a0a9bb2e241e952312_cgraph.pdf Graphic file (ty
+pe pdf)
+ <use classHeight_ab715608c84ce45a0a9bb2e241e952312_cgraph.pdf>
+Package pdftex.def Info: classHeight_ab715608c84ce45a0a9bb2e241e952312_cgraph.p
+df used on input line 84.
+(pdftex.def)             Requested size: 302.0pt x 138.00142pt.
+
+[8 <./classHeight_a7fecf5018a116f8234513b222bae6a2f_cgraph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 95.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 95.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 95.
+
+) (./classTimedData.tex
+<classTimedData__inherit__graph.pdf, id=389, 166.6225pt x 354.32375pt>
+File: classTimedData__inherit__graph.pdf Graphic file (type pdf)
+
+<use classTimedData__inherit__graph.pdf>
+Package pdftex.def Info: classTimedData__inherit__graph.pdf used on input line 
+14.
+(pdftex.def)             Requested size: 166.0pt x 353.0253pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9 <./classHeight_ab715608c84ce45a0a9bb2e241e952312_cgraph.pdf>]
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 30.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 30.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 30.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 6.29996pt on input line 30.
+ [10 <./classTimedData__inherit__graph.pdf>]
+Underfull \hbox (badness 10000) detected at line 57
+[][][]
+ []
+
+
+<classTimedData_abed3263e78c1a55e7ff5fe6a50185317_cgraph.pdf, id=439, 342.27875
+pt x 138.5175pt>
+File: classTimedData_abed3263e78c1a55e7ff5fe6a50185317_cgraph.pdf Graphic file 
+(type pdf)
+
+<use classTimedData_abed3263e78c1a55e7ff5fe6a50185317_cgraph.pdf>
+Package pdftex.def Info: classTimedData_abed3263e78c1a55e7ff5fe6a50185317_cgrap
+h.pdf used on input line 66.
+(pdftex.def)             Requested size: 341.0pt x 138.00987pt.
+
+Underfull \hbox (badness 10000) detected at line 86
+[][][]
+ []
+
+
+<classTimedData_a96f4b1aba52e95af687db6d71fa19bfa_cgraph.pdf, id=443, 342.27875
+pt x 138.5175pt>
+File: classTimedData_a96f4b1aba52e95af687db6d71fa19bfa_cgraph.pdf Graphic file 
+(type pdf)
+
+<use classTimedData_a96f4b1aba52e95af687db6d71fa19bfa_cgraph.pdf>
+Package pdftex.def Info: classTimedData_a96f4b1aba52e95af687db6d71fa19bfa_cgrap
+h.pdf used on input line 95.
+(pdftex.def)             Requested size: 341.0pt x 138.00987pt.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 106.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 106.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 106.
+
+[11 <./classTimedData_abed3263e78c1a55e7ff5fe6a50185317_cgraph.pdf> <./classTim
+edData_a96f4b1aba52e95af687db6d71fa19bfa_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classTimedData_a96f4b1aba52e95af687db6d71fa19b
+fa_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+>]
+Underfull \hbox (badness 10000) detected at line 117
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 127
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 145
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 150
+[][][]
+ []
+
+
+LaTeX Font Warning: Font shape `T1/pcr/bc/n' undefined
+(Font)              using `T1/pcr/m/n' instead on input line 159.
+
+
+Underfull \hbox (badness 10000) detected at line 165
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 180
+[][][]
+ []
+
+[12] [13]
+Underfull \hbox (badness 10000) detected at line 198
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 201
+[][][]
+ []
+
+) (./classVerticalData.tex
+Underfull \hbox (badness 10000) detected at line 46
+[][][]
+ []
+
+[14] [15]) [16]
+Chapter 5.
+(./mega__sensor_8h.tex
+<mega__sensor_8h__incl.pdf, id=511, 785.93625pt x 156.585pt>
+File: mega__sensor_8h__incl.pdf Graphic file (type pdf)
+
+<use mega__sensor_8h__incl.pdf>
+Package pdftex.def Info: mega__sensor_8h__incl.pdf used on input line 26.
+(pdftex.def)             Requested size: 350.0pt x 69.73386pt.
+
+<mega__sensor_8h__dep__incl.pdf, id=512, 187.70125pt x 156.585pt>
+File: mega__sensor_8h__dep__incl.pdf Graphic file (type pdf)
+
+<use mega__sensor_8h__dep__incl.pdf>
+Package pdftex.def Info: mega__sensor_8h__dep__incl.pdf used on input line 33.
+(pdftex.def)             Requested size: 187.0pt x 156.00879pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17
+
+ <./mega__sensor_8h__incl.pdf>]
+Underfull \hbox (badness 10000) detected at line 46
+[][][]
+ []
+
+LaTeX Font Info:    Font shape `T1/phv/bc/it' in size <7> not available
+(Font)              Font shape `T1/phv/bc/sl' tried instead on input line 68.
+LaTeX Font Info:    Font shape `T1/phv/bc/sl' will be
+(Font)              scaled to size 6.29996pt on input line 68.
 
 Underfull \hbox (badness 10000) detected at line 69
 [][][]
  []
 
+[18 <./mega__sensor_8h__dep__incl.pdf>]) (./velocityCalculate_8hpp.tex
+<velocityCalculate_8hpp__incl.pdf, id=537, 819.06pt x 156.585pt>
+File: velocityCalculate_8hpp__incl.pdf Graphic file (type pdf)
 
-Underfull \hbox (badness 10000) detected at line 79
+<use velocityCalculate_8hpp__incl.pdf>
+Package pdftex.def Info: velocityCalculate_8hpp__incl.pdf used on input line 20
+.
+(pdftex.def)             Requested size: 350.0pt x 66.91211pt.
+
+<velocityCalculate_8hpp__dep__incl.pdf, id=538, 190.7125pt x 156.585pt>
+File: velocityCalculate_8hpp__dep__incl.pdf Graphic file (type pdf)
+
+<use velocityCalculate_8hpp__dep__incl.pdf>
+Package pdftex.def Info: velocityCalculate_8hpp__dep__incl.pdf used on input li
+ne 27.
+(pdftex.def)             Requested size: 190.0pt x 156.0064pt.
+ [19 <./velocityCalculate_8hpp__incl.pdf> <./velocityCalculate_8hpp__dep__incl.
+pdf
+
+pdfTeX warning: pdflatex (file ./velocityCalculate_8hpp__dep__incl.pdf): PDF in
+clusion: multiple pdfs with page group included in a single page
+>]
+Underfull \hbox (badness 10000) detected at line 46
 [][][]
  []
 
-) (./classVerticalData.tex [4]
+
+Underfull \hbox (badness 10000) detected at line 49
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 80
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 116
+[][][]
+ []
+
+
+<velocityCalculate_8hpp_aeeb54087a0d0b7c6418fccb0308e1a34_cgraph.pdf, id=564, 2
+91.0875pt x 176.66pt>
+File: velocityCalculate_8hpp_aeeb54087a0d0b7c6418fccb0308e1a34_cgraph.pdf Graph
+ic file (type pdf)
+
+<use velocityCalculate_8hpp_aeeb54087a0d0b7c6418fccb0308e1a34_cgraph.pdf>
+Package pdftex.def Info: velocityCalculate_8hpp_aeeb54087a0d0b7c6418fccb0308e1a
+34_cgraph.pdf used on input line 131.
+(pdftex.def)             Requested size: 290.0pt x 176.0126pt.
+
+Underfull \vbox (badness 1590) has occurred while \output is active []
+
+ [20]
+Underfull \hbox (badness 10000) detected at line 158
+[][][]
+ []
+
+[21 <./velocityCalculate_8hpp_aeeb54087a0d0b7c6418fccb0308e1a34_cgraph.pdf>]
+Underfull \hbox (badness 10000) detected at line 199
+[][][]
+ []
+
+) (./velocityTracking_8cpp.tex
+<velocityTracking_8cpp__incl.pdf, id=580, 1542.76375pt x 212.795pt>
+File: velocityTracking_8cpp__incl.pdf Graphic file (type pdf)
+
+<use velocityTracking_8cpp__incl.pdf>
+Package pdftex.def Info: velocityTracking_8cpp__incl.pdf used on input line 28.
+
+(pdftex.def)             Requested size: 350.0pt x 48.27293pt.
+ [22 <./velocityTracking_8cpp__incl.pdf>]
 Underfull \hbox (badness 10000) detected at line 52
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 62
+Underfull \hbox (badness 10000) detected at line 55
 [][][]
  []
 
-) [5] (./refman.ind [6
+
+Underfull \hbox (badness 10000) detected at line 76
+[][][]
+ []
+
+
+<velocityTracking_8cpp_a420d1601b90eadda1b8a5a0552f1991c_cgraph.pdf, id=604, 33
+0.23375pt x 138.5175pt>
+File: velocityTracking_8cpp_a420d1601b90eadda1b8a5a0552f1991c_cgraph.pdf Graphi
+c file (type pdf)
+
+<use velocityTracking_8cpp_a420d1601b90eadda1b8a5a0552f1991c_cgraph.pdf>
+Package pdftex.def Info: velocityTracking_8cpp_a420d1601b90eadda1b8a5a0552f1991
+c_cgraph.pdf used on input line 96.
+(pdftex.def)             Requested size: 329.0pt x 138.00565pt.
+
+Underfull \hbox (badness 10000) detected at line 108
+[][][]
+ []
+
+[23 <./velocityTracking_8cpp_a420d1601b90eadda1b8a5a0552f1991c_cgraph.pdf>]
+<velocityTracking_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf, id=615, 44
+4.66125pt x 291.0875pt>
+File: velocityTracking_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf Graphi
+c file (type pdf)
+
+<use velocityTracking_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf>
+Package pdftex.def Info: velocityTracking_8cpp_a0ddf1224851353fc92bfbff6f499fa9
+7_cgraph.pdf used on input line 134.
+(pdftex.def)             Requested size: 350.0pt x 229.12157pt.
+
+Underfull \hbox (badness 10000) detected at line 154
+[][][]
+ []
+
+
+<velocityTracking_8cpp_a6893ce6a000489582c4754d3e929faf2_cgraph.pdf, id=616, 29
+7.11pt x 100.375pt>
+File: velocityTracking_8cpp_a6893ce6a000489582c4754d3e929faf2_cgraph.pdf Graphi
+c file (type pdf)
+
+<use velocityTracking_8cpp_a6893ce6a000489582c4754d3e929faf2_cgraph.pdf>
+Package pdftex.def Info: velocityTracking_8cpp_a6893ce6a000489582c4754d3e929faf
+2_cgraph.pdf used on input line 176.
+(pdftex.def)             Requested size: 296.0pt x 100.00409pt.
+
+Underfull \vbox (badness 4353) has occurred while \output is active []
+
+ [24 <./velocityTracking_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf>]) [
+25 <./velocityTracking_8cpp_a6893ce6a000489582c4754d3e929faf2_cgraph.pdf>] (./r
+efman.ind
+[26
 
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 154.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 154.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 163.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 163.
  (./refman.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 154.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 154.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 163.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 163.
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: F834BF7E7D0401C9654FDAFB39E918C5;3844.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 154.
+(rerunfilecheck)             Checksum: 8BE132223E2B571FEEA6F6405BA6453B;9927.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 163.
  ) 
 Here is how much of TeX's memory you used:
- 12435 strings out of 493105
- 171576 string characters out of 6137073
- 256143 words of memory out of 5000000
- 15645 multiletter control sequences out of 15000+600000
- 73532 words of font info for 99 fonts, out of 8000000 for 9000
+ 12692 strings out of 493105
+ 179429 string characters out of 6137073
+ 261468 words of memory out of 5000000
+ 15784 multiletter control sequences out of 15000+600000
+ 81617 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,16n,43p,369b,409s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,17n,43p,1387b,412s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/he
-lvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb
-o8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (10 pages, 67783 bytes).
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic
+/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8ac.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on refman.pdf (30 pages, 184385 bytes).
 PDF statistics:
- 229 PDF objects out of 1000 (max. 8388607)
- 207 compressed objects within 3 object streams
- 44 named destinations out of 1000 (max. 500000)
- 169 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 701 PDF objects out of 1000 (max. 8388607)
+ 624 compressed objects within 7 object streams
+ 128 named destinations out of 1000 (max. 500000)
+ 516 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,4 +1,8 @@
 // include guard to prevent double inclusion
+/*
+ * @author Devon Haubold
+ * @brief Store data with a timestamp
+ */
 #ifndef __TIMEDDATA_H_INCLUDED__
 #define __TIMEDDATA_H_INCLUDED__
 
@@ -24,28 +28,26 @@ public:
 	 */
 	TimedData();
 
-	/**
-	 * @param[in] time the TimedData reading was taken
-	 * @param[in] sensor TimedData reading
-	 * @pre TimedData reading availabel
+	/**Construct a TimedData object with provided parameters
+	 * @param[in] time the data was taken
+	 * @param[in] data any data
 	 * @post A TimedData object containing a TimedData reading and the corresponding time-stamp
 	 */
-	TimedData(float /*in*/data, microseconds /*in*/ time);
+	TimedData(float data, microseconds time);
 
 
 	/**
-	 * 
+	 * @return Data held in TimedData
 	 */
 	float getData();
 
 	/**
-	 * 
-	 * @return time 
+	 * @return time of Data
 	 */
 	microseconds getTime();
 
 	/**
-	 *  print contents to console
+	 *  @brief print contents of TimedData to console
 	 */
 	void printAll();
 
@@ -54,8 +56,6 @@ public:
 	 * @param[in] h pointer to the TimedData object being written
 	 * @pre An existing TimedData object
 	 * @post Object is saved to a binary file on disk
-	 * @todo find a way to extract object location in memory from within itself
-	 * @todo Test writing multiple objects to same file
 	 */
 	void writeData(string filename, TimedData *h);
 
@@ -65,8 +65,6 @@ public:
 	 * @pre A file containing at least one TimedData object stored in binary
 	 * @pre A TimedData object to store the data from file
 	 * @post A TimedData object containing data from the file being read
-	 * @todo find a way to extract object location in memory from within itself
-	 * @todo Test reading multiple objects from the same file
 	 */
 	void readData(string filename, TimedData *h);
 
@@ -78,25 +76,23 @@ public:
 	~TimedData(void);
 
 protected:
-	/**
-	*
+	/**set time member
+	*@param[in] t the timestamp of the data
+	*@post time member is set to t
 	*/
 	void setTime(microseconds t);
 
-	/**
-	*
+	/**set Data member
+	*@param[in] d the data
+	*@post the Data member is set
 	*/
 	void setData(float d);
 
 private:
-	/**
-	 * 
-	 */
-	float data;
-	/**
-	 * 
-	 */
-	microseconds time;
+
+	float data; /**< holds the data */
+
+	microseconds time; /**< the timestamp of the data*/
 
 
 };

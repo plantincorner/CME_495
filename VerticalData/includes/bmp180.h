@@ -1,16 +1,14 @@
 #ifndef BMP180_H
 #define BMP180_H
-/*
- * @author 	Alexander Rüedlinger <a.rueedlinger@gmail.com>
- * @date 	26.02.2015
- *
- * A c driver for the sensor BMP180.
- *  
- */
+//  	Alexander Rüedlinger <a.rueedlinger@gmail.com>
+// 	26.02.2015
+// A c driver for the sensor BMP180.
+
+
  
-/*
- * pressure oversampling modes
- */
+
+ // pressure oversampling modes
+
 #define BMP180_PRE_OSS0 0 // ultra low power
 #define BMP180_PRE_OSS1 1 // standard
 #define BMP180_PRE_OSS2 2 // high resolution
@@ -18,7 +16,7 @@
 
 
 typedef struct {
-	/* Eprom values */
+	// values
 	int ac1;
 	int ac2;
 	int ac3;
