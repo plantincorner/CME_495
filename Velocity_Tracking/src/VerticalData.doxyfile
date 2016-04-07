@@ -753,7 +753,7 @@ WARN_LOGFILE =
 # spaces.
 # Note: If this tag is empty the current directory is searched.
 
-INPUT = /home/devon/git/CME_495/VerticalData/includes . /home/devon/git/CME_495/VerticalData/src
+INPUT = /home/devon/git/CME_495/Velocity_Tracking/includes . /home/devon/git/CME_495/Velocity_Tracking/src
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses

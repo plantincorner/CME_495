@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.2.4)  6 APR 2016 10:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.2.4)  6 APR 2016 17:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1116,7 +1116,7 @@ LaTeX Font Info:    Try loading font information for T1+pcr on input line 6.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-<classHeight__inherit__graph.pdf, id=346, 166.6225pt x 354.32375pt>
+<classHeight__inherit__graph.pdf, id=374, 166.6225pt x 354.32375pt>
 File: classHeight__inherit__graph.pdf Graphic file (type pdf)
 
 <use classHeight__inherit__graph.pdf>
@@ -1157,7 +1157,7 @@ Underfull \hbox (badness 10000) detected at line 46
  []
 
 
-<classHeight_a7fecf5018a116f8234513b222bae6a2f_cgraph.pdf, id=370, 303.1325pt x
+<classHeight_a7fecf5018a116f8234513b222bae6a2f_cgraph.pdf, id=398, 303.1325pt x
  138.5175pt>
 File: classHeight_a7fecf5018a116f8234513b222bae6a2f_cgraph.pdf Graphic file (ty
 pe pdf)
@@ -1179,7 +1179,7 @@ Underfull \hbox (badness 10000) detected at line 75
  []
 
 
-<classHeight_ab715608c84ce45a0a9bb2e241e952312_cgraph.pdf, id=373, 303.1325pt x
+<classHeight_ab715608c84ce45a0a9bb2e241e952312_cgraph.pdf, id=401, 303.1325pt x
  138.5175pt>
 File: classHeight_ab715608c84ce45a0a9bb2e241e952312_cgraph.pdf Graphic file (ty
 pe pdf)
@@ -1202,7 +1202,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 95.
 
 ) (./classTimedData.tex
-<classTimedData__inherit__graph.pdf, id=389, 166.6225pt x 354.32375pt>
+<classTimedData__inherit__graph.pdf, id=417, 166.6225pt x 354.32375pt>
 File: classTimedData__inherit__graph.pdf Graphic file (type pdf)
 
 <use classTimedData__inherit__graph.pdf>
@@ -1227,7 +1227,7 @@ Underfull \hbox (badness 10000) detected at line 57
  []
 
 
-<classTimedData_abed3263e78c1a55e7ff5fe6a50185317_cgraph.pdf, id=439, 342.27875
+<classTimedData_abed3263e78c1a55e7ff5fe6a50185317_cgraph.pdf, id=468, 342.27875
 pt x 138.5175pt>
 File: classTimedData_abed3263e78c1a55e7ff5fe6a50185317_cgraph.pdf Graphic file 
 (type pdf)
@@ -1242,7 +1242,7 @@ Underfull \hbox (badness 10000) detected at line 86
  []
 
 
-<classTimedData_a96f4b1aba52e95af687db6d71fa19bfa_cgraph.pdf, id=443, 342.27875
+<classTimedData_a96f4b1aba52e95af687db6d71fa19bfa_cgraph.pdf, id=472, 342.27875
 pt x 138.5175pt>
 File: classTimedData_a96f4b1aba52e95af687db6d71fa19bfa_cgraph.pdf Graphic file 
 (type pdf)
@@ -1331,14 +1331,55 @@ Underfull \hbox (badness 10000) detected at line 32
 [][][]
  []
 
+
+Underfull \hbox (badness 10000) detected at line 35
+[][][]
+ []
+
 LaTeX Font Info:    Font shape `T1/phv/bc/it' in size <7> not available
-(Font)              Font shape `T1/phv/bc/sl' tried instead on input line 54.
+(Font)              Font shape `T1/phv/bc/sl' tried instead on input line 57.
 LaTeX Font Info:    Font shape `T1/phv/bc/sl' will be
-(Font)              scaled to size 6.29996pt on input line 54.
+(Font)              scaled to size 6.29996pt on input line 57.
 [17
 
 ]
-Underfull \hbox (badness 10000) detected at line 55
+Underfull \hbox (badness 10000) detected at line 64
+[][][]
+ []
+
+
+<mega__sensor_8h_a24ad36b35639619a3489817e76a1a860_cgraph.pdf, id=547, 271.0125
+pt x 100.375pt>
+File: mega__sensor_8h_a24ad36b35639619a3489817e76a1a860_cgraph.pdf Graphic file
+ (type pdf)
+
+<use mega__sensor_8h_a24ad36b35639619a3489817e76a1a860_cgraph.pdf>
+Package pdftex.def Info: mega__sensor_8h_a24ad36b35639619a3489817e76a1a860_cgra
+ph.pdf used on input line 101.
+(pdftex.def)             Requested size: 270.0pt x 100.00409pt.
+)
+(./output_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 9--19
+
+ []
+
+[18 <./mega__sensor_8h_a24ad36b35639619a3489817e76a1a860_cgraph.pdf>]
+Underfull \hbox (badness 10000) detected at line 31
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 34
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 65
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 84
 [][][]
  []
 
@@ -1347,7 +1388,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--16
 
  []
 
-
+[19]
 Underfull \hbox (badness 10000) detected at line 32
 [][][]
  []
@@ -1357,18 +1398,18 @@ Underfull \hbox (badness 10000) detected at line 35
 [][][]
  []
 
-[18]
+
 Underfull \hbox (badness 10000) detected at line 66
 [][][]
  []
 
-
+[20]
 Underfull \hbox (badness 10000) detected at line 102
 [][][]
  []
 
 
-<velocityCalculate_8hpp_aeeb54087a0d0b7c6418fccb0308e1a34_cgraph.pdf, id=533, 2
+<velocityCalculate_8hpp_aeeb54087a0d0b7c6418fccb0308e1a34_cgraph.pdf, id=581, 2
 91.0875pt x 176.66pt>
 File: velocityCalculate_8hpp_aeeb54087a0d0b7c6418fccb0308e1a34_cgraph.pdf Graph
 ic file (type pdf)
@@ -1378,13 +1419,11 @@ Package pdftex.def Info: velocityCalculate_8hpp_aeeb54087a0d0b7c6418fccb0308e1a
 34_cgraph.pdf used on input line 117.
 (pdftex.def)             Requested size: 290.0pt x 176.0126pt.
 
-[19 <./velocityCalculate_8hpp_aeeb54087a0d0b7c6418fccb0308e1a34_cgraph.pdf>]
-[20]
 Underfull \hbox (badness 10000) detected at line 144
 [][][]
  []
 
-
+[21 <./velocityCalculate_8hpp_aeeb54087a0d0b7c6418fccb0308e1a34_cgraph.pdf>]
 Underfull \hbox (badness 10000) detected at line 185
 [][][]
  []
@@ -1394,7 +1433,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--24
 
  []
 
-[21]
+
 Underfull \hbox (badness 10000) detected at line 45
 [][][]
  []
@@ -1404,86 +1443,84 @@ Underfull \hbox (badness 10000) detected at line 48
 [][][]
  []
 
-
+[22]
 Underfull \hbox (badness 10000) detected at line 69
 [][][]
  []
 
 
-<velocityTracking_8cpp_a420d1601b90eadda1b8a5a0552f1991c_cgraph.pdf, id=559, 33
-0.23375pt x 138.5175pt>
+<velocityTracking_8cpp_a420d1601b90eadda1b8a5a0552f1991c_cgraph.pdf, id=610, 42
+6.59375pt x 138.5175pt>
 File: velocityTracking_8cpp_a420d1601b90eadda1b8a5a0552f1991c_cgraph.pdf Graphi
 c file (type pdf)
 
 <use velocityTracking_8cpp_a420d1601b90eadda1b8a5a0552f1991c_cgraph.pdf>
 Package pdftex.def Info: velocityTracking_8cpp_a420d1601b90eadda1b8a5a0552f1991
-c_cgraph.pdf used on input line 89.
-(pdftex.def)             Requested size: 329.0pt x 138.00565pt.
+c_cgraph.pdf used on input line 90.
+(pdftex.def)             Requested size: 350.0pt x 113.65482pt.
 
-[22]
-Underfull \hbox (badness 10000) detected at line 101
+Underfull \hbox (badness 10000) detected at line 102
 [][][]
  []
 
 
-<velocityTracking_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf, id=571, 44
-4.66125pt x 291.0875pt>
+<velocityTracking_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf, id=611, 54
+1.02126pt x 329.23pt>
 File: velocityTracking_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf Graphi
 c file (type pdf)
 
 <use velocityTracking_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf>
 Package pdftex.def Info: velocityTracking_8cpp_a0ddf1224851353fc92bfbff6f499fa9
-7_cgraph.pdf used on input line 127.
-(pdftex.def)             Requested size: 350.0pt x 229.12157pt.
+7_cgraph.pdf used on input line 129.
+(pdftex.def)             Requested size: 350.0pt x 212.99223pt.
 
-[23 <./velocityTracking_8cpp_a420d1601b90eadda1b8a5a0552f1991c_cgraph.pdf> <./v
-elocityTracking_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf
-
-pdfTeX warning: pdflatex (file ./velocityTracking_8cpp_a0ddf1224851353fc92bfbff
-6f499fa97_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in
- a single page
->]
-Underfull \hbox (badness 10000) detected at line 147
+[23 <./velocityTracking_8cpp_a420d1601b90eadda1b8a5a0552f1991c_cgraph.pdf>]
+Underfull \hbox (badness 10000) detected at line 149
 [][][]
  []
 
 
-<velocityTracking_8cpp_a6893ce6a000489582c4754d3e929faf2_cgraph.pdf, id=587, 29
+<velocityTracking_8cpp_a6893ce6a000489582c4754d3e929faf2_cgraph.pdf, id=622, 29
 7.11pt x 100.375pt>
 File: velocityTracking_8cpp_a6893ce6a000489582c4754d3e929faf2_cgraph.pdf Graphi
 c file (type pdf)
 
 <use velocityTracking_8cpp_a6893ce6a000489582c4754d3e929faf2_cgraph.pdf>
 Package pdftex.def Info: velocityTracking_8cpp_a6893ce6a000489582c4754d3e929faf
-2_cgraph.pdf used on input line 169.
+2_cgraph.pdf used on input line 171.
 (pdftex.def)             Requested size: 296.0pt x 100.00409pt.
 )
-[24 <./velocityTracking_8cpp_a6893ce6a000489582c4754d3e929faf2_cgraph.pdf>]
-(./refman.ind [25
+[24 <./velocityTracking_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf> <./v
+elocityTracking_8cpp_a6893ce6a000489582c4754d3e929faf2_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./velocityTracking_8cpp_a6893ce6a000489582c4754d
+3e929faf2_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in
+ a single page
+>] (./refman.ind [25
 
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 163.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 163.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 164.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 164.
  (./refman.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 163.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 163.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 164.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 164.
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 8BE132223E2B571FEEA6F6405BA6453B;9927.
+(rerunfilecheck)             Checksum: 15F7A3B30A77DECE11F1C5A2339328FC;10963.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 163.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 164.
  ) 
 Here is how much of TeX's memory you used:
- 12666 strings out of 493105
- 178552 string characters out of 6137073
- 261468 words of memory out of 5000000
- 15764 multiletter control sequences out of 15000+600000
+ 12692 strings out of 493105
+ 179304 string characters out of 6137073
+ 262633 words of memory out of 5000000
+ 15778 multiletter control sequences out of 15000+600000
  81617 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,16n,43p,1387b,412s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,16n,43p,1387b,512s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
@@ -1492,10 +1529,10 @@ urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic
 /uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8ac.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (29 pages, 172222 bytes).
+Output written on refman.pdf (29 pages, 178815 bytes).
 PDF statistics:
- 661 PDF objects out of 1000 (max. 8388607)
- 596 compressed objects within 6 object streams
- 127 named destinations out of 1000 (max. 500000)
- 491 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 703 PDF objects out of 1000 (max. 8388607)
+ 635 compressed objects within 7 object streams
+ 136 named destinations out of 1000 (max. 500000)
+ 536 words of extra memory for PDF output out of 10000 (max. 10000000)
 
