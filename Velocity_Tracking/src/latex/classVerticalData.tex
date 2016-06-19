@@ -1,0 +1,101 @@
+\hypertarget{classVerticalData}{\section{Vertical\+Data Class Reference}
+\label{classVerticalData}\index{Vertical\+Data@{Vertical\+Data}}
+}
+
+
+Store two \hyperlink{classHeight}{Height} objects and calculate vertical velocity.  
+
+
+
+
+{\ttfamily \#include $<$Vertical\+Data.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classVerticalData_a50b355687804c6d9b03e90bce2a3095e}{store\+Height} (\hyperlink{classHeight}{Height} \&ht)
+\begin{DoxyCompactList}\small\item\em Store height object. \end{DoxyCompactList}\item 
+void \hyperlink{classVerticalData_aef83569982446e500bd333c8a85b6f3a}{place\+Height} (float height, microseconds time)
+\begin{DoxyCompactList}\small\item\em create \hyperlink{classHeight}{Height} object and place in queue \end{DoxyCompactList}\item 
+float \hyperlink{classVerticalData_a6de4f8e0da7c7b31072c4a078b62d063}{get\+Velocity} ()
+\item 
+void \hyperlink{classVerticalData_a33097c244e4c8b4693aaecb60942fe41}{set\+Velocity} (float vel)
+\item 
+\hypertarget{classVerticalData_aa0e879c93866136cdfa2f8130b5eac17}{void \hyperlink{classVerticalData_aa0e879c93866136cdfa2f8130b5eac17}{print\+All} ()}\label{classVerticalData_aa0e879c93866136cdfa2f8130b5eac17}
+
+\begin{DoxyCompactList}\small\item\em Print contents of \hyperlink{classVerticalData}{Vertical\+Data} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classVerticalData_a6399ba01c41d1468f098e5efd88a1032}{void \hyperlink{classVerticalData_a6399ba01c41d1468f098e5efd88a1032}{calculate\+Velocity} ()}\label{classVerticalData_a6399ba01c41d1468f098e5efd88a1032}
+
+\begin{DoxyCompactList}\small\item\em Calculate the vertical velocity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Store two \hyperlink{classHeight}{Height} objects and calculate vertical velocity. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classVerticalData_a6de4f8e0da7c7b31072c4a078b62d063}{\index{Vertical\+Data@{Vertical\+Data}!get\+Velocity@{get\+Velocity}}
+\index{get\+Velocity@{get\+Velocity}!Vertical\+Data@{Vertical\+Data}}
+\subsubsection[{get\+Velocity}]{\setlength{\rightskip}{0pt plus 5cm}float Vertical\+Data\+::get\+Velocity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classVerticalData_a6de4f8e0da7c7b31072c4a078b62d063}
+\begin{DoxyReturn}{Returns}
+vertical velocity 
+\end{DoxyReturn}
+\hypertarget{classVerticalData_aef83569982446e500bd333c8a85b6f3a}{\index{Vertical\+Data@{Vertical\+Data}!place\+Height@{place\+Height}}
+\index{place\+Height@{place\+Height}!Vertical\+Data@{Vertical\+Data}}
+\subsubsection[{place\+Height}]{\setlength{\rightskip}{0pt plus 5cm}void Vertical\+Data\+::place\+Height (
+\begin{DoxyParamCaption}
+\item[{float}]{height, }
+\item[{microseconds}]{time}
+\end{DoxyParamCaption}
+)}}\label{classVerticalData_aef83569982446e500bd333c8a85b6f3a}
+
+
+create \hyperlink{classHeight}{Height} object and place in queue 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em height} & height of U\+A\+V in meters \\
+\hline
+\mbox{\tt in}  & {\em time} & timestamp of height in microseconds \\
+\hline
+\end{DoxyParams}
+\hypertarget{classVerticalData_a33097c244e4c8b4693aaecb60942fe41}{\index{Vertical\+Data@{Vertical\+Data}!set\+Velocity@{set\+Velocity}}
+\index{set\+Velocity@{set\+Velocity}!Vertical\+Data@{Vertical\+Data}}
+\subsubsection[{set\+Velocity}]{\setlength{\rightskip}{0pt plus 5cm}void Vertical\+Data\+::set\+Velocity (
+\begin{DoxyParamCaption}
+\item[{float}]{vel}
+\end{DoxyParamCaption}
+)}}\label{classVerticalData_a33097c244e4c8b4693aaecb60942fe41}
+
+\begin{DoxyParams}{Parameters}
+{\em vel} & the velocity of the U\+A\+V in m/s \\
+\hline
+\end{DoxyParams}
+\hypertarget{classVerticalData_a50b355687804c6d9b03e90bce2a3095e}{\index{Vertical\+Data@{Vertical\+Data}!store\+Height@{store\+Height}}
+\index{store\+Height@{store\+Height}!Vertical\+Data@{Vertical\+Data}}
+\subsubsection[{store\+Height}]{\setlength{\rightskip}{0pt plus 5cm}void Vertical\+Data\+::store\+Height (
+\begin{DoxyParamCaption}
+\item[{{\bf Height} \&}]{ht}
+\end{DoxyParamCaption}
+)}}\label{classVerticalData_a50b355687804c6d9b03e90bce2a3095e}
+
+
+Store height object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ht} & the height of the U\+A\+V in meters \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Vertical\+Data.\+hpp\item 
+Vertical\+Data.\+cpp\end{DoxyCompactItemize}

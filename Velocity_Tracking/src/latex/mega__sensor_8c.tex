@@ -1,0 +1,94 @@
+\hypertarget{mega__sensor_8c}{\section{mega\+\_\+sensor.\+c File Reference}
+\label{mega__sensor_8c}\index{mega\+\_\+sensor.\+c@{mega\+\_\+sensor.\+c}}
+}
+
+
+get sensor data  
+
+
+{\ttfamily \#include \char`\"{}../includes/mega\+\_\+sensor.\+h\char`\"{}}\\*
+Include dependency graph for mega\+\_\+sensor.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mega__sensor_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{mega__sensor_8c_ae71449b1cc6e6250b91f539153a7a0d3}{\#define {\bfseries M\+\_\+\+P\+I}~3.\+14159265358979323846}\label{mega__sensor_8c_ae71449b1cc6e6250b91f539153a7a0d3}
+
+\item 
+\hypertarget{mega__sensor_8c_af42406224183dda096180af685e1e325}{\#define {\bfseries D\+E\+L\+T\+\_\+\+P\+R\+E\+S\+S}~11.\+399393}\label{mega__sensor_8c_af42406224183dda096180af685e1e325}
+
+\item 
+\hypertarget{mega__sensor_8c_a0228ebdb951c7064de39154754f63bed}{\#define {\bfseries A\+L\+T\+\_\+\+S\+E\+N\+S\+\_\+\+C\+H\+N\+G}~4000}\label{mega__sensor_8c_a0228ebdb951c7064de39154754f63bed}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{mega__sensor_8c_a24ad36b35639619a3489817e76a1a860}{M\+E\+G\+A\+\_\+\+S\+E\+N\+S\+O\+R} (float $\ast$g\+\_\+x, float $\ast$g\+\_\+y, float $\ast$a\+\_\+x, float $\ast$a\+\_\+y, float $\ast$t, long $\ast$p, int $\ast$l, float $\ast$l\+\_\+c, long $\ast$b\+\_\+c, float $\ast$h, int fd)
+\begin{DoxyCompactList}\small\item\em Update sensor data calculate height. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+get sensor data 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{mega__sensor_8c_a24ad36b35639619a3489817e76a1a860}{\index{mega\+\_\+sensor.\+c@{mega\+\_\+sensor.\+c}!M\+E\+G\+A\+\_\+\+S\+E\+N\+S\+O\+R@{M\+E\+G\+A\+\_\+\+S\+E\+N\+S\+O\+R}}
+\index{M\+E\+G\+A\+\_\+\+S\+E\+N\+S\+O\+R@{M\+E\+G\+A\+\_\+\+S\+E\+N\+S\+O\+R}!mega\+\_\+sensor.\+c@{mega\+\_\+sensor.\+c}}
+\subsubsection[{M\+E\+G\+A\+\_\+\+S\+E\+N\+S\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}void M\+E\+G\+A\+\_\+\+S\+E\+N\+S\+O\+R (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{g\+\_\+x, }
+\item[{float $\ast$}]{g\+\_\+y, }
+\item[{float $\ast$}]{a\+\_\+x, }
+\item[{float $\ast$}]{a\+\_\+y, }
+\item[{float $\ast$}]{t, }
+\item[{long $\ast$}]{p, }
+\item[{int $\ast$}]{l, }
+\item[{float $\ast$}]{l\+\_\+c, }
+\item[{long $\ast$}]{b\+\_\+c, }
+\item[{float $\ast$}]{h, }
+\item[{int}]{fd}
+\end{DoxyParamCaption}
+)}}\label{mega__sensor_8c_a24ad36b35639619a3489817e76a1a860}
+
+
+Update sensor data calculate height. 
+
+\begin{DoxyPrecond}{Precondition}
+The Lidar is initialized 
+
+The I\+M\+U is initialized 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em g\+\_\+x} & acceleration in the x direction in \\
+\hline
+\mbox{\tt out}  & {\em g\+\_\+y} & acceleration in the y direction \\
+\hline
+\mbox{\tt out}  & {\em a\+\_\+x} & \\
+\hline
+\mbox{\tt out}  & {\em a\+\_\+y} & \\
+\hline
+\mbox{\tt out}  & {\em t} & \\
+\hline
+\mbox{\tt out}  & {\em p} & \\
+\hline
+\mbox{\tt out}  & {\em l} & \\
+\hline
+\mbox{\tt out}  & {\em l} & \\
+\hline
+\mbox{\tt out}  & {\em l\+\_\+c} & \\
+\hline
+\mbox{\tt out}  & {\em b\+\_\+c} & \\
+\hline
+\mbox{\tt out}  & {\em fd} & \\
+\hline
+\mbox{\tt out}  & {\em } & post \\
+\hline
+\end{DoxyParams}

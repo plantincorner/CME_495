@@ -1,0 +1,188 @@
+\hypertarget{velocityCalculate_8hpp}{\section{velocity\+Calculate.\+hpp File Reference}
+\label{velocityCalculate_8hpp}\index{velocity\+Calculate.\+hpp@{velocity\+Calculate.\+hpp}}
+}
+
+
+Calculate the Horizontal Velocity of a U\+A\+V.  
+
+
+{\ttfamily \#include $<$opencv2/video/tracking.\+hpp$>$}\\*
+{\ttfamily \#include $<$opencv2/imgproc/imgproc.\+hpp$>$}\\*
+{\ttfamily \#include $<$opencv2/highgui/highgui.\+hpp$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include $<$random$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{velocityCalculate_8hpp_a118131c72f75d5aca6ad7631de0eda64}{four\+Pixel\+Average} (Input\+Array img\+Full, Output\+Array img\+Reduced)
+\begin{DoxyCompactList}\small\item\em average four pixels \end{DoxyCompactList}\item 
+float \hyperlink{velocityCalculate_8hpp_accfa483afa5017fd06388c4de09416b4}{entropy} (Mat seq, Size size, int index)
+\begin{DoxyCompactList}\small\item\em calculate the entropy of an image \end{DoxyCompactList}\item 
+Mat \hyperlink{velocityCalculate_8hpp_afe324ff9e0136d24643fb5d2c49e6d89}{my\+Entropy} (Mat seq, int hist\+Size)
+\begin{DoxyCompactList}\small\item\em calculates relative occurrence of different symbols within given input sequence using histogram \end{DoxyCompactList}\item 
+void \hyperlink{velocityCalculate_8hpp_aeeb54087a0d0b7c6418fccb0308e1a34}{calculate\+A\+E\+A\+O} (Mat prev\+Gray, Mat next\+Gray, double camera\+Elevation, int frame\+Rate, double pitch, double roll, double w\+Pitch, double w\+Roll, double \&Vx, double \&Vy, double Vz, double \&speed, double \&direction)
+\begin{DoxyCompactList}\small\item\em Calculates velocity in the x and y directions,speed and direction of an unmanned aerial vehicle(\+U\+A\+V). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Calculate the Horizontal Velocity of a U\+A\+V. 
+
+\begin{DoxyDate}{Date}
+Mar 26, 2016 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Lance Pitka 
+
+Devon Haubold 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{velocityCalculate_8hpp_aeeb54087a0d0b7c6418fccb0308e1a34}{\index{velocity\+Calculate.\+hpp@{velocity\+Calculate.\+hpp}!calculate\+A\+E\+A\+O@{calculate\+A\+E\+A\+O}}
+\index{calculate\+A\+E\+A\+O@{calculate\+A\+E\+A\+O}!velocity\+Calculate.\+hpp@{velocity\+Calculate.\+hpp}}
+\subsubsection[{calculate\+A\+E\+A\+O}]{\setlength{\rightskip}{0pt plus 5cm}void calculate\+A\+E\+A\+O (
+\begin{DoxyParamCaption}
+\item[{Mat}]{prev\+Gray, }
+\item[{Mat}]{next\+Gray, }
+\item[{double}]{camera\+Elevation, }
+\item[{int}]{frame\+Rate, }
+\item[{double}]{pitch, }
+\item[{double}]{roll, }
+\item[{double}]{w\+Pitch, }
+\item[{double}]{w\+Roll, }
+\item[{double \&}]{Vx, }
+\item[{double \&}]{Vy, }
+\item[{double}]{Vz, }
+\item[{double \&}]{speed, }
+\item[{double \&}]{direction}
+\end{DoxyParamCaption}
+)}}\label{velocityCalculate_8hpp_aeeb54087a0d0b7c6418fccb0308e1a34}
+
+
+Calculates velocity in the x and y directions,speed and direction of an unmanned aerial vehicle(\+U\+A\+V). 
+
+Calculates confidence in calculations \begin{DoxyPrecond}{Precondition}
+Two images, prev\+Gray and next\+Gray, taken successively at a specified frame rate 
+
+Pitch, \hyperlink{classHeight}{Height}, Vz, Roll, change in pitch, change in Roll, at the time the images are captured 
+
+Vx, Vy, speed and Direction are declared 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em prev\+Gray} & the first single channel 8bit image \\
+\hline
+\mbox{\tt in}  & {\em next\+Gray} & the second single channel 8bit image \\
+\hline
+\mbox{\tt in}  & {\em camera\+Elevation} & the distance of the U\+A\+V from the ground \\
+\hline
+\mbox{\tt in}  & {\em frame\+Rate} & rate at which the images are being captured in fps \\
+\hline
+\mbox{\tt in}  & {\em pitch} & the pitch of the U\+A\+V in radians \\
+\hline
+\mbox{\tt in}  & {\em roll} & the roll of the U\+A\+V in radians \\
+\hline
+\mbox{\tt in}  & {\em w\+Pitch} & the U\+A\+V angular pitch velocity in radians/sec \\
+\hline
+\mbox{\tt in}  & {\em w\+Roll} & the U\+A\+V angular roll velocity in radians/sec \\
+\hline
+\mbox{\tt out}  & {\em Vx} & U\+A\+V velocity in the x direction \\
+\hline
+\mbox{\tt out}  & {\em Vy} & U\+A\+V velocity in the y direction \\
+\hline
+\mbox{\tt in,out}  & {\em Vz} & U\+A\+V Velocity in the z direction (vertical velocity) in m/s \\
+\hline
+\mbox{\tt out}  & {\em speed} & the speed of U\+A\+V in m/s \\
+\hline
+\mbox{\tt out}  & {\em direction} & direction of the U\+A\+V in radians relative to itself. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Vx contains the most recent velocity in the x direction 
+
+Vy contains the most recent Velocity in the y direction 
+
+speed contains the most recent speed 
+
+direction contains the most recent direction 
+\end{DoxyPostcond}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{velocityCalculate_8hpp_aeeb54087a0d0b7c6418fccb0308e1a34_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{velocityCalculate_8hpp_accfa483afa5017fd06388c4de09416b4}{\index{velocity\+Calculate.\+hpp@{velocity\+Calculate.\+hpp}!entropy@{entropy}}
+\index{entropy@{entropy}!velocity\+Calculate.\+hpp@{velocity\+Calculate.\+hpp}}
+\subsubsection[{entropy}]{\setlength{\rightskip}{0pt plus 5cm}float entropy (
+\begin{DoxyParamCaption}
+\item[{Mat}]{seq, }
+\item[{Size}]{size, }
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{velocityCalculate_8hpp_accfa483afa5017fd06388c4de09416b4}
+
+
+calculate the entropy of an image 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em seq} & a single channel 8 bit image \\
+\hline
+\mbox{\tt in}  & {\em size} & dimensions of image \\
+\hline
+\mbox{\tt in}  & {\em index} & pixel location in image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the entropy of the image at index 
+\end{DoxyReturn}
+\hypertarget{velocityCalculate_8hpp_a118131c72f75d5aca6ad7631de0eda64}{\index{velocity\+Calculate.\+hpp@{velocity\+Calculate.\+hpp}!four\+Pixel\+Average@{four\+Pixel\+Average}}
+\index{four\+Pixel\+Average@{four\+Pixel\+Average}!velocity\+Calculate.\+hpp@{velocity\+Calculate.\+hpp}}
+\subsubsection[{four\+Pixel\+Average}]{\setlength{\rightskip}{0pt plus 5cm}void four\+Pixel\+Average (
+\begin{DoxyParamCaption}
+\item[{Input\+Array}]{img\+Full, }
+\item[{Output\+Array}]{img\+Reduced}
+\end{DoxyParamCaption}
+)}}\label{velocityCalculate_8hpp_a118131c72f75d5aca6ad7631de0eda64}
+
+
+average four pixels 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em img\+Full} & the image to be averaged \\
+\hline
+\mbox{\tt out}  & {\em img\+Reduced} & an averaged image \\
+\hline
+\end{DoxyParams}
+\hypertarget{velocityCalculate_8hpp_afe324ff9e0136d24643fb5d2c49e6d89}{\index{velocity\+Calculate.\+hpp@{velocity\+Calculate.\+hpp}!my\+Entropy@{my\+Entropy}}
+\index{my\+Entropy@{my\+Entropy}!velocity\+Calculate.\+hpp@{velocity\+Calculate.\+hpp}}
+\subsubsection[{my\+Entropy}]{\setlength{\rightskip}{0pt plus 5cm}Mat my\+Entropy (
+\begin{DoxyParamCaption}
+\item[{Mat}]{seq, }
+\item[{int}]{hist\+Size}
+\end{DoxyParamCaption}
+)}}\label{velocityCalculate_8hpp_afe324ff9e0136d24643fb5d2c49e6d89}
+
+
+calculates relative occurrence of different symbols within given input sequence using histogram 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em seq} & a single channel 8 bit image \\
+\hline
+\mbox{\tt in}  & {\em hist\+Size} & size of the histogram \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+histogram showing occurence of symbols in a sequence 
+\end{DoxyReturn}
+Compute the histograms\+: 

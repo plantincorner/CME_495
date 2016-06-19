@@ -1,0 +1,209 @@
+\hypertarget{classTimedData}{\section{Timed\+Data Class Reference}
+\label{classTimedData}\index{Timed\+Data@{Timed\+Data}}
+}
+
+
+{\ttfamily \#include $<$Timed\+Data.\+hpp$>$}
+
+
+
+Inheritance diagram for Timed\+Data\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classTimedData__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTimedData_abed3263e78c1a55e7ff5fe6a50185317}{Timed\+Data} ()
+\item 
+\hyperlink{classTimedData_a96f4b1aba52e95af687db6d71fa19bfa}{Timed\+Data} (float data, microseconds time)
+\item 
+float \hyperlink{classTimedData_aa8b1827a1b723de9ddd2582494927170}{get\+Data} ()
+\item 
+microseconds \hyperlink{classTimedData_a0012907b806867efc968db0d618213a6}{get\+Time} ()
+\item 
+\hypertarget{classTimedData_aaff93a393397a9dc1823652f8a0f89cc}{void \hyperlink{classTimedData_aaff93a393397a9dc1823652f8a0f89cc}{print\+All} ()}\label{classTimedData_aaff93a393397a9dc1823652f8a0f89cc}
+
+\begin{DoxyCompactList}\small\item\em print contents of \hyperlink{classTimedData}{Timed\+Data} to console \end{DoxyCompactList}\item 
+void \hyperlink{classTimedData_a6ae616a87f0f8ed004445b2fd6b1ba7d}{write\+Data} (string filename, \hyperlink{classTimedData}{Timed\+Data} $\ast$h)
+\item 
+void \hyperlink{classTimedData_a4b4ece4a2ab9c68e3fb0e2f1983819c5}{read\+Data} (string filename, \hyperlink{classTimedData}{Timed\+Data} $\ast$h)
+\item 
+\hyperlink{classTimedData_a9963efb752073782ab0cc4442cd41172}{$\sim$\+Timed\+Data} (void)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classTimedData_a95d97c33cc4107ac10590aad5522f7a1}{set\+Time} (microseconds t)
+\item 
+void \hyperlink{classTimedData_aab7f26960dd570f86b8893352444411d}{set\+Data} (float d)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Store \hyperlink{classTimedData}{Timed\+Data} data and time-\/stamp 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classTimedData_abed3263e78c1a55e7ff5fe6a50185317}{\index{Timed\+Data@{Timed\+Data}!Timed\+Data@{Timed\+Data}}
+\index{Timed\+Data@{Timed\+Data}!Timed\+Data@{Timed\+Data}}
+\subsubsection[{Timed\+Data}]{\setlength{\rightskip}{0pt plus 5cm}Timed\+Data\+::\+Timed\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classTimedData_abed3263e78c1a55e7ff5fe6a50185317}
+Construct an empty \hyperlink{classTimedData}{Timed\+Data} object \begin{DoxyPostcond}{Postcondition}
+an empty \hyperlink{classTimedData}{Timed\+Data} object is created 
+\end{DoxyPostcond}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classTimedData_abed3263e78c1a55e7ff5fe6a50185317_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classTimedData_a96f4b1aba52e95af687db6d71fa19bfa}{\index{Timed\+Data@{Timed\+Data}!Timed\+Data@{Timed\+Data}}
+\index{Timed\+Data@{Timed\+Data}!Timed\+Data@{Timed\+Data}}
+\subsubsection[{Timed\+Data}]{\setlength{\rightskip}{0pt plus 5cm}Timed\+Data\+::\+Timed\+Data (
+\begin{DoxyParamCaption}
+\item[{float}]{data, }
+\item[{microseconds}]{time}
+\end{DoxyParamCaption}
+)}}\label{classTimedData_a96f4b1aba52e95af687db6d71fa19bfa}
+Construct a \hyperlink{classTimedData}{Timed\+Data} object with provided parameters 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em time} & the data was taken \\
+\hline
+\mbox{\tt in}  & {\em data} & any data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+A \hyperlink{classTimedData}{Timed\+Data} object containing a \hyperlink{classTimedData}{Timed\+Data} reading and the corresponding time-\/stamp 
+\end{DoxyPostcond}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classTimedData_a96f4b1aba52e95af687db6d71fa19bfa_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classTimedData_a9963efb752073782ab0cc4442cd41172}{\index{Timed\+Data@{Timed\+Data}!````~Timed\+Data@{$\sim$\+Timed\+Data}}
+\index{````~Timed\+Data@{$\sim$\+Timed\+Data}!Timed\+Data@{Timed\+Data}}
+\subsubsection[{$\sim$\+Timed\+Data}]{\setlength{\rightskip}{0pt plus 5cm}Timed\+Data\+::$\sim$\+Timed\+Data (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classTimedData_a9963efb752073782ab0cc4442cd41172}
+Destructor for \hyperlink{classTimedData}{Timed\+Data} object 
+
+\subsection{Member Function Documentation}
+\hypertarget{classTimedData_aa8b1827a1b723de9ddd2582494927170}{\index{Timed\+Data@{Timed\+Data}!get\+Data@{get\+Data}}
+\index{get\+Data@{get\+Data}!Timed\+Data@{Timed\+Data}}
+\subsubsection[{get\+Data}]{\setlength{\rightskip}{0pt plus 5cm}float Timed\+Data\+::get\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classTimedData_aa8b1827a1b723de9ddd2582494927170}
+\begin{DoxyReturn}{Returns}
+Data held in \hyperlink{classTimedData}{Timed\+Data} 
+\end{DoxyReturn}
+\hypertarget{classTimedData_a0012907b806867efc968db0d618213a6}{\index{Timed\+Data@{Timed\+Data}!get\+Time@{get\+Time}}
+\index{get\+Time@{get\+Time}!Timed\+Data@{Timed\+Data}}
+\subsubsection[{get\+Time}]{\setlength{\rightskip}{0pt plus 5cm}microseconds Timed\+Data\+::get\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classTimedData_a0012907b806867efc968db0d618213a6}
+\begin{DoxyReturn}{Returns}
+time of Data 
+\end{DoxyReturn}
+\hypertarget{classTimedData_a4b4ece4a2ab9c68e3fb0e2f1983819c5}{\index{Timed\+Data@{Timed\+Data}!read\+Data@{read\+Data}}
+\index{read\+Data@{read\+Data}!Timed\+Data@{Timed\+Data}}
+\subsubsection[{read\+Data}]{\setlength{\rightskip}{0pt plus 5cm}void Timed\+Data\+::read\+Data (
+\begin{DoxyParamCaption}
+\item[{string}]{filename, }
+\item[{{\bf Timed\+Data} $\ast$}]{h}
+\end{DoxyParamCaption}
+)}}\label{classTimedData_a4b4ece4a2ab9c68e3fb0e2f1983819c5}
+read \hyperlink{classTimedData}{Timed\+Data} object from file 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em filename} & name of file to be read \\
+\hline
+\mbox{\tt in}  & {\em h} & pointer to the \hyperlink{classTimedData}{Timed\+Data} object being read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+A file containing at least one \hyperlink{classTimedData}{Timed\+Data} object stored in binary 
+
+A \hyperlink{classTimedData}{Timed\+Data} object to store the data from file 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+A \hyperlink{classTimedData}{Timed\+Data} object containing data from the file being read 
+\end{DoxyPostcond}
+\hypertarget{classTimedData_aab7f26960dd570f86b8893352444411d}{\index{Timed\+Data@{Timed\+Data}!set\+Data@{set\+Data}}
+\index{set\+Data@{set\+Data}!Timed\+Data@{Timed\+Data}}
+\subsubsection[{set\+Data}]{\setlength{\rightskip}{0pt plus 5cm}void Timed\+Data\+::set\+Data (
+\begin{DoxyParamCaption}
+\item[{float}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classTimedData_aab7f26960dd570f86b8893352444411d}
+set Data member 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em d} & the data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+the Data member is set 
+\end{DoxyPostcond}
+\hypertarget{classTimedData_a95d97c33cc4107ac10590aad5522f7a1}{\index{Timed\+Data@{Timed\+Data}!set\+Time@{set\+Time}}
+\index{set\+Time@{set\+Time}!Timed\+Data@{Timed\+Data}}
+\subsubsection[{set\+Time}]{\setlength{\rightskip}{0pt plus 5cm}void Timed\+Data\+::set\+Time (
+\begin{DoxyParamCaption}
+\item[{microseconds}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classTimedData_a95d97c33cc4107ac10590aad5522f7a1}
+set time member 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em t} & the timestamp of the data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+time member is set to t 
+\end{DoxyPostcond}
+\hypertarget{classTimedData_a6ae616a87f0f8ed004445b2fd6b1ba7d}{\index{Timed\+Data@{Timed\+Data}!write\+Data@{write\+Data}}
+\index{write\+Data@{write\+Data}!Timed\+Data@{Timed\+Data}}
+\subsubsection[{write\+Data}]{\setlength{\rightskip}{0pt plus 5cm}void Timed\+Data\+::write\+Data (
+\begin{DoxyParamCaption}
+\item[{string}]{filename, }
+\item[{{\bf Timed\+Data} $\ast$}]{h}
+\end{DoxyParamCaption}
+)}}\label{classTimedData_a6ae616a87f0f8ed004445b2fd6b1ba7d}
+Save \hyperlink{classTimedData}{Timed\+Data} object to file 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em filename} & name of file to be written \\
+\hline
+\mbox{\tt in}  & {\em h} & pointer to the \hyperlink{classTimedData}{Timed\+Data} object being written \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+An existing \hyperlink{classTimedData}{Timed\+Data} object 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Object is saved to a binary file on disk 
+\end{DoxyPostcond}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Timed\+Data.\+hpp\item 
+Timed\+Data.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,105 @@
+\hypertarget{mega__sensor_8h}{\section{mega\+\_\+sensor.\+h File Reference}
+\label{mega__sensor_8h}\index{mega\+\_\+sensor.\+h@{mega\+\_\+sensor.\+h}}
+}
+
+
+get sensor data  
+
+
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$signal.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$fcntl.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include $<$wiring\+Pi.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../include/lidar\+Lite.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../includes/sensor.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../includes/output.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../includes/bmp180.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{mega__sensor_8h_a24ad36b35639619a3489817e76a1a860}{M\+E\+G\+A\+\_\+\+S\+E\+N\+S\+O\+R} (float $\ast$g\+\_\+x, float $\ast$g\+\_\+y, float $\ast$a\+\_\+x, float $\ast$a\+\_\+y, float $\ast$t, long $\ast$p, int $\ast$l, float $\ast$l\+\_\+c, long $\ast$b\+\_\+c, float $\ast$h, int fd)
+\begin{DoxyCompactList}\small\item\em extracts data from sensors \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+get sensor data 
+
+\begin{DoxyAuthor}{Author}
+Luke Protz 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+March 27, 2016 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{mega__sensor_8h_a24ad36b35639619a3489817e76a1a860}{\index{mega\+\_\+sensor.\+h@{mega\+\_\+sensor.\+h}!M\+E\+G\+A\+\_\+\+S\+E\+N\+S\+O\+R@{M\+E\+G\+A\+\_\+\+S\+E\+N\+S\+O\+R}}
+\index{M\+E\+G\+A\+\_\+\+S\+E\+N\+S\+O\+R@{M\+E\+G\+A\+\_\+\+S\+E\+N\+S\+O\+R}!mega\+\_\+sensor.\+h@{mega\+\_\+sensor.\+h}}
+\subsubsection[{M\+E\+G\+A\+\_\+\+S\+E\+N\+S\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}void M\+E\+G\+A\+\_\+\+S\+E\+N\+S\+O\+R (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{g\+\_\+x, }
+\item[{float $\ast$}]{g\+\_\+y, }
+\item[{float $\ast$}]{a\+\_\+x, }
+\item[{float $\ast$}]{a\+\_\+y, }
+\item[{float $\ast$}]{t, }
+\item[{long $\ast$}]{p, }
+\item[{int $\ast$}]{l, }
+\item[{float $\ast$}]{l\+\_\+c, }
+\item[{long $\ast$}]{b\+\_\+c, }
+\item[{float $\ast$}]{h, }
+\item[{int}]{fd}
+\end{DoxyParamCaption}
+)}}\label{mega__sensor_8h_a24ad36b35639619a3489817e76a1a860}
+
+
+extracts data from sensors 
+
+detemines most accurate data based sensors being used
+
+\begin{DoxyPrecond}{Precondition}
+The Lidar is initialized 
+
+The I\+M\+U is initialized 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em g\+\_\+x} & pitch velocity in rad/s \\
+\hline
+\mbox{\tt out}  & {\em g\+\_\+y} & roll velocity in rad/s \\
+\hline
+\mbox{\tt out}  & {\em a\+\_\+x} & pitch in radians \\
+\hline
+\mbox{\tt out}  & {\em a\+\_\+y} & roll in radians \\
+\hline
+\mbox{\tt out}  & {\em t} & temperature in degrees Celcius \\
+\hline
+\mbox{\tt out}  & {\em p} & pressure in pascales \\
+\hline
+\mbox{\tt out}  & {\em l} & distance from lidar in cm \\
+\hline
+\mbox{\tt out}  & {\em l\+\_\+c} & height calculation held when uav reaches 40 m \\
+\hline
+\mbox{\tt out}  & {\em b\+\_\+c} & pressure measurement held uav reaches 40 m \\
+\hline
+\mbox{\tt out}  & {\em h} & calculated height, corrected for attitude \\
+\hline
+\mbox{\tt out}  & {\em fd} & confirmation of lidar functionality, equals 1 when lidar operational \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{mega__sensor_8h_a24ad36b35639619a3489817e76a1a860_cgraph}
+\end{center}
+\end{figure}
+
+

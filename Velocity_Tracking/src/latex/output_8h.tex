@@ -1,0 +1,86 @@
+\hypertarget{output_8h}{\section{output.\+h File Reference}
+\label{output_8h}\index{output.\+h@{output.\+h}}
+}
+
+
+Interface with lidar manufacturer A\+P\+I.  
+
+
+{\ttfamily \#include \char`\"{}sensor.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$signal.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$fcntl.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include $<$wiring\+Pi.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{output_8h_a6a3869251603ae4e569abadbd7dab11c}{I\+N\+Thandler} (int sig)
+\begin{DoxyCompactList}\small\item\em Initializes Lidar. \end{DoxyCompactList}\item 
+void \hyperlink{output_8h_a90418e9662ee79ffa39a9efab5d2ee05}{A\+C\+C\+G\+Y\+R} (float $\ast$gyr\+\_\+x, float $\ast$gyr\+\_\+y, float $\ast$acc\+\_\+x, float $\ast$acc\+\_\+y)
+\begin{DoxyCompactList}\small\item\em gathers information from I\+M\+U (accelerometer and gyroscope) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface with lidar manufacturer A\+P\+I. 
+
+\begin{DoxyAuthor}{Author}
+Luke Protz 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+March 25, 2016 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{output_8h_a90418e9662ee79ffa39a9efab5d2ee05}{\index{output.\+h@{output.\+h}!A\+C\+C\+G\+Y\+R@{A\+C\+C\+G\+Y\+R}}
+\index{A\+C\+C\+G\+Y\+R@{A\+C\+C\+G\+Y\+R}!output.\+h@{output.\+h}}
+\subsubsection[{A\+C\+C\+G\+Y\+R}]{\setlength{\rightskip}{0pt plus 5cm}void A\+C\+C\+G\+Y\+R (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{gyr\+\_\+x, }
+\item[{float $\ast$}]{gyr\+\_\+y, }
+\item[{float $\ast$}]{acc\+\_\+x, }
+\item[{float $\ast$}]{acc\+\_\+y}
+\end{DoxyParamCaption}
+)}}\label{output_8h_a90418e9662ee79ffa39a9efab5d2ee05}
+
+
+gathers information from I\+M\+U (accelerometer and gyroscope) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em gyr\+\_\+x} & gyroscope pitch value \\
+\hline
+\mbox{\tt out}  & {\em gyr\+\_\+y} & gyroscope roll value \\
+\hline
+\mbox{\tt out}  & {\em acc\+\_\+x} & accelerometer pitch value \\
+\hline
+\mbox{\tt out}  & {\em acc\+\_\+y} & accelerometer roll value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+parameters contain most recent attitude measurements 
+\end{DoxyPostcond}
+\hypertarget{output_8h_a6a3869251603ae4e569abadbd7dab11c}{\index{output.\+h@{output.\+h}!I\+N\+Thandler@{I\+N\+Thandler}}
+\index{I\+N\+Thandler@{I\+N\+Thandler}!output.\+h@{output.\+h}}
+\subsubsection[{I\+N\+Thandler}]{\setlength{\rightskip}{0pt plus 5cm}void I\+N\+Thandler (
+\begin{DoxyParamCaption}
+\item[{int}]{sig}
+\end{DoxyParamCaption}
+)}}\label{output_8h_a6a3869251603ae4e569abadbd7dab11c}
+
+
+Initializes Lidar. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sig} & wake signal \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+lidar is operational 
+\end{DoxyPostcond}

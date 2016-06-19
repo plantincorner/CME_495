@@ -1,0 +1,118 @@
+\hypertarget{sensor_8h}{\section{sensor.\+h File Reference}
+\label{sensor_8h}\index{sensor.\+h@{sensor.\+h}}
+}
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$fcntl.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}linux/i2c-\/dev.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}L\+S\+M9\+D\+S0.\+h\char`\"{}}\\*
+Include dependency graph for sensor.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sensor_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{sensor_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{sensor_8h_a640b586bca6a4aefcb74a9592298e6a9}{read\+Block} (uint8\+\_\+t command, uint8\+\_\+t size, uint8\+\_\+t $\ast$data)
+\item 
+void \hyperlink{sensor_8h_af507fb8b1a034a5308d4ed677bc6e0cb}{select\+Device} (int file, int addr)
+\item 
+void \hyperlink{sensor_8h_a0099fe9588d17fac36ed16ccc941da2e}{read\+A\+C\+C} (int $\ast$a)
+\item 
+void \hyperlink{sensor_8h_ae8d9b4b2cea7904cc644d525ecdfed9f}{read\+M\+A\+G} (int $\ast$m)
+\item 
+void \hyperlink{sensor_8h_affd222260cd8d3086bfa32f94dfc4267}{read\+G\+Y\+R} (int $\ast$g)
+\item 
+void \hyperlink{sensor_8h_aa0f501ee4901aa6b14130a4b1bc4d0d4}{write\+Acc\+Reg} (uint8\+\_\+t reg, uint8\+\_\+t value)
+\item 
+void \hyperlink{sensor_8h_a20a89e0d68af2af07db1efd3ab862f3e}{write\+Mag\+Reg} (uint8\+\_\+t reg, uint8\+\_\+t value)
+\item 
+void \hyperlink{sensor_8h_a9c7bd5a1b69672f31e8a51a55bd3db74}{write\+Gyr\+Reg} (uint8\+\_\+t reg, uint8\+\_\+t value)
+\item 
+void \hyperlink{sensor_8h_a881f28be88a2b1fa862ccd7f023d9611}{enable\+I\+M\+U} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{sensor_8h_a881f28be88a2b1fa862ccd7f023d9611}{\index{sensor.\+h@{sensor.\+h}!enable\+I\+M\+U@{enable\+I\+M\+U}}
+\index{enable\+I\+M\+U@{enable\+I\+M\+U}!sensor.\+h@{sensor.\+h}}
+\subsubsection[{enable\+I\+M\+U}]{\setlength{\rightskip}{0pt plus 5cm}void enable\+I\+M\+U (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{sensor_8h_a881f28be88a2b1fa862ccd7f023d9611}
+\hypertarget{sensor_8h_a0099fe9588d17fac36ed16ccc941da2e}{\index{sensor.\+h@{sensor.\+h}!read\+A\+C\+C@{read\+A\+C\+C}}
+\index{read\+A\+C\+C@{read\+A\+C\+C}!sensor.\+h@{sensor.\+h}}
+\subsubsection[{read\+A\+C\+C}]{\setlength{\rightskip}{0pt plus 5cm}void read\+A\+C\+C (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{a}
+\end{DoxyParamCaption}
+)}}\label{sensor_8h_a0099fe9588d17fac36ed16ccc941da2e}
+\hypertarget{sensor_8h_a640b586bca6a4aefcb74a9592298e6a9}{\index{sensor.\+h@{sensor.\+h}!read\+Block@{read\+Block}}
+\index{read\+Block@{read\+Block}!sensor.\+h@{sensor.\+h}}
+\subsubsection[{read\+Block}]{\setlength{\rightskip}{0pt plus 5cm}void read\+Block (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{command, }
+\item[{uint8\+\_\+t}]{size, }
+\item[{uint8\+\_\+t $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{sensor_8h_a640b586bca6a4aefcb74a9592298e6a9}
+\hypertarget{sensor_8h_affd222260cd8d3086bfa32f94dfc4267}{\index{sensor.\+h@{sensor.\+h}!read\+G\+Y\+R@{read\+G\+Y\+R}}
+\index{read\+G\+Y\+R@{read\+G\+Y\+R}!sensor.\+h@{sensor.\+h}}
+\subsubsection[{read\+G\+Y\+R}]{\setlength{\rightskip}{0pt plus 5cm}void read\+G\+Y\+R (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{g}
+\end{DoxyParamCaption}
+)}}\label{sensor_8h_affd222260cd8d3086bfa32f94dfc4267}
+\hypertarget{sensor_8h_ae8d9b4b2cea7904cc644d525ecdfed9f}{\index{sensor.\+h@{sensor.\+h}!read\+M\+A\+G@{read\+M\+A\+G}}
+\index{read\+M\+A\+G@{read\+M\+A\+G}!sensor.\+h@{sensor.\+h}}
+\subsubsection[{read\+M\+A\+G}]{\setlength{\rightskip}{0pt plus 5cm}void read\+M\+A\+G (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{m}
+\end{DoxyParamCaption}
+)}}\label{sensor_8h_ae8d9b4b2cea7904cc644d525ecdfed9f}
+\hypertarget{sensor_8h_af507fb8b1a034a5308d4ed677bc6e0cb}{\index{sensor.\+h@{sensor.\+h}!select\+Device@{select\+Device}}
+\index{select\+Device@{select\+Device}!sensor.\+h@{sensor.\+h}}
+\subsubsection[{select\+Device}]{\setlength{\rightskip}{0pt plus 5cm}void select\+Device (
+\begin{DoxyParamCaption}
+\item[{int}]{file, }
+\item[{int}]{addr}
+\end{DoxyParamCaption}
+)}}\label{sensor_8h_af507fb8b1a034a5308d4ed677bc6e0cb}
+\hypertarget{sensor_8h_aa0f501ee4901aa6b14130a4b1bc4d0d4}{\index{sensor.\+h@{sensor.\+h}!write\+Acc\+Reg@{write\+Acc\+Reg}}
+\index{write\+Acc\+Reg@{write\+Acc\+Reg}!sensor.\+h@{sensor.\+h}}
+\subsubsection[{write\+Acc\+Reg}]{\setlength{\rightskip}{0pt plus 5cm}void write\+Acc\+Reg (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{reg, }
+\item[{uint8\+\_\+t}]{value}
+\end{DoxyParamCaption}
+)}}\label{sensor_8h_aa0f501ee4901aa6b14130a4b1bc4d0d4}
+\hypertarget{sensor_8h_a9c7bd5a1b69672f31e8a51a55bd3db74}{\index{sensor.\+h@{sensor.\+h}!write\+Gyr\+Reg@{write\+Gyr\+Reg}}
+\index{write\+Gyr\+Reg@{write\+Gyr\+Reg}!sensor.\+h@{sensor.\+h}}
+\subsubsection[{write\+Gyr\+Reg}]{\setlength{\rightskip}{0pt plus 5cm}void write\+Gyr\+Reg (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{reg, }
+\item[{uint8\+\_\+t}]{value}
+\end{DoxyParamCaption}
+)}}\label{sensor_8h_a9c7bd5a1b69672f31e8a51a55bd3db74}
+\hypertarget{sensor_8h_a20a89e0d68af2af07db1efd3ab862f3e}{\index{sensor.\+h@{sensor.\+h}!write\+Mag\+Reg@{write\+Mag\+Reg}}
+\index{write\+Mag\+Reg@{write\+Mag\+Reg}!sensor.\+h@{sensor.\+h}}
+\subsubsection[{write\+Mag\+Reg}]{\setlength{\rightskip}{0pt plus 5cm}void write\+Mag\+Reg (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{reg, }
+\item[{uint8\+\_\+t}]{value}
+\end{DoxyParamCaption}
+)}}\label{sensor_8h_a20a89e0d68af2af07db1efd3ab862f3e}
